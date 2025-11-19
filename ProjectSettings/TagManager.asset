@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Enemy
+  - Ground
+  - Trap
+  - Checkpoint
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Forest
+    uniqueID: 3131240197
+    locked: 0
+  - name: Player
+    uniqueID: 1467397021
+    locked: 0
+  - name: Platform
+    uniqueID: 2448172123
+    locked: 0
+  - name: Tree
+    uniqueID: 1066461741
+    locked: 0
+  m_RenderingLayers:
+  - Default
