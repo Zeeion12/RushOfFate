@@ -138,6 +138,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -484,7 +497,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Golem_IdleB_0: 6767266734697148751
+      Golem_IdleB_1: 4001696509249506036
+      Golem_IdleB_10: -7780656669802544193
+      Golem_IdleB_11: 7120625570724935194
+      Golem_IdleB_12: -1395507575681993019
+      Golem_IdleB_13: -132566865840480492
+      Golem_IdleB_14: -5504513342195656730
+      Golem_IdleB_2: -4555073136800704462
+      Golem_IdleB_3: -7084781198462642732
+      Golem_IdleB_4: -2775983221327879372
+      Golem_IdleB_5: -3375463823133696157
+      Golem_IdleB_6: 2394547360736326957
+      Golem_IdleB_7: -4420041475401255997
+      Golem_IdleB_8: 3030944715728955575
+      Golem_IdleB_9: 2102397271786071128
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

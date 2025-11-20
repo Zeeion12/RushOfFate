@@ -180,6 +180,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -834,7 +847,36 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Canine_White_Full_0: -2131665451703039658
+      Canine_White_Full_1: -2927020195387478493
+      Canine_White_Full_10: 8059936620180176302
+      Canine_White_Full_11: -594808986493702105
+      Canine_White_Full_12: 7028804158090865582
+      Canine_White_Full_13: -5310655262952867706
+      Canine_White_Full_14: -921316447223842355
+      Canine_White_Full_15: 3565358829219266919
+      Canine_White_Full_16: -3665802828701928967
+      Canine_White_Full_17: -4874182659195952767
+      Canine_White_Full_18: -628688281239561520
+      Canine_White_Full_19: 6599464616121548525
+      Canine_White_Full_2: -6132685979954404713
+      Canine_White_Full_20: -7093823488444252930
+      Canine_White_Full_21: -8468590910442461139
+      Canine_White_Full_22: -3451244947619835906
+      Canine_White_Full_23: -8956757953152740956
+      Canine_White_Full_24: 5421476778402851785
+      Canine_White_Full_25: 4747255977855864962
+      Canine_White_Full_26: -487216455803288179
+      Canine_White_Full_27: 7544601965646606884
+      Canine_White_Full_28: -3904396062816006578
+      Canine_White_Full_3: -4397014052448595767
+      Canine_White_Full_4: 3980896820928867763
+      Canine_White_Full_5: 6861946118903355011
+      Canine_White_Full_6: -4889338011692863903
+      Canine_White_Full_7: -4841784606893246717
+      Canine_White_Full_8: -4670614517707204695
+      Canine_White_Full_9: -3974079897203307731
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

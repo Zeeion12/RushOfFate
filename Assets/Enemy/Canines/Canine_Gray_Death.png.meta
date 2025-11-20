@@ -117,6 +117,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -309,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Canine_Gray_Death_0: -8797443091481587947
+      Canine_Gray_Death_1: 3448565358376401505
+      Canine_Gray_Death_2: -3501003309072295763
+      Canine_Gray_Death_3: 1729981410822539000
+      Canine_Gray_Death_4: 6060582338397868238
+      Canine_Gray_Death_5: -8909225940405596061
+      Canine_Gray_Death_6: 5890366135492638866
+      Canine_Gray_Death_7: -4453087809841204764
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

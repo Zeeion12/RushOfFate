@@ -126,6 +126,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -384,7 +397,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Golem_Armor_Ability_0: 4517011205545875929
+      Golem_Armor_Ability_1: -3487011003072021407
+      Golem_Armor_Ability_10: 2091495657284362832
+      Golem_Armor_Ability_2: -3425926272032877201
+      Golem_Armor_Ability_3: 4371205819980733466
+      Golem_Armor_Ability_4: -7678252057889715739
+      Golem_Armor_Ability_5: -4013674119437697815
+      Golem_Armor_Ability_6: -8794290732113877774
+      Golem_Armor_Ability_7: -8207494022414964678
+      Golem_Armor_Ability_8: -6314165333206424457
+      Golem_Armor_Ability_9: 1434869215068839185
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

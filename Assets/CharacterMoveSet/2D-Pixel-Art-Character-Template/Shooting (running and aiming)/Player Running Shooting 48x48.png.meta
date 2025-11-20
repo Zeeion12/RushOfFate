@@ -117,6 +117,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -309,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Player Running Shooting 48x48_0: -1241646895883879106
+      Player Running Shooting 48x48_1: 3765430924459589042
+      Player Running Shooting 48x48_2: 1992299957624337141
+      Player Running Shooting 48x48_3: -1228086243482997044
+      Player Running Shooting 48x48_4: 4099823821486938314
+      Player Running Shooting 48x48_5: 9164926223592432122
+      Player Running Shooting 48x48_6: 2744883451254833829
+      Player Running Shooting 48x48_7: 2469745989172213264
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

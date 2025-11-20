@@ -180,6 +180,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -834,7 +847,36 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Canine_Brown_Full_FX_0: 8040747148234518904
+      Canine_Brown_Full_FX_1: 4899847529740399600
+      Canine_Brown_Full_FX_10: 1616976801211937239
+      Canine_Brown_Full_FX_11: -3760978788833097517
+      Canine_Brown_Full_FX_12: 6765457978435296338
+      Canine_Brown_Full_FX_13: 4971451072773368054
+      Canine_Brown_Full_FX_14: 1566509719442092407
+      Canine_Brown_Full_FX_15: -8368854509294286122
+      Canine_Brown_Full_FX_16: -1041270081809373784
+      Canine_Brown_Full_FX_17: 77356454520730779
+      Canine_Brown_Full_FX_18: -2267475554532381399
+      Canine_Brown_Full_FX_19: 2041569674653725392
+      Canine_Brown_Full_FX_2: 224552275410700114
+      Canine_Brown_Full_FX_20: -1556397355196976835
+      Canine_Brown_Full_FX_21: -6615231025767146547
+      Canine_Brown_Full_FX_22: 4492339226723623152
+      Canine_Brown_Full_FX_23: -2897199534659977094
+      Canine_Brown_Full_FX_24: -4751209418532021250
+      Canine_Brown_Full_FX_25: -6934057170276903486
+      Canine_Brown_Full_FX_26: 1574335044526422535
+      Canine_Brown_Full_FX_27: -833130047588315161
+      Canine_Brown_Full_FX_28: 1578658199355543275
+      Canine_Brown_Full_FX_3: -2845124575686378595
+      Canine_Brown_Full_FX_4: -1544470022450245001
+      Canine_Brown_Full_FX_5: 8216927380070589245
+      Canine_Brown_Full_FX_6: 5480463213025321561
+      Canine_Brown_Full_FX_7: 3115839674304496117
+      Canine_Brown_Full_FX_8: -8322483788908023771
+      Canine_Brown_Full_FX_9: 2285099285824947003
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

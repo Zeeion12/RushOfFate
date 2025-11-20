@@ -117,6 +117,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -309,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Slime_Spiked_Jump_0: -1641798918562053417
+      Slime_Spiked_Jump_1: 3159627358990428927
+      Slime_Spiked_Jump_2: -441737706056035698
+      Slime_Spiked_Jump_3: 640027358729759804
+      Slime_Spiked_Jump_4: 2442125793583260075
+      Slime_Spiked_Jump_5: -1361301236401281588
+      Slime_Spiked_Jump_6: -6044705316452280752
+      Slime_Spiked_Jump_7: -3939340846533709606
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

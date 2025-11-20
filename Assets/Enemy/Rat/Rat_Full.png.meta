@@ -198,6 +198,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -984,7 +997,42 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Rat_Full_0: 6676898260982075175
+      Rat_Full_1: 8740521016902485778
+      Rat_Full_10: 6839862356065243671
+      Rat_Full_11: 4702756504252745901
+      Rat_Full_12: -3872912845412757569
+      Rat_Full_13: 6713208065130242447
+      Rat_Full_14: -2795424138401713029
+      Rat_Full_15: 6218410598175725613
+      Rat_Full_16: -5494837735639858693
+      Rat_Full_17: 7074888741435597516
+      Rat_Full_18: 4690372491960354305
+      Rat_Full_19: -6643357069041942265
+      Rat_Full_2: 7776116432535655076
+      Rat_Full_20: 3161641945087733561
+      Rat_Full_21: 2953830246469470119
+      Rat_Full_22: 1559117337950007502
+      Rat_Full_23: 5016900347814018860
+      Rat_Full_24: -6475621214121945663
+      Rat_Full_25: -9167734127821399793
+      Rat_Full_26: 6887398191063422820
+      Rat_Full_27: -639335451375876639
+      Rat_Full_28: 2955414743291545382
+      Rat_Full_29: -1746841173272797613
+      Rat_Full_3: 4207764423510464377
+      Rat_Full_30: -7935719333096229225
+      Rat_Full_31: -8957443607307245132
+      Rat_Full_32: -4726180139563358895
+      Rat_Full_33: 5853150069508099494
+      Rat_Full_34: -762526838066787447
+      Rat_Full_4: -8349601959463483073
+      Rat_Full_5: -2798422272619205636
+      Rat_Full_6: -5446201000231871205
+      Rat_Full_7: 9090715371951146930
+      Rat_Full_8: 1838894273460373189
+      Rat_Full_9: -6536590013300789702
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
