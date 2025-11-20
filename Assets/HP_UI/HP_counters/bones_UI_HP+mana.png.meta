@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bones_UI_HP+mana_0: 6010070679399828082
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

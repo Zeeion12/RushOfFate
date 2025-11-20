@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Golem_Armor_ArmorBreak_0: 5990791301009300691
+      Golem_Armor_ArmorBreak_1: 5220387232015998753
+      Golem_Armor_ArmorBreak_2: -7368641352971263272
+      Golem_Armor_ArmorBreak_3: -7791225066264170037
+      Golem_Armor_ArmorBreak_4: -1869360633689833403
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

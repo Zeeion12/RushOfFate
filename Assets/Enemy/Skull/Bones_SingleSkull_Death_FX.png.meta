@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bones_SingleSkull_Death_FX_0: 7171675841561057577
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

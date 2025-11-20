@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      emerald_counter-Sheet_0: -6751640822072322173
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

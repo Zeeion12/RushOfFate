@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pebble_Hit_0: 3616641007533208252
+      Pebble_Hit_1: -708143198734582480
+      Pebble_Hit_2: -8571702218229297731
+      Pebble_Hit_3: -7424311634706903468
+      Pebble_Hit_4: -2512097640483545141
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

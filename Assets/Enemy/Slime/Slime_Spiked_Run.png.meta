@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Slime_Spiked_Run_0: -6897147555146677718
+      Slime_Spiked_Run_1: 2633298041438041989
+      Slime_Spiked_Run_2: 7040088401794588845
+      Slime_Spiked_Run_3: 3323162497288181714
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

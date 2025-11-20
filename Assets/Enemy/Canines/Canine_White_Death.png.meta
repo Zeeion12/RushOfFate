@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Canine_White_Death_0: -516983389024746453
+      Canine_White_Death_1: 2870546600709373156
+      Canine_White_Death_2: -5106413856542558223
+      Canine_White_Death_3: 8972018911914358086
+      Canine_White_Death_4: 3124894493858665777
+      Canine_White_Death_5: 4150516341579082552
+      Canine_White_Death_6: -3024080684122339982
+      Canine_White_Death_7: -980813920080529792
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

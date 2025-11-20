@@ -409,7 +409,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Golem_Reset_0: 352026425547110693
+      Golem_Reset_1: -6432853110025655510
+      Golem_Reset_10: -1697461553149694509
+      Golem_Reset_11: 4688110772075909353
+      Golem_Reset_2: 1906208750689863775
+      Golem_Reset_3: 1730685737920930698
+      Golem_Reset_4: -5248385177865099482
+      Golem_Reset_5: 2223798638489283974
+      Golem_Reset_6: 7964446280403650847
+      Golem_Reset_7: 5799406193834149098
+      Golem_Reset_8: -6128764294392143777
+      Golem_Reset_9: 173063460649061427
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

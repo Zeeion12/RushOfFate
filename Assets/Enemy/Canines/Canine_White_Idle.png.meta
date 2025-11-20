@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Canine_White_Idle_0: 1464327008863891724
+      Canine_White_Idle_1: 6534255637790396628
+      Canine_White_Idle_2: 5545878796528738116
+      Canine_White_Idle_3: -9076553064686085722
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

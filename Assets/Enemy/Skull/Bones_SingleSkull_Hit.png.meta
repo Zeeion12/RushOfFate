@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bones_SingleSkull_Hit_0: 8378356175859037722
+      Bones_SingleSkull_Hit_1: -8113372621299409273
+      Bones_SingleSkull_Hit_2: 2785621471707589009
+      Bones_SingleSkull_Hit_3: 4823759084339969249
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

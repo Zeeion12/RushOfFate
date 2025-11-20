@@ -509,7 +509,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      selector_animation-Sheet_0: 1186399548194215531
+      selector_animation-Sheet_1: -8952009728704570616
+      selector_animation-Sheet_10: -783137749169428754
+      selector_animation-Sheet_11: -2496926273829937294
+      selector_animation-Sheet_12: -478514762632626855
+      selector_animation-Sheet_13: 5580430840637938504
+      selector_animation-Sheet_14: 7420456851252137306
+      selector_animation-Sheet_15: -5168159946814357032
+      selector_animation-Sheet_2: -3517512489551251597
+      selector_animation-Sheet_3: 1478797837672598246
+      selector_animation-Sheet_4: -4075954004528841236
+      selector_animation-Sheet_5: 7244630957885760461
+      selector_animation-Sheet_6: -5113104009765079874
+      selector_animation-Sheet_7: -4396536520842584759
+      selector_animation-Sheet_8: 5962190826357681273
+      selector_animation-Sheet_9: -260830188224897611
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

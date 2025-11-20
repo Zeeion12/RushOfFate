@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Golem_Armor_AttackB_FX_0: -4618726569510283316
+      Golem_Armor_AttackB_FX_1: -7439810193119348501
+      Golem_Armor_AttackB_FX_2: -8008843630271164512
+      Golem_Armor_AttackB_FX_3: -5384549244642414795
+      Golem_Armor_AttackB_FX_4: 3130870251153241696
+      Golem_Armor_AttackB_FX_5: -11857927107015632
+      Golem_Armor_AttackB_FX_6: -4254220641152582131
+      Golem_Armor_AttackB_FX_7: -8133797023007555542
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

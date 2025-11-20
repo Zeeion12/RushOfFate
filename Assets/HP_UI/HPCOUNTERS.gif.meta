@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HPCOUNTERS_0: 7553596466622111888
+      HPCOUNTERS_1: -6175261496692817625
+      HPCOUNTERS_2: -8601919742620589858
+      HPCOUNTERS_3: 9216621265225404097
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

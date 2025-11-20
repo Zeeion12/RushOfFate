@@ -884,7 +884,38 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      heart_counter-Sheet_0: -4426682444605624865
+      heart_counter-Sheet_1: -5536658556051927292
+      heart_counter-Sheet_10: -6006323302236414692
+      heart_counter-Sheet_11: -1084796528347615594
+      heart_counter-Sheet_12: -3860257381130910126
+      heart_counter-Sheet_13: -7011328319068360992
+      heart_counter-Sheet_14: -655579703478460567
+      heart_counter-Sheet_15: 1214892179953650446
+      heart_counter-Sheet_16: 6557774756693893066
+      heart_counter-Sheet_17: 3214279572235678559
+      heart_counter-Sheet_18: -3638537878647505988
+      heart_counter-Sheet_19: 7916927037724602453
+      heart_counter-Sheet_2: -6723046731458720053
+      heart_counter-Sheet_20: -4295549773684995459
+      heart_counter-Sheet_21: -1849484644451351361
+      heart_counter-Sheet_22: 2738926029275371721
+      heart_counter-Sheet_23: -5630736273673891817
+      heart_counter-Sheet_24: -2306348318914185287
+      heart_counter-Sheet_25: -2022800648529310965
+      heart_counter-Sheet_26: -29875528124084424
+      heart_counter-Sheet_27: 619598589115204310
+      heart_counter-Sheet_28: -30012155745590591
+      heart_counter-Sheet_29: -3142627654275673360
+      heart_counter-Sheet_3: 841722451882217464
+      heart_counter-Sheet_30: -2077818504833863914
+      heart_counter-Sheet_4: -1754951633449237228
+      heart_counter-Sheet_5: 6955716358934570279
+      heart_counter-Sheet_6: 8140600833696832599
+      heart_counter-Sheet_7: 4047654678713357496
+      heart_counter-Sheet_8: 7692532376127300705
+      heart_counter-Sheet_9: 2542209835942499983
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

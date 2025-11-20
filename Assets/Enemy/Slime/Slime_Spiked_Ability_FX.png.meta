@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Slime_Spiked_Ability_FX_0: -1459999167980900649
+      Slime_Spiked_Ability_FX_1: -7537808435016613266
+      Slime_Spiked_Ability_FX_2: -1563438550615148534
+      Slime_Spiked_Ability_FX_3: 4581894845277391115
+      Slime_Spiked_Ability_FX_4: -9063615357480146861
+      Slime_Spiked_Ability_FX_5: 2074990256250243228
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

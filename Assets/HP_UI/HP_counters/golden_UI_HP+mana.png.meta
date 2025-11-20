@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      golden_UI_HP+mana_0: -2079779751640032370
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

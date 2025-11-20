@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Canine_Gray_Run_0: -1885817510584220666
+      Canine_Gray_Run_1: 8012885163016650406
+      Canine_Gray_Run_2: 6921958235144957426
+      Canine_Gray_Run_3: 8885285752080481978
+      Canine_Gray_Run_4: 6043633365910044775
+      Canine_Gray_Run_5: 8217322127270338424
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

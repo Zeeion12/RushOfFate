@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Canine_Black_Attack_0: 1581296986342731018
+      Canine_Black_Attack_1: -2751319987595852780
+      Canine_Black_Attack_2: -5825201665037384890
+      Canine_Black_Attack_3: -2654988323386430698
+      Canine_Black_Attack_4: 6897561481303061180
+      Canine_Black_Attack_5: 5648263212881212058
+      Canine_Black_Attack_6: -8785001194796006324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

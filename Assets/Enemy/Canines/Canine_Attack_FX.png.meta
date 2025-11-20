@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Canine_Attack_FX_0: 7974898811821720588
+      Canine_Attack_FX_1: -8003339985506722388
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

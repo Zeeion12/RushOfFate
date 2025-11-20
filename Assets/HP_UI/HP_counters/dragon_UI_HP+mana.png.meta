@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dragon_UI_HP+mana_0: 6444535614709608936
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
