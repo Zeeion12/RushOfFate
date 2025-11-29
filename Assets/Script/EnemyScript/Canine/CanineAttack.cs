@@ -21,6 +21,7 @@ public class CanineAttack : MonoBehaviour
     private float lastAttackTime = -999f;
     private bool isAttacking = false;
     private Transform player;
+    private PlayerMovement playerMovement; // NEW: untuk check invincibility
 
     void Start()
     {
@@ -32,6 +33,7 @@ public class CanineAttack : MonoBehaviour
         if (playerObj != null)
         {
             player = playerObj.transform;
+            playerMovement = playerObj.GetComponent<PlayerMovement>(); // NEW: get PlayerMovement
         }
     }
 
@@ -83,9 +85,16 @@ public class CanineAttack : MonoBehaviour
 
         foreach (Collider2D hit in hits)
         {
+            // NEW: Check invincibility sebelum deal damage
+            if (playerMovement != null && playerMovement.IsInvincible())
+            {
+                Debug.Log($"Enemy attack blocked - Player is invincible (rolling)!");
+                continue; // Skip damage jika player invincible
+            }
+
             Debug.Log($"Enemy hit player: {hit.name}");
 
-            // Nanti bisa tambah damage ke player:
+            // TODO: Nanti bisa tambah damage ke player ketika PlayerHealth sudah dibuat:
             // PlayerHealth playerHealth = hit.GetComponent<PlayerHealth>();
             // if (playerHealth != null)
             // {

@@ -58,7 +58,13 @@ public class PlayerAttack : MonoBehaviour
 
     private bool CanAttack()
     {
-        return !isAttacking && Time.time >= lastAttackTime + attackCooldown;
+        // Tidak bisa attack jika:
+        // - Sedang attack
+        // - Masih dalam cooldown
+        // - Sedang rolling (NEW!)
+        return !isAttacking
+            && Time.time >= lastAttackTime + attackCooldown
+            && !movementScript.IsRolling(); // Check rolling state
     }
 
     private void PerformAttack()
