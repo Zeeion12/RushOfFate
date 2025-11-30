@@ -114,6 +114,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -284,7 +297,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Shooter_Arrow_Trap_0: 5664317421379508311
+      Shooter_Arrow_Trap_1: 2664446938899218892
+      Shooter_Arrow_Trap_2: -3242719409127367225
+      Shooter_Arrow_Trap_3: 8452858929953208293
+      Shooter_Arrow_Trap_4: 9024367733721590576
+      Shooter_Arrow_Trap_5: 3996180061049761737
+      Shooter_Arrow_Trap_6: 2426697223069408470
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

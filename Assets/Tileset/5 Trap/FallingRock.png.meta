@@ -171,6 +171,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -759,7 +772,33 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FallingRock_0: 907180060966303384
+      FallingRock_1: 1938065099256695685
+      FallingRock_10: -8749196052890801633
+      FallingRock_11: 5625810834269972682
+      FallingRock_12: -2517504933169226206
+      FallingRock_13: 8413458066306071821
+      FallingRock_14: 4398875220213095256
+      FallingRock_15: -5037869754275854489
+      FallingRock_16: -2280108581845188360
+      FallingRock_17: 1487220763618208452
+      FallingRock_18: 7650302825621376026
+      FallingRock_19: -3092924229579361780
+      FallingRock_2: -7603387257893191898
+      FallingRock_20: 8634713523915023659
+      FallingRock_21: -3356778392608840846
+      FallingRock_22: -1558603271273093851
+      FallingRock_23: -536891639544565973
+      FallingRock_24: 2555901603141562928
+      FallingRock_25: 1769210429780715863
+      FallingRock_3: 874010686499319050
+      FallingRock_4: 2778358696420113119
+      FallingRock_5: -5723676831871702989
+      FallingRock_6: 4131660796094684121
+      FallingRock_7: 1299816117422231029
+      FallingRock_8: -294977577628213394
+      FallingRock_9: 7248077085973353854
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
