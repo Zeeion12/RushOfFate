@@ -1082,7 +1082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeManager: {fileID: 131032324}
-  gameSceneName: Stage1
+  gameSceneName: TutorialStage
 --- !u!1 &1066790158
 GameObject:
   m_ObjectHideFlags: 0
