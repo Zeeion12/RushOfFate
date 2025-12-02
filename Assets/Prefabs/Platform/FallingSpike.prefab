@@ -182,4 +182,5 @@ MonoBehaviour:
   detectionSize: {x: 1, y: 3}
   shakeTime: 0.5
   fallGravity: 3
+  fallDistance: 20
   respawnDelay: 1
