@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveInput;
     private bool isGrounded;
     private bool canMove = true; // Untuk disable movement saat attack
-    
+
     // Roll state
     private bool isRolling = false;
     private bool isInvincible = false;
@@ -37,12 +37,18 @@ public class PlayerMovement : MonoBehaviour
     private float rollTimer = 0f;
     private Vector2 rollDirection;
 
+    private PlayerMana manaScript;
+
+    [Header("Mana Cost")]
+    [SerializeField] private int rollManaCost = 2; // Cost untuk roll
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         playerCollider = GetComponent<Collider2D>();
+        manaScript = GetComponent<PlayerMana>();
     }
 
     private void OnEnable()
@@ -74,13 +80,13 @@ public class PlayerMovement : MonoBehaviour
         if (isRolling)
         {
             rollTimer += Time.deltaTime;
-            
+
             // Roll selesai setelah durasi habis
             if (rollTimer >= rollDuration)
             {
                 EndRoll();
             }
-            
+
             // Lakukan roll movement
             PerformRollMovement();
             return; // Skip normal movement saat rolling
@@ -122,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Tentukan arah roll berdasarkan input movement
         Vector2 inputDirection = moveAction.action.ReadValue<Vector2>();
-        
+
         // Jika tidak ada input, roll ke arah facing
         if (inputDirection.magnitude < 0.1f)
         {
@@ -133,7 +139,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // Roll ke arah input (normalized agar konsisten)
             rollDirection = new Vector2(inputDirection.x, 0f).normalized;
-            
+
             // Update facing direction sebelum roll
             if (rollDirection.x != 0)
                 spriteRenderer.flipX = rollDirection.x < 0;
@@ -144,20 +150,30 @@ public class PlayerMovement : MonoBehaviour
 
     private bool CanRoll()
     {
-        // Tidak bisa roll jika:
-        // - Sudah dalam state rolling
-        // - Masih dalam cooldown
-        // - Tidak bisa move (sedang attack)
-        // - Tidak grounded (opsional, bisa dihapus jika mau aerial roll)
-        
-        return !isRolling 
-            && Time.time >= lastRollTime + rollCooldown 
+        // Check mana (PRIORITY) sebelum cooldown
+        if (manaScript != null && !manaScript.HasEnoughMana(rollManaCost))
+        {
+            Debug.Log("Not enough mana to roll!");
+            return false;
+        }
+
+        return !isRolling
+            && Time.time >= lastRollTime + rollCooldown
             && canMove
-            && isGrounded; // Comment baris ini jika mau bisa roll di udara
+            && isGrounded;
     }
 
     private void StartRoll()
     {
+        // Consume mana
+        if (manaScript != null)
+        {
+            if (!manaScript.ConsumeMana(rollManaCost))
+            {
+                return; // Gagal consume, cancel roll
+            }
+        }
+
         isRolling = true;
         isInvincible = true;
         rollTimer = 0f;
@@ -172,7 +188,7 @@ public class PlayerMovement : MonoBehaviour
         // Start invincibility coroutine
         StartCoroutine(InvincibilityCoroutine());
 
-        Debug.Log("Roll started!");
+        Debug.Log("Roll started! Mana consumed.");
     }
 
     private void PerformRollMovement()
