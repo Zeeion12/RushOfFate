@@ -319,7 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   invincibilityDuration: 1
-  deathDelay: 2
+  deathDelay: 0.5
   OnHealthChanged:
     m_PersistentCalls:
       m_Calls: []
