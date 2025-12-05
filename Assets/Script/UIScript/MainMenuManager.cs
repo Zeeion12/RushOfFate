@@ -7,7 +7,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private FadeManager fadeManager;
 
     [Header("Scene Names")]
-    [SerializeField] private string gameSceneName = "Stage1"; // SESUAIKAN dengan nama scene game Anda!
+    [SerializeField] private string gameSceneName = "LevelSelection"; // SESUAIKAN dengan nama scene game Anda!
 
     /// <summary>
     /// Dipanggil saat tombol PLAY diklik
