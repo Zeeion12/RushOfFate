@@ -318,6 +318,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1984,7 +1997,82 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_TravelBook_Spritesheet01a_0: 7539424304134783339
+      UI_TravelBook_Spritesheet01a_1: 4150665234673531639
+      UI_TravelBook_Spritesheet01a_10: 7865523996264792280
+      UI_TravelBook_Spritesheet01a_11: -4619880126864781636
+      UI_TravelBook_Spritesheet01a_12: -508462562002355856
+      UI_TravelBook_Spritesheet01a_13: -7124878379744812474
+      UI_TravelBook_Spritesheet01a_14: 2517015423062362495
+      UI_TravelBook_Spritesheet01a_15: -1538924207365483094
+      UI_TravelBook_Spritesheet01a_16: -8927712937928965206
+      UI_TravelBook_Spritesheet01a_17: 8961885810816780196
+      UI_TravelBook_Spritesheet01a_18: 3686068349031228001
+      UI_TravelBook_Spritesheet01a_19: 6798930227321133449
+      UI_TravelBook_Spritesheet01a_2: -126353843763244710
+      UI_TravelBook_Spritesheet01a_20: -8904598040045139097
+      UI_TravelBook_Spritesheet01a_21: 4854568361140695812
+      UI_TravelBook_Spritesheet01a_22: -7535184221933914226
+      UI_TravelBook_Spritesheet01a_23: -900258028400401785
+      UI_TravelBook_Spritesheet01a_24: 663772796875208936
+      UI_TravelBook_Spritesheet01a_25: 7540316776518615979
+      UI_TravelBook_Spritesheet01a_26: -2450797642273577151
+      UI_TravelBook_Spritesheet01a_27: -559953289203687358
+      UI_TravelBook_Spritesheet01a_28: -310748307242965697
+      UI_TravelBook_Spritesheet01a_29: -2628221866278006828
+      UI_TravelBook_Spritesheet01a_3: -5856476380469231110
+      UI_TravelBook_Spritesheet01a_30: -6417201795709419569
+      UI_TravelBook_Spritesheet01a_31: -2012560496005935082
+      UI_TravelBook_Spritesheet01a_32: -8427871896875772859
+      UI_TravelBook_Spritesheet01a_33: 3292041203013639105
+      UI_TravelBook_Spritesheet01a_34: 7846540674408812014
+      UI_TravelBook_Spritesheet01a_35: 8655864639169435233
+      UI_TravelBook_Spritesheet01a_36: 636783886337725083
+      UI_TravelBook_Spritesheet01a_37: 1946849279506653374
+      UI_TravelBook_Spritesheet01a_38: -178001011037730466
+      UI_TravelBook_Spritesheet01a_39: 8665829302185102355
+      UI_TravelBook_Spritesheet01a_4: -5758975289079548878
+      UI_TravelBook_Spritesheet01a_40: -6981309007942008498
+      UI_TravelBook_Spritesheet01a_41: 8735866871549994840
+      UI_TravelBook_Spritesheet01a_42: 1387841923594178387
+      UI_TravelBook_Spritesheet01a_43: 3200453872424836725
+      UI_TravelBook_Spritesheet01a_44: -3427412147364447907
+      UI_TravelBook_Spritesheet01a_45: 5555489575514953763
+      UI_TravelBook_Spritesheet01a_46: 2941297270816694203
+      UI_TravelBook_Spritesheet01a_47: 7689457923892755042
+      UI_TravelBook_Spritesheet01a_48: 3801973232507039663
+      UI_TravelBook_Spritesheet01a_49: -2351535736004527370
+      UI_TravelBook_Spritesheet01a_5: -6528598702870552773
+      UI_TravelBook_Spritesheet01a_50: 5560987426034425193
+      UI_TravelBook_Spritesheet01a_51: -1736326198179598209
+      UI_TravelBook_Spritesheet01a_52: 1589412219821938677
+      UI_TravelBook_Spritesheet01a_53: 2084799184541426245
+      UI_TravelBook_Spritesheet01a_54: -1329816012373038836
+      UI_TravelBook_Spritesheet01a_55: 566714083096784761
+      UI_TravelBook_Spritesheet01a_56: -5056792737324953339
+      UI_TravelBook_Spritesheet01a_57: 6038305202747589182
+      UI_TravelBook_Spritesheet01a_58: -1627041802797236528
+      UI_TravelBook_Spritesheet01a_59: 5240521728687677876
+      UI_TravelBook_Spritesheet01a_6: 8967021286587414309
+      UI_TravelBook_Spritesheet01a_60: 6196750405309527164
+      UI_TravelBook_Spritesheet01a_61: -7878360752296952018
+      UI_TravelBook_Spritesheet01a_62: 3291754229741735326
+      UI_TravelBook_Spritesheet01a_63: 3211995004112590615
+      UI_TravelBook_Spritesheet01a_64: -1980072303316650840
+      UI_TravelBook_Spritesheet01a_65: 2101771568030340579
+      UI_TravelBook_Spritesheet01a_66: 5006757688201886247
+      UI_TravelBook_Spritesheet01a_67: 3204836964241067168
+      UI_TravelBook_Spritesheet01a_68: -6649469198064994334
+      UI_TravelBook_Spritesheet01a_69: 8744670044684464149
+      UI_TravelBook_Spritesheet01a_7: -8164821773615996169
+      UI_TravelBook_Spritesheet01a_70: -4589630204043726120
+      UI_TravelBook_Spritesheet01a_71: 7056472119307296241
+      UI_TravelBook_Spritesheet01a_72: 440659322342832948
+      UI_TravelBook_Spritesheet01a_73: 860274235407915612
+      UI_TravelBook_Spritesheet01a_74: -1678856124046620459
+      UI_TravelBook_Spritesheet01a_8: 7260228440296810101
+      UI_TravelBook_Spritesheet01a_9: -8858865788211059562
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
