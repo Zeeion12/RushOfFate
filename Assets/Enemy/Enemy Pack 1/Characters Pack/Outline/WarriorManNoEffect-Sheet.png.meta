@@ -759,7 +759,33 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WarriorManNoEffect-Sheet_0: 6114548867454884810
+      WarriorManNoEffect-Sheet_1: -8396251675428113050
+      WarriorManNoEffect-Sheet_10: -2420207343338727426
+      WarriorManNoEffect-Sheet_11: 7516501567687369083
+      WarriorManNoEffect-Sheet_12: 4196159744086903136
+      WarriorManNoEffect-Sheet_13: -2548316998085617840
+      WarriorManNoEffect-Sheet_14: 554138778566105630
+      WarriorManNoEffect-Sheet_15: -7971321319670368752
+      WarriorManNoEffect-Sheet_16: -8473279577733708703
+      WarriorManNoEffect-Sheet_17: -1164802005793594506
+      WarriorManNoEffect-Sheet_18: 9022881582655724851
+      WarriorManNoEffect-Sheet_19: -3263942456152916485
+      WarriorManNoEffect-Sheet_2: 5030820563935172915
+      WarriorManNoEffect-Sheet_20: -2982182218608614813
+      WarriorManNoEffect-Sheet_21: 2861659965714323839
+      WarriorManNoEffect-Sheet_22: -8820910305535904000
+      WarriorManNoEffect-Sheet_23: 4160741373525923795
+      WarriorManNoEffect-Sheet_24: -8702167924756704010
+      WarriorManNoEffect-Sheet_25: 2096646558034432492
+      WarriorManNoEffect-Sheet_3: -2477507765354407289
+      WarriorManNoEffect-Sheet_4: 4215938271665883884
+      WarriorManNoEffect-Sheet_5: 7020227976554784112
+      WarriorManNoEffect-Sheet_6: -2389581107171626851
+      WarriorManNoEffect-Sheet_7: -8444149350499100657
+      WarriorManNoEffect-Sheet_8: 593525611807757642
+      WarriorManNoEffect-Sheet_9: 5656432791020527439
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

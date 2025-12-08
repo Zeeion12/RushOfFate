@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Villager Hurt 48x48_0: -7304118206662432004
+      Villager Hurt 48x48_1: 386512508594804901
+      Villager Hurt 48x48_2: -7351567682079796641
+      Villager Hurt 48x48_3: -4090119112989606878
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

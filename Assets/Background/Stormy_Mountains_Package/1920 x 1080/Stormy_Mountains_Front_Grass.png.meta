@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Stormy_Mountains_Front_Grass_0: -4033344158073982669
+      Stormy_Mountains_Front_Grass_1: 3605525260751683659
+      Stormy_Mountains_Front_Grass_2: 8597592448312815709
+      Stormy_Mountains_Front_Grass_3: -1644906356000439392
+      Stormy_Mountains_Front_Grass_4: 5935677527012350381
+      Stormy_Mountains_Front_Grass_5: -6880216532142769107
+      Stormy_Mountains_Front_Grass_6: -2592934094410573280
+      Stormy_Mountains_Front_Grass_7: 8253548672172284250
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

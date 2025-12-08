@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect HP MP-Sheet_0: -667615449846056398
+      Effect HP MP-Sheet_1: -5361124487055518360
+      Effect HP MP-Sheet_2: 6357526347589561730
+      Effect HP MP-Sheet_3: -6534043466042496046
+      Effect HP MP-Sheet_4: 2501835991383110528
+      Effect HP MP-Sheet_5: 3784284922301139822
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

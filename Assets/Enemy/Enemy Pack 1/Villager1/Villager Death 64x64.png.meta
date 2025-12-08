@@ -434,7 +434,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Villager Death 64x64_0: -1684413467923647960
+      Villager Death 64x64_1: 1935068499257910022
+      Villager Death 64x64_10: -8714670973897698944
+      Villager Death 64x64_11: -2738958561326588213
+      Villager Death 64x64_12: -7192552867144691892
+      Villager Death 64x64_2: -4319483822958682591
+      Villager Death 64x64_3: 4036616325440024581
+      Villager Death 64x64_4: 7635363594747366070
+      Villager Death 64x64_5: 3682022535860474143
+      Villager Death 64x64_6: 310107954646195920
+      Villager Death 64x64_7: 8509308800697903892
+      Villager Death 64x64_8: 8039018116822037457
+      Villager Death 64x64_9: 6909324257726969018
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Stormy_Mountains_2560x1440_0: 6182470853558147137
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

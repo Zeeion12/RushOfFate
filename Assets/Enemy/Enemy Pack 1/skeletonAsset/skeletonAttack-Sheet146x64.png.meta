@@ -684,7 +684,30 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeletonAttack-Sheet146x64_0: -8121881711402236030
+      skeletonAttack-Sheet146x64_1: 4210736784113581055
+      skeletonAttack-Sheet146x64_10: 5712357284922737976
+      skeletonAttack-Sheet146x64_11: -2491538936798461352
+      skeletonAttack-Sheet146x64_12: -7153621530311465759
+      skeletonAttack-Sheet146x64_13: 8650967217586437205
+      skeletonAttack-Sheet146x64_14: -8974570630357503744
+      skeletonAttack-Sheet146x64_15: -8179264614178896256
+      skeletonAttack-Sheet146x64_16: -3469356291515088112
+      skeletonAttack-Sheet146x64_17: -3560770043499807889
+      skeletonAttack-Sheet146x64_18: 3682916012954001810
+      skeletonAttack-Sheet146x64_19: -6574421363621200805
+      skeletonAttack-Sheet146x64_2: -3775770922969598469
+      skeletonAttack-Sheet146x64_20: 2191911544130601354
+      skeletonAttack-Sheet146x64_21: -7566542586387761585
+      skeletonAttack-Sheet146x64_22: -7263575956443104276
+      skeletonAttack-Sheet146x64_3: 3490334897210465162
+      skeletonAttack-Sheet146x64_4: 5665104097739316286
+      skeletonAttack-Sheet146x64_5: 4670277192392567413
+      skeletonAttack-Sheet146x64_6: -4635604045894075783
+      skeletonAttack-Sheet146x64_7: 6051259599055485108
+      skeletonAttack-Sheet146x64_8: -9070496792345663286
+      skeletonAttack-Sheet146x64_9: 6912796647677589302
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

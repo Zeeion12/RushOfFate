@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeletonDie-Sheet32x32_head_0: 2813456713229823351
+      skeletonDie-Sheet32x32_head_1: 4952210382973701373
+      skeletonDie-Sheet32x32_head_2: -883183523521125294
+      skeletonDie-Sheet32x32_head_3: -7103388301723627116
+      skeletonDie-Sheet32x32_head_4: -4485419763969877290
+      skeletonDie-Sheet32x32_head_5: -7501990124482461668
+      skeletonDie-Sheet32x32_head_6: -2999811974114981458
+      skeletonDie-Sheet32x32_head_7: 8634383345986650279
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

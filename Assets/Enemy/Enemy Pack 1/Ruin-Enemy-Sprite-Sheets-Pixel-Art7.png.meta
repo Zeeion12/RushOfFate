@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ruin-Enemy-Sprite-Sheets-Pixel-Art7_0: 664909783490862426
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
