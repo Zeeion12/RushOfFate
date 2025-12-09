@@ -285,6 +285,7 @@ MonoBehaviour:
   maxHealth: 6
   invincibilityDuration: 0.2
   knockbackForce: 3
+  knockbackDuration: 0.2
 --- !u!114 &5809227619126836827
 MonoBehaviour:
   m_ObjectHideFlags: 0

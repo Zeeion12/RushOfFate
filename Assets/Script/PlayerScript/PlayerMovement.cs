@@ -5,16 +5,25 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 6f;
-    public float jumpForce = 12f;
     public Transform groundCheck;
     public float groundCheckRadius = 0.12f;
-    public LayerMask groundLayer;
+    // ❌ REMOVED: public LayerMask groundLayer;
+
+    [Header("Jump Settings")]
+    public float firstJumpForce = 12f;
+    public float secondJumpForce = 10f;
+    private int jumpCount = 0;
+    private const int maxJumps = 2;
+    private bool wasGrounded;
 
     [Header("Roll Settings")]
     public float rollSpeed = 10f;
     public float rollDuration = 0.5f;
     public float rollCooldown = 1f;
     public float invincibilityDuration = 0.5f;
+
+    [Header("Mana Cost")]
+    [SerializeField] private int rollManaCost = 2;
 
     [Header("Input Actions")]
     public InputActionReference moveAction;
@@ -28,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 moveInput;
     private bool isGrounded;
-    private bool canMove = true; // Untuk disable movement saat attack
+    private bool canMove = true;
 
     // Roll state
     private bool isRolling = false;
@@ -38,9 +47,6 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 rollDirection;
 
     private PlayerMana manaScript;
-
-    [Header("Mana Cost")]
-    [SerializeField] private int rollManaCost = 2; // Cost untuk roll
 
     private void Awake()
     {
@@ -73,37 +79,42 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        // Cek grounded
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        // ✅ NEW: Tag-based ground check
+        wasGrounded = isGrounded;
+        isGrounded = CheckGroundWithTag();
+
+        // Reset jump count saat landing
+        if (isGrounded && !wasGrounded)
+        {
+            jumpCount = 0;
+            Debug.Log("✅ LANDED! Jump count reset.");
+        }
 
         // Handle roll timer
         if (isRolling)
         {
             rollTimer += Time.deltaTime;
 
-            // Roll selesai setelah durasi habis
             if (rollTimer >= rollDuration)
             {
                 EndRoll();
             }
 
-            // Lakukan roll movement
             PerformRollMovement();
-            return; // Skip normal movement saat rolling
+            return;
         }
 
-        // Gerakan horizontal (hanya kalau bisa gerak dan tidak rolling)
+        // Gerakan horizontal
         if (canMove && !isRolling)
         {
             moveInput = moveAction.action.ReadValue<Vector2>();
             rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
 
-            // Flip sprite berdasarkan arah gerak
             if (moveInput.x != 0)
                 spriteRenderer.flipX = moveInput.x < 0;
         }
 
-        // Update parameter animasi (hanya jika tidak rolling)
+        // Update animasi
         if (!isRolling)
         {
             animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
@@ -111,36 +122,60 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // ✅ NEW: Ground check pakai Tag "Ground"
+    private bool CheckGroundWithTag()
+    {
+        // Cek semua collider dalam radius
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(groundCheck.position, groundCheckRadius);
+
+        // Loop semua collider yang terdeteksi
+        foreach (Collider2D hitCollider in hitColliders)
+        {
+            // Cek apakah punya tag "Ground"
+            if (hitCollider.CompareTag("Ground"))
+            {
+                return true; // Ground detected!
+            }
+        }
+
+        return false; // Tidak ada ground
+    }
+
     private void OnJump(InputAction.CallbackContext context)
     {
-        // Tidak bisa jump saat rolling
-        if (isGrounded && canMove && !isRolling)
+        if (isRolling || !canMove) return;
+
+        if (jumpCount < maxJumps)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            animator.SetTrigger("Jump");
+            PerformJump();
         }
+    }
+
+    private void PerformJump()
+    {
+        float jumpForce = (jumpCount == 0) ? firstJumpForce : secondJumpForce;
+
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        jumpCount++;
+        animator.SetTrigger("Jump");
+
+        Debug.Log($"Jump {jumpCount}/{maxJumps} performed! Force: {jumpForce}");
     }
 
     private void OnRoll(InputAction.CallbackContext context)
     {
-        // Check apakah bisa roll
         if (!CanRoll()) return;
 
-        // Tentukan arah roll berdasarkan input movement
         Vector2 inputDirection = moveAction.action.ReadValue<Vector2>();
 
-        // Jika tidak ada input, roll ke arah facing
         if (inputDirection.magnitude < 0.1f)
         {
-            // Roll ke arah sprite menghadap
             rollDirection = spriteRenderer.flipX ? Vector2.left : Vector2.right;
         }
         else
         {
-            // Roll ke arah input (normalized agar konsisten)
             rollDirection = new Vector2(inputDirection.x, 0f).normalized;
 
-            // Update facing direction sebelum roll
             if (rollDirection.x != 0)
                 spriteRenderer.flipX = rollDirection.x < 0;
         }
@@ -150,7 +185,6 @@ public class PlayerMovement : MonoBehaviour
 
     private bool CanRoll()
     {
-        // Check mana (PRIORITY) sebelum cooldown
         if (manaScript != null && !manaScript.HasEnoughMana(rollManaCost))
         {
             Debug.Log("Not enough mana to roll!");
@@ -165,12 +199,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void StartRoll()
     {
-        // Consume mana
         if (manaScript != null)
         {
             if (!manaScript.ConsumeMana(rollManaCost))
             {
-                return; // Gagal consume, cancel roll
+                return;
             }
         }
 
@@ -179,13 +212,9 @@ public class PlayerMovement : MonoBehaviour
         rollTimer = 0f;
         lastRollTime = Time.time;
 
-        // Trigger animation
         animator.SetTrigger("Roll");
-
-        // Stop vertical velocity untuk roll yang smooth
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
 
-        // Start invincibility coroutine
         StartCoroutine(InvincibilityCoroutine());
 
         Debug.Log("Roll started! Mana consumed.");
@@ -193,7 +222,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void PerformRollMovement()
     {
-        // Apply roll velocity
         rb.linearVelocity = new Vector2(rollDirection.x * rollSpeed, rb.linearVelocity.y);
     }
 
@@ -212,46 +240,39 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Invincibility ended!");
     }
 
-    // Public method untuk disable/enable movement (dipanggil dari PlayerAttack)
     public void SetCanMove(bool value)
     {
         canMove = value;
 
-        // Stop movement kalau di-disable
-        if (!canMove && !isRolling) // Jangan stop movement kalau sedang roll
+        if (!canMove && !isRolling)
         {
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         }
     }
 
-    // Public getter untuk facing direction (dipakai PlayerAttack)
     public bool IsFacingRight()
     {
         return !spriteRenderer.flipX;
     }
 
-    // Public getter untuk invincibility state (bisa dipakai CanineAttack atau damage system)
     public bool IsInvincible()
     {
         return isInvincible;
     }
 
-    // Public getter untuk rolling state (bisa dipakai PlayerAttack untuk restrict attack saat roll)
     public bool IsRolling()
     {
         return isRolling;
     }
 
-    // Visualisasi untuk debugging
     private void OnDrawGizmosSelected()
     {
         if (groundCheck != null)
         {
-            Gizmos.color = Color.red;
+            Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
 
-        // Visualisasi roll direction saat rolling
         if (isRolling && Application.isPlaying)
         {
             Gizmos.color = Color.cyan;

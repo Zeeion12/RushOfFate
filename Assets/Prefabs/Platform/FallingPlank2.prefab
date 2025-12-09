@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4531345415476971048}
   - component: {fileID: 6629215499328515585}
   m_Layer: 0
-  m_Name: FallingPlank
+  m_Name: FallingPlank2
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: -1846795173
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1224772749470294522, guid: 2447c0bc8aa4ff64da29994e5ab34b00, type: 3}
+  m_Sprite: {fileID: 8853470326346502563, guid: 2447c0bc8aa4ff64da29994e5ab34b00, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,7 +128,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.085, y: 1.56}
+    oldSize: {x: 2.085, y: 1.575}
     newSize: {x: 1.0666667, y: 0.56666666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
