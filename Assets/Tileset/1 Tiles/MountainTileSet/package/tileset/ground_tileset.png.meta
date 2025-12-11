@@ -243,6 +243,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1359,7 +1372,57 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ground_tileset_0: 8697376015662529595
+      ground_tileset_1: 3690355617544205666
+      ground_tileset_10: -3135804169607508577
+      ground_tileset_11: -6819641273636072070
+      ground_tileset_12: 8396446768985996034
+      ground_tileset_13: 9097775684447543411
+      ground_tileset_14: -7150694786879293756
+      ground_tileset_15: -4231429490589373197
+      ground_tileset_16: -366061808604038994
+      ground_tileset_17: 2929119364852245855
+      ground_tileset_18: -1193877978018344493
+      ground_tileset_19: 5988421141125588610
+      ground_tileset_2: 7583804384456860702
+      ground_tileset_20: 366884299882255842
+      ground_tileset_21: 5978902468246933248
+      ground_tileset_22: -8123600454297765164
+      ground_tileset_23: 8594926614163287228
+      ground_tileset_24: 6118407115422626334
+      ground_tileset_25: 8655709183304387116
+      ground_tileset_26: -4868837269395684735
+      ground_tileset_27: 5847524187264606505
+      ground_tileset_28: -371764729946532082
+      ground_tileset_29: -743273366389714905
+      ground_tileset_3: 1587247438152511192
+      ground_tileset_30: 5943723477192462807
+      ground_tileset_31: -8389685707173765940
+      ground_tileset_32: 5408928887788175395
+      ground_tileset_33: -8502624960011745946
+      ground_tileset_34: 293456925523502507
+      ground_tileset_35: 6250191574374288727
+      ground_tileset_36: 886982143866267901
+      ground_tileset_37: 1826278891410383898
+      ground_tileset_38: -1039199470377832200
+      ground_tileset_39: 9092439354848799131
+      ground_tileset_4: 7037526059963627435
+      ground_tileset_40: -8883276269093463317
+      ground_tileset_41: -1140270885509549496
+      ground_tileset_42: 6227017047696798536
+      ground_tileset_43: -3771070432213578202
+      ground_tileset_44: -2874831011378971524
+      ground_tileset_45: -2826475102144735586
+      ground_tileset_46: 628961322627217075
+      ground_tileset_47: 3235402420912287357
+      ground_tileset_48: -7783382123568970648
+      ground_tileset_49: -1673419055578866688
+      ground_tileset_5: -3523603760028579285
+      ground_tileset_6: 5083174886733731781
+      ground_tileset_7: -6120439936415376515
+      ground_tileset_8: 2212317885733786989
+      ground_tileset_9: 4759866921483365049
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
