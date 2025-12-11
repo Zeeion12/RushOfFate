@@ -87,7 +87,6 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && !wasGrounded)
         {
             jumpCount = 0;
-            Debug.Log("✅ LANDED! Jump count reset.");
         }
 
         // Handle roll timer
@@ -159,7 +158,6 @@ public class PlayerMovement : MonoBehaviour
         jumpCount++;
         animator.SetTrigger("Jump");
 
-        Debug.Log($"Jump {jumpCount}/{maxJumps} performed! Force: {jumpForce}");
     }
 
     private void OnRoll(InputAction.CallbackContext context)
@@ -187,7 +185,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (manaScript != null && !manaScript.HasEnoughMana(rollManaCost))
         {
-            Debug.Log("Not enough mana to roll!");
             return false;
         }
 
@@ -217,7 +214,6 @@ public class PlayerMovement : MonoBehaviour
 
         StartCoroutine(InvincibilityCoroutine());
 
-        Debug.Log("Roll started! Mana consumed.");
     }
 
     private void PerformRollMovement()
@@ -230,14 +226,13 @@ public class PlayerMovement : MonoBehaviour
         isRolling = false;
         rollTimer = 0f;
 
-        Debug.Log("Roll ended!");
     }
 
     private System.Collections.IEnumerator InvincibilityCoroutine()
     {
         yield return new WaitForSeconds(invincibilityDuration);
         isInvincible = false;
-        Debug.Log("Invincibility ended!");
+
     }
 
     public void SetCanMove(bool value)

@@ -102,7 +102,6 @@ public class FallingTrapAuto : MonoBehaviour
         if (boxCollider != null)
             boxCollider.enabled = true;
 
-        Debug.Log($"{gameObject.name} respawned!");
     }
 
     // Collision detection untuk insta-kill
