@@ -116,12 +116,12 @@ TextureImporter:
       name: Tavern_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1088
-        height: 864
+        x: 19
+        y: 576
+        width: 345
+        height: 288
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -134,11 +134,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Tavern_1
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 576
+        width: 217
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc43a3c0ac9f5847b25824b62ea9552
+      internalID: -2009239152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 30bef079a5f04274c9555064de65a415
     internalID: 0
     vertices: []
     indices: 
@@ -149,6 +171,10 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Tavern_0: 5093131891365191335
+<<<<<<< Updated upstream
+=======
+      Tavern_1: -2009239152
+>>>>>>> Stashed changes
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

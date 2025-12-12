@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: cfd4bcf304be0a64dad4238b34819b7f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4911920496676800835
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_0
+  - first:
+      213: -8122249646467298616
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_1
+  - first:
+      213: 7419531981981568943
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_2
+  - first:
+      213: 1355220365409599089
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_3
+  - first:
+      213: 4062523863239359996
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_4
+  - first:
+      213: 7825487025785561982
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_5
+  - first:
+      213: -5280116600463704077
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_6
+  - first:
+      213: 8060094653605402194
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_7
+  - first:
+      213: -6415674041938858477
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_8
+  - first:
+      213: 4486916159772818454
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_9
+  - first:
+      213: -2604842475742772209
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_10
+  - first:
+      213: -487164658994636744
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_11
+  - first:
+      213: 2096860445385743816
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_12
+  - first:
+      213: 2608220814342091365
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_13
+  - first:
+      213: -3579774951802060493
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_14
+  - first:
+      213: -1251817867018336430
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_15
+  - first:
+      213: 5325883851787210620
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_16
+  - first:
+      213: -8925651901610296441
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_17
+  - first:
+      213: -8389038444706839474
+    second: Bubble Pine Tree - GREEN_TEAL - Spritesheet_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db67e9e255a55dbb0800000000000000
+      internalID: -4911920496676800835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ca4645eaf8f74f80800000000000000
+      internalID: -8122249646467298616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faf49a9f60977f660800000000000000
+      internalID: 7419531981981568943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17e3d98fdb5bec210800000000000000
+      internalID: 1355220365409599089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfdfdefedebf06830800000000000000
+      internalID: 4062523863239359996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 0
+        width: 257
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e73606e1df6b99c60800000000000000
+      internalID: 7825487025785561982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ffb7b85de149b6b0800000000000000
+      internalID: -5280116600463704077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 256dc2c12653bdf60800000000000000
+      internalID: 8060094653605402194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e2a875372f6f6a0800000000000000
+      internalID: -6415674041938858477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61cf730897ab44e30800000000000000
+      internalID: 4486916159772818454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f04c081c19db9dbd0800000000000000
+      internalID: -2604842475742772209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8381081e25e3d39f0800000000000000
+      internalID: -487164658994636744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cdd8c6277b891d10800000000000000
+      internalID: 2096860445385743816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 562f3aef203423420800000000000000
+      internalID: 2608220814342091365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3314ff5d5a5125ec0800000000000000
+      internalID: -3579774951802060493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 0
+        width: 155
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25782e84846a0aee0800000000000000
+      internalID: -1251817867018336430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7f04cc352759e940800000000000000
+      internalID: 5325883851787210620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b7ab7b2e6b12480800000000000000
+      internalID: -8925651901610296441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - GREEN_TEAL - Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 0
+        width: 103
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4447284bf5249b80800000000000000
+      internalID: -8389038444706839474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
