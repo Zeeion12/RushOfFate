@@ -141,6 +141,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -509,7 +522,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pine Tree - NIGHT  - Spritesheet_0: 2578142180833165136
+      Pine Tree - NIGHT  - Spritesheet_1: 795731853109577904
+      Pine Tree - NIGHT  - Spritesheet_10: -4323113693573428607
+      Pine Tree - NIGHT  - Spritesheet_11: 3969737314392838952
+      Pine Tree - NIGHT  - Spritesheet_12: -4047317693562537619
+      Pine Tree - NIGHT  - Spritesheet_13: 1710627525755771409
+      Pine Tree - NIGHT  - Spritesheet_14: 5186648217649500258
+      Pine Tree - NIGHT  - Spritesheet_15: -3938909559761946448
+      Pine Tree - NIGHT  - Spritesheet_2: -724491580359131402
+      Pine Tree - NIGHT  - Spritesheet_3: 8713103770797958095
+      Pine Tree - NIGHT  - Spritesheet_4: 7712885303861462861
+      Pine Tree - NIGHT  - Spritesheet_5: 1262767183202960420
+      Pine Tree - NIGHT  - Spritesheet_6: 5566444013828618043
+      Pine Tree - NIGHT  - Spritesheet_7: 3615210235995812411
+      Pine Tree - NIGHT  - Spritesheet_8: -8877088950582484736
+      Pine Tree - NIGHT  - Spritesheet_9: -1291646134812441774
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

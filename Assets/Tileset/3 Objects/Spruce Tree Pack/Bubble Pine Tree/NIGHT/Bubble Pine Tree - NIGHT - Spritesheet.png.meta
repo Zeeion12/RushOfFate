@@ -150,6 +150,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -584,7 +597,26 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bubble Pine Tree - NIGHT - Spritesheet_0: -3141196851022925028
+      Bubble Pine Tree - NIGHT - Spritesheet_1: -2224231935826540069
+      Bubble Pine Tree - NIGHT - Spritesheet_10: 1455512483405162205
+      Bubble Pine Tree - NIGHT - Spritesheet_11: -3202107464272323620
+      Bubble Pine Tree - NIGHT - Spritesheet_12: 8208195252820231496
+      Bubble Pine Tree - NIGHT - Spritesheet_13: 8974527174122911665
+      Bubble Pine Tree - NIGHT - Spritesheet_14: 5728499306070463052
+      Bubble Pine Tree - NIGHT - Spritesheet_15: 8693696124152331498
+      Bubble Pine Tree - NIGHT - Spritesheet_16: -6617648014156939729
+      Bubble Pine Tree - NIGHT - Spritesheet_17: -8534571647808810816
+      Bubble Pine Tree - NIGHT - Spritesheet_18: -5732195900533014627
+      Bubble Pine Tree - NIGHT - Spritesheet_2: -7697325040978181361
+      Bubble Pine Tree - NIGHT - Spritesheet_3: 2646199311651742555
+      Bubble Pine Tree - NIGHT - Spritesheet_4: 2537033681158372583
+      Bubble Pine Tree - NIGHT - Spritesheet_5: -944293799601320881
+      Bubble Pine Tree - NIGHT - Spritesheet_6: -6798735177733154683
+      Bubble Pine Tree - NIGHT - Spritesheet_7: 6786307573189238040
+      Bubble Pine Tree - NIGHT - Spritesheet_8: -940719393594202948
+      Bubble Pine Tree - NIGHT - Spritesheet_9: -1706694992263893561
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
