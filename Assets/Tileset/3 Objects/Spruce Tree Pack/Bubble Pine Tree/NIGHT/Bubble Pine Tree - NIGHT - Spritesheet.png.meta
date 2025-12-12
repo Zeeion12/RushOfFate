@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: 8c1444db4e3385243bd2979dee22bf76
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3141196851022925028
+    second: Bubble Pine Tree - NIGHT - Spritesheet_0
+  - first:
+      213: -2224231935826540069
+    second: Bubble Pine Tree - NIGHT - Spritesheet_1
+  - first:
+      213: -7697325040978181361
+    second: Bubble Pine Tree - NIGHT - Spritesheet_2
+  - first:
+      213: 2646199311651742555
+    second: Bubble Pine Tree - NIGHT - Spritesheet_3
+  - first:
+      213: 2537033681158372583
+    second: Bubble Pine Tree - NIGHT - Spritesheet_4
+  - first:
+      213: -944293799601320881
+    second: Bubble Pine Tree - NIGHT - Spritesheet_5
+  - first:
+      213: -6798735177733154683
+    second: Bubble Pine Tree - NIGHT - Spritesheet_6
+  - first:
+      213: 6786307573189238040
+    second: Bubble Pine Tree - NIGHT - Spritesheet_7
+  - first:
+      213: -940719393594202948
+    second: Bubble Pine Tree - NIGHT - Spritesheet_8
+  - first:
+      213: -1706694992263893561
+    second: Bubble Pine Tree - NIGHT - Spritesheet_9
+  - first:
+      213: 1455512483405162205
+    second: Bubble Pine Tree - NIGHT - Spritesheet_10
+  - first:
+      213: -3202107464272323620
+    second: Bubble Pine Tree - NIGHT - Spritesheet_11
+  - first:
+      213: 8208195252820231496
+    second: Bubble Pine Tree - NIGHT - Spritesheet_12
+  - first:
+      213: 8974527174122911665
+    second: Bubble Pine Tree - NIGHT - Spritesheet_13
+  - first:
+      213: 5728499306070463052
+    second: Bubble Pine Tree - NIGHT - Spritesheet_14
+  - first:
+      213: 8693696124152331498
+    second: Bubble Pine Tree - NIGHT - Spritesheet_15
+  - first:
+      213: -6617648014156939729
+    second: Bubble Pine Tree - NIGHT - Spritesheet_16
+  - first:
+      213: -8534571647808810816
+    second: Bubble Pine Tree - NIGHT - Spritesheet_17
+  - first:
+      213: -5732195900533014627
+    second: Bubble Pine Tree - NIGHT - Spritesheet_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c13f3355b1a3864d0800000000000000
+      internalID: -3141196851022925028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd9cafeb6d0f121e0800000000000000
+      internalID: -2224231935826540069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f03c6cb48ab9d2590800000000000000
+      internalID: -7697325040978181361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b53a2e7f04039b420800000000000000
+      internalID: 2646199311651742555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ec75a4f0ba553320800000000000000
+      internalID: 2537033681158372583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 0
+        width: 257
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4cc827dac135e2f0800000000000000
+      internalID: -944293799601320881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5885349806a06a1a0800000000000000
+      internalID: -6798735177733154683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ddc7c48cecd2e50800000000000000
+      internalID: 6786307573189238040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb42f7712b4e1f2f0800000000000000
+      internalID: -940719393594202948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd2c2e62f99058e0800000000000000
+      internalID: -1706694992263893561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd6e28b54e4033410800000000000000
+      internalID: 1455512483405162205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdbdb6b0a34df83d0800000000000000
+      internalID: -3202107464272323620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845c563f71e59e170800000000000000
+      internalID: 8208195252820231496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b7bfa07aeceb8c70800000000000000
+      internalID: 8974527174122911665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c42d66a94c7bf7f40800000000000000
+      internalID: 5728499306070463052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 0
+        width: 155
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aec3a41509636a870800000000000000
+      internalID: 8693696124152331498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2e3b9361346924a0800000000000000
+      internalID: -6617648014156939729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 0
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c05c3eed4c1f8980800000000000000
+      internalID: -8534571647808810816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Pine Tree - NIGHT - Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 0
+        width: 103
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9f77cde2362370b0800000000000000
+      internalID: -5732195900533014627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
