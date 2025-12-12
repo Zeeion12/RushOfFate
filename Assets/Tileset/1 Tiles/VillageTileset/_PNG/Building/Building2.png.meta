@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 08cfd6435f11bd447916b878375e481b
+guid: af049d531181b9644bf3f6751ae011e7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5093131891365191335
-    second: Tavern_0
+      213: -2301515492470509865
+    second: Building2_0
+  - first:
+      213: 3809396362845215495
+    second: Building2_1
+  - first:
+      213: 1833122524558320393
+    second: Building2_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,40 +102,71 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tavern_0
+      name: Building2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1088
-        height: 864
+        y: 223
+        width: 417
+        height: 375
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ae190b78707ea640800000000000000
-      internalID: 5093131891365191335
+      spriteID: 7deac328adf5f00e0800000000000000
+      internalID: -2301515492470509865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building2_1
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 230
+        width: 458
+        height: 465
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edee024321d826d4fa31f92a61339ddf
+      internalID: -664138375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building2_2
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 230
+        width: 529
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efdb10521b1fdb742b2da0e4095832d5
+      internalID: -382752619
       vertices: []
       indices: 
       edges: []
@@ -138,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9abd59492e1a93d4e8e45aa246d4f1e8
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +185,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tavern_0: 5093131891365191335
+      Building2_1: -664138375
+      Building2_2: -382752619
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
