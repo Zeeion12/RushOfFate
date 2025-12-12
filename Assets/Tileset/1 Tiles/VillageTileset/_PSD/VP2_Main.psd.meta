@@ -1226,7 +1226,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 8dcdc25d5c3762b49b4a861a58f7aeae
-      internalID: 553337637
+      internalID: 2343448867482217426
       vertices: []
       indices: 
       edges: []
@@ -1248,7 +1248,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c07b9dcec6d70c94f8719a9562c576ff
-      internalID: 18551573
+      internalID: -1806980118358872819
       vertices: []
       indices: 
       edges: []
@@ -1270,7 +1270,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 40339e88c189f7e4a8521111276a2705
-      internalID: -290783768
+      internalID: -1824580050924479333
       vertices: []
       indices: 
       edges: []
@@ -1292,7 +1292,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 104f3a8e4be162842b07c45f9174593e
-      internalID: 2026524530
+      internalID: -5423939365737584423
       vertices: []
       indices: 
       edges: []
@@ -1314,7 +1314,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ca7b508b0476fc347aed9e3dc510ef20
-      internalID: 275356339
+      internalID: -6310580080253106281
       vertices: []
       indices: 
       edges: []
@@ -1336,7 +1336,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 159e97e1cac21a341a8cb355eab3f727
-      internalID: 1008699394
+      internalID: -1664557447108928663
       vertices: []
       indices: 
       edges: []
@@ -1358,7 +1358,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 18095828c9c50a5438ebc6cc276838ca
-      internalID: -3541580
+      internalID: 4798900841424755331
       vertices: []
       indices: 
       edges: []
@@ -1377,7 +1377,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<< Updated upstream
       VP2_Main_0: -7885528051555498636
       VP2_Main_1: -8994156104104977331
       VP2_Main_10: 7412410475298854632
@@ -1417,20 +1416,18 @@ TextureImporter:
       VP2_Main_41: 6242856864949374119
       VP2_Main_42: 4466697281005359791
       VP2_Main_43: -247816508953803333
+      VP2_Main_44: 2343448867482217426
+      VP2_Main_45: -1806980118358872819
+      VP2_Main_46: -1824580050924479333
+      VP2_Main_47: -5423939365737584423
+      VP2_Main_48: -6310580080253106281
+      VP2_Main_49: -1664557447108928663
       VP2_Main_5: -2040951824872116943
+      VP2_Main_50: 4798900841424755331
       VP2_Main_6: -3190402116529997410
       VP2_Main_7: 8766399647279503430
       VP2_Main_8: 6841024463426854461
       VP2_Main_9: 2881784694022446494
-=======
-      VP2_Main_44: 553337637
-      VP2_Main_45: 18551573
-      VP2_Main_46: -290783768
-      VP2_Main_47: 2026524530
-      VP2_Main_48: 275356339
-      VP2_Main_49: 1008699394
-      VP2_Main_50: -3541580
->>>>>>> Stashed changes
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -120,6 +120,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -334,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Large Spruce Tree - GREEN - Spritesheet_0: -6162030346484487730
+      Large Spruce Tree - GREEN - Spritesheet_1: 5655842896633579380
+      Large Spruce Tree - GREEN - Spritesheet_2: -8778627658308985084
+      Large Spruce Tree - GREEN - Spritesheet_3: -2794819127562146330
+      Large Spruce Tree - GREEN - Spritesheet_4: 3102718176999253833
+      Large Spruce Tree - GREEN - Spritesheet_5: -890366764266728677
+      Large Spruce Tree - GREEN - Spritesheet_6: 1470837291171935655
+      Large Spruce Tree - GREEN - Spritesheet_7: 8224438346052151765
+      Large Spruce Tree - GREEN - Spritesheet_8: 5830574696769072698
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

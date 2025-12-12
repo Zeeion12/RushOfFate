@@ -150,6 +150,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -584,7 +597,26 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_0: -4911920496676800835
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_1: -8122249646467298616
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_10: -2604842475742772209
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_11: -487164658994636744
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_12: 2096860445385743816
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_13: 2608220814342091365
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_14: -3579774951802060493
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_15: -1251817867018336430
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_16: 5325883851787210620
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_17: -8925651901610296441
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_18: -8389038444706839474
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_2: 7419531981981568943
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_3: 1355220365409599089
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_4: 4062523863239359996
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_5: 7825487025785561982
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_6: -5280116600463704077
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_7: 8060094653605402194
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_8: -6415674041938858477
+      Bubble Pine Tree - GREEN_TEAL - Spritesheet_9: 4486916159772818454
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

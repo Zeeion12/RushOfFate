@@ -141,6 +141,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -509,7 +522,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pine Tree - GREEN  - Spritesheet_0: 3121398975826102619
+      Pine Tree - GREEN  - Spritesheet_1: 668543175153090412
+      Pine Tree - GREEN  - Spritesheet_10: -403390250150815711
+      Pine Tree - GREEN  - Spritesheet_11: 4358816977193768142
+      Pine Tree - GREEN  - Spritesheet_12: -7172061649864805884
+      Pine Tree - GREEN  - Spritesheet_13: -1935110602139423772
+      Pine Tree - GREEN  - Spritesheet_14: 6760773914962650221
+      Pine Tree - GREEN  - Spritesheet_15: 2479017667936865711
+      Pine Tree - GREEN  - Spritesheet_2: 481341089762299683
+      Pine Tree - GREEN  - Spritesheet_3: -6486020714410839928
+      Pine Tree - GREEN  - Spritesheet_4: 7339882126352368941
+      Pine Tree - GREEN  - Spritesheet_5: 4323802457097871902
+      Pine Tree - GREEN  - Spritesheet_6: 7644342740409536149
+      Pine Tree - GREEN  - Spritesheet_7: -5280885920985331627
+      Pine Tree - GREEN  - Spritesheet_8: 791876643570865464
+      Pine Tree - GREEN  - Spritesheet_9: 2427765591902405747
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
