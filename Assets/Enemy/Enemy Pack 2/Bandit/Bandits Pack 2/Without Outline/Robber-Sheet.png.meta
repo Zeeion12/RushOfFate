@@ -1,0 +1,1467 @@
+fileFormatVersion: 2
+guid: 4380218735eae5847be8b29a0ab7d8be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2994794286830858509
+    second: Robber-Sheet_0
+  - first:
+      213: 7687415468351918166
+    second: Robber-Sheet_1
+  - first:
+      213: -2440874618159238693
+    second: Robber-Sheet_2
+  - first:
+      213: -5907408890441067179
+    second: Robber-Sheet_3
+  - first:
+      213: 8868394092040874965
+    second: Robber-Sheet_4
+  - first:
+      213: -3886749144536751640
+    second: Robber-Sheet_5
+  - first:
+      213: -4522999807742518329
+    second: Robber-Sheet_6
+  - first:
+      213: -5929629925985215237
+    second: Robber-Sheet_7
+  - first:
+      213: -595722248071539820
+    second: Robber-Sheet_8
+  - first:
+      213: -5115505683842846595
+    second: Robber-Sheet_9
+  - first:
+      213: 453654711390005616
+    second: Robber-Sheet_10
+  - first:
+      213: -1590160930930964654
+    second: Robber-Sheet_11
+  - first:
+      213: 5637646723848901959
+    second: Robber-Sheet_12
+  - first:
+      213: 7991224386362449904
+    second: Robber-Sheet_13
+  - first:
+      213: -8954878462254304697
+    second: Robber-Sheet_14
+  - first:
+      213: -1605601813736395028
+    second: Robber-Sheet_15
+  - first:
+      213: 6462326870315524644
+    second: Robber-Sheet_16
+  - first:
+      213: -2809005325661121638
+    second: Robber-Sheet_17
+  - first:
+      213: -4298710078063161472
+    second: Robber-Sheet_18
+  - first:
+      213: 6604778011711567745
+    second: Robber-Sheet_19
+  - first:
+      213: 7828956724481840478
+    second: Robber-Sheet_20
+  - first:
+      213: -3166537233100825186
+    second: Robber-Sheet_21
+  - first:
+      213: 764324809608599440
+    second: Robber-Sheet_22
+  - first:
+      213: -7641535664111310838
+    second: Robber-Sheet_23
+  - first:
+      213: 5547263007382614119
+    second: Robber-Sheet_24
+  - first:
+      213: 2316449127012425456
+    second: Robber-Sheet_25
+  - first:
+      213: 2294793565344320499
+    second: Robber-Sheet_26
+  - first:
+      213: 8082106855460841312
+    second: Robber-Sheet_27
+  - first:
+      213: 2082892461356395965
+    second: Robber-Sheet_28
+  - first:
+      213: 3537277351020799895
+    second: Robber-Sheet_29
+  - first:
+      213: 6592232947396325876
+    second: Robber-Sheet_30
+  - first:
+      213: 8752733489338646437
+    second: Robber-Sheet_31
+  - first:
+      213: -8724979939769045688
+    second: Robber-Sheet_32
+  - first:
+      213: 8450283930639574596
+    second: Robber-Sheet_33
+  - first:
+      213: -5220776000209346964
+    second: Robber-Sheet_34
+  - first:
+      213: -1324506178657374743
+    second: Robber-Sheet_35
+  - first:
+      213: 1452507755499212229
+    second: Robber-Sheet_36
+  - first:
+      213: 699498756548225881
+    second: Robber-Sheet_37
+  - first:
+      213: -4096987837176327877
+    second: Robber-Sheet_38
+  - first:
+      213: -6185113189888743139
+    second: Robber-Sheet_39
+  - first:
+      213: -2976826437209681384
+    second: Robber-Sheet_40
+  - first:
+      213: 3388576470325951128
+    second: Robber-Sheet_41
+  - first:
+      213: 7636591758070688620
+    second: Robber-Sheet_42
+  - first:
+      213: 7779325077270519715
+    second: Robber-Sheet_43
+  - first:
+      213: -4725390532234402021
+    second: Robber-Sheet_44
+  - first:
+      213: -7267389226225307807
+    second: Robber-Sheet_45
+  - first:
+      213: 1478898412415910202
+    second: Robber-Sheet_46
+  - first:
+      213: -7662425370817545708
+    second: Robber-Sheet_47
+  - first:
+      213: 2987524610414587832
+    second: Robber-Sheet_48
+  - first:
+      213: 3116686199086359014
+    second: Robber-Sheet_49
+  - first:
+      213: 8179501310789370603
+    second: Robber-Sheet_50
+  - first:
+      213: -2953080860438045405
+    second: Robber-Sheet_51
+  - first:
+      213: 6923695694983360316
+    second: Robber-Sheet_52
+  - first:
+      213: 5408262988531291076
+    second: Robber-Sheet_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Robber-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 399
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d013ce96985af8920800000000000000
+      internalID: 2994794286830858509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 399
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65095f783af2faa60800000000000000
+      internalID: 7687415468351918166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 399
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd1f9539775402ed0800000000000000
+      internalID: -2440874618159238693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 399
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5559646b9eaa40ea0800000000000000
+      internalID: -5907408890441067179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 399
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dbe440a07dd21b70800000000000000
+      internalID: 8868394092040874965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 399
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e165d4fe3e7f0ac0800000000000000
+      internalID: -3886749144536751640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 399
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cbd85483a31b31c0800000000000000
+      internalID: -4522999807742518329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 399
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfc1024bff8b5bda0800000000000000
+      internalID: -5929629925985215237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 335
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49316ea85c19bb7f0800000000000000
+      internalID: -595722248071539820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 335
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d703e040fa21209b0800000000000000
+      internalID: -5115505683842846595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 335
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07965137e84bb4600800000000000000
+      internalID: 453654711390005616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 335
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 257c720fe0d9ee9e0800000000000000
+      internalID: -1590160930930964654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 335
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 745982863d1fc3e40800000000000000
+      internalID: 5637646723848901959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 335
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ff92957d3886ee60800000000000000
+      internalID: 7991224386362449904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 335
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 742398acb71e9b380800000000000000
+      internalID: -8954878462254304697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 335
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceee48148a1c7b9e0800000000000000
+      internalID: -1605601813736395028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 271
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4226e97bc0ccea950800000000000000
+      internalID: 6462326870315524644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 271
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a93d9cff9886409d0800000000000000
+      internalID: -2809005325661121638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 271
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f47a4a5f9e754c0800000000000000
+      internalID: -4298710078063161472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 271
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 187f068ab92e8ab50800000000000000
+      internalID: 6604778011711567745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 271
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5555ac49aa06ac60800000000000000
+      internalID: 7828956724481840478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 271
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d1afcd9233e04d0800000000000000
+      internalID: -3166537233100825186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 271
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0971db16d5d6b9a00800000000000000
+      internalID: 764324809608599440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 271
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a08aa22dccfc3f590800000000000000
+      internalID: -7641535664111310838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 207
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 760b4b68056dbfc40800000000000000
+      internalID: 5547263007382614119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 207
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fed6db353ea52020800000000000000
+      internalID: 2316449127012425456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 207
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb433fd69eb8df10800000000000000
+      internalID: 2294793565344320499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 207
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0672e7c3d59692070800000000000000
+      internalID: 8082106855460841312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 207
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbdac7078abe7ec10800000000000000
+      internalID: 2082892461356395965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 208
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79721ab620fe61130800000000000000
+      internalID: 3537277351020799895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 208
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f13f2240f05c7b50800000000000000
+      internalID: 6592232947396325876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 208
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aff1bd0cb4f77970800000000000000
+      internalID: 8752733489338646437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 208
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d28a1c8f4aae680800000000000000
+      internalID: -8724979939769045688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 207
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 446a6f0a670754570800000000000000
+      internalID: 8450283930639574596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 207
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6e13af73e31c87b0800000000000000
+      internalID: -5220776000209346964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 143
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed2156e5a86e9de0800000000000000
+      internalID: -1324506178657374743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 143
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cdc700ab18582410800000000000000
+      internalID: 1452507755499212229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 143
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95b62e8b96e15b900800000000000000
+      internalID: 699498756548225881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 143
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b315204d4439427c0800000000000000
+      internalID: -4096987837176327877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 143
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d19291de2501a2aa0800000000000000
+      internalID: -6185113189888743139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 143
+        width: 36
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8121024902030b6d0800000000000000
+      internalID: -2976826437209681384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 143
+        width: 37
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89a7608a854a60f20800000000000000
+      internalID: 3388576470325951128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 143
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6baa7a5ebf9af960800000000000000
+      internalID: 7636591758070688620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 143
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af5ffee0f6b5fb60800000000000000
+      internalID: 7779325077270519715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 143
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b17ac2dd85a0c6eb0800000000000000
+      internalID: -4725390532234402021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 79
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16fe656c00c052b90800000000000000
+      internalID: -7267389226225307807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 79
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3180f2454a168410800000000000000
+      internalID: 1478898412415910202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 15
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41aba76f8b899a590800000000000000
+      internalID: -7662425370817545708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 15
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bfaf79fdc1d57920800000000000000
+      internalID: 2987524610414587832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 15
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e1a7ecc591b04b20800000000000000
+      internalID: 3116686199086359014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 15
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be24175fa1d638170800000000000000
+      internalID: 8179501310789370603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 15
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32dd5908a9c8407d0800000000000000
+      internalID: -2953080860438045405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 15
+        width: 29
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3f62602d88e51060800000000000000
+      internalID: 6923695694983360316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robber-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 15
+        width: 29
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c3dc4ba8820e0b40800000000000000
+      internalID: 5408262988531291076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

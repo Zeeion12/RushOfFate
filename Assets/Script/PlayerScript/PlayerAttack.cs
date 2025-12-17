@@ -99,13 +99,27 @@ public class PlayerAttack : MonoBehaviour
 
         foreach (Collider2D hit in hits)
         {
-            // Get enemy health and deal damage
-            CanineHealth enemyHealth = hit.GetComponent<CanineHealth>();
-            if (enemyHealth != null)
+            // Try to damage different enemy types
+            bool enemyHit = false;
+
+            // Check for Canine
+            CanineHealth canineHealth = hit.GetComponent<CanineHealth>();
+            if (canineHealth != null)
             {
-                enemyHealth.TakeDamage(attackDamage, transform.position);
-                Debug.Log($"Player hit {hit.name}! Damage: {attackDamage}");
+                canineHealth.TakeDamage(attackDamage, transform.position);
+                Debug.Log($"Player hit Canine: {hit.name}! Damage: {attackDamage}");
+                enemyHit = true;
             }
+
+            // Check for Bandit (Whip)
+            BanditHealth banditHealth = hit.GetComponent<BanditHealth>();
+            if (banditHealth != null)
+            {
+                banditHealth.TakeDamage(attackDamage, transform.position);
+                Debug.Log($"Player hit Bandit: {hit.name}! Damage: {attackDamage}");
+                enemyHit = true;
+            }
+
         }
 
         // Wait sisa animasi selesai

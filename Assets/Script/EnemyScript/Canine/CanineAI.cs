@@ -12,6 +12,10 @@ public class CanineAI : MonoBehaviour
     [SerializeField] private float detectionRange = 4f;
     [SerializeField] private float chaseRange = 5f;
 
+    [Header("Attack Settings")]
+    [SerializeField] private float attackRange = 1.5f; // NEW: Stopping distance untuk attack
+    [SerializeField] private float stoppingDistance = 1.2f; // NEW: Jarak minimum sebelum stop chase
+
     [Header("Ground Check")]
     [SerializeField] private Transform groundCheckPoint;
     [SerializeField] private float groundCheckDistance = 0.5f;
@@ -129,6 +133,27 @@ public class CanineAI : MonoBehaviour
     {
         if (player == null) return;
 
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+
+        // NEW: STOP CHASING jika sudah dalam attack range!
+        if (distanceToPlayer <= stoppingDistance)
+        {
+            // Stop movement tapi tetap facing player
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            animator.SetBool("isRunning", false);
+
+            // Make sure we're facing the player
+            float directionToPlayer = Mathf.Sign(player.position.x - transform.position.x);
+            bool shouldFaceRight = directionToPlayer > 0;
+
+            if (shouldFaceRight != movingRight)
+            {
+                Flip();
+            }
+
+            return; // Exit early, don't chase further
+        }
+
         // Check if there's ground ahead when chasing
         if (!IsGroundAhead())
         {
@@ -138,16 +163,16 @@ public class CanineAI : MonoBehaviour
         }
 
         // Calculate direction to player
-        float directionToPlayer = Mathf.Sign(player.position.x - transform.position.x);
+        float directionToPlayer2 = Mathf.Sign(player.position.x - transform.position.x);
 
         // Flip if needed
-        if ((directionToPlayer > 0 && !movingRight) || (directionToPlayer < 0 && movingRight))
+        if ((directionToPlayer2 > 0 && !movingRight) || (directionToPlayer2 < 0 && movingRight))
         {
             Flip();
         }
 
         // Move towards player
-        rb.linearVelocity = new Vector2(directionToPlayer * chaseSpeed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(directionToPlayer2 * chaseSpeed, rb.linearVelocity.y);
 
         // Set animation
         animator.SetBool("isRunning", true);
@@ -231,7 +256,7 @@ public class CanineAI : MonoBehaviour
         Vector2 origin = Application.isPlaying ? spawnPosition : (Vector2)transform.position;
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(new Vector2(origin.x - patrolDistance, origin.y),
-                       new Vector2(origin.x + patrolDistance, origin.y));
+                        new Vector2(origin.x + patrolDistance, origin.y));
 
         // Detection range
         Gizmos.color = Color.red;
@@ -240,6 +265,10 @@ public class CanineAI : MonoBehaviour
         // Chase range
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
+
+        // NEW: Stopping distance (attack range)
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, stoppingDistance);
 
         // Ground check
         if (groundCheckPoint != null)

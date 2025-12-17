@@ -10,9 +10,13 @@ public class PlayerHealth : MonoBehaviour
     [Header("Death Settings")]
     [SerializeField] private float deathDelay = 2f; // Delay sebelum respawn/game over
 
+    [Header("Respawn Settings")]
+    [SerializeField] private float respawnInvincibilityDuration = 2f; // I-frames setelah respawn
+
     [Header("Events")]
     public UnityEvent<int> OnHealthChanged; // Event untuk update UI
     public UnityEvent OnDeath;
+    public UnityEvent OnRespawn; // Event saat respawn
 
     // State
     private int currentHealth;
@@ -64,14 +68,11 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
-            // Trigger hurt animation (jika ada)
+            // Trigger hurt animation
             if (animator != null)
             {
                 animator.SetTrigger("Hurt");
             }
-
-            // Start invincibility frames
-            StartCoroutine(InvincibilityCoroutine());
         }
     }
 
@@ -115,28 +116,6 @@ public class PlayerHealth : MonoBehaviour
         StartCoroutine(HandleDeath());
     }
 
-    System.Collections.IEnumerator InvincibilityCoroutine()
-    {
-        isInvincible = true;
-
-        // Visual feedback: blinking sprite
-        float blinkInterval = 0.1f;
-        float elapsedTime = 0f;
-
-        while (elapsedTime < invincibilityDuration)
-        {
-            spriteRenderer.enabled = !spriteRenderer.enabled;
-            yield return new WaitForSeconds(blinkInterval);
-            elapsedTime += blinkInterval;
-        }
-
-        // Ensure sprite is visible
-        spriteRenderer.enabled = true;
-        isInvincible = false;
-
-        Debug.Log("Invincibility ended!");
-    }
-
     System.Collections.IEnumerator HandleDeath()
     {
         // Wait for death animation to play
@@ -165,22 +144,25 @@ public class PlayerHealth : MonoBehaviour
                 movementScript.enabled = true;
             }
 
-            // 5. Reset animator (keluar dari death state)
+            // 5. FORCE IDLE STATE (Keluar dari Death state)
             if (animator != null)
             {
-                animator.SetTrigger("Respawn"); // Atau animator.Play("Idle")
-                                                // Atau bisa juga:
-                                                // animator.Play("Idle"); // Force ke idle state
+                animator.Play("Idle");
+
+                Debug.Log("Forced to Idle state after respawn!");
             }
 
-            // 6. Ensure sprite visible (kalau sempat di-hide saat death)
+            // 6. Ensure sprite visible
             if (spriteRenderer != null)
             {
                 spriteRenderer.enabled = true;
             }
 
             // 7. Give temporary invincibility setelah respawn
-            StartCoroutine(RespawnInvincibilityCoroutine(2f));
+            StartCoroutine(RespawnInvincibilityCoroutine(respawnInvincibilityDuration));
+
+            // 8. Trigger respawn event
+            OnRespawn?.Invoke();
 
             Debug.Log("Player respawned at checkpoint!");
         }
@@ -189,16 +171,10 @@ public class PlayerHealth : MonoBehaviour
             // === NO CHECKPOINT = GAME OVER ===
             Debug.LogWarning("GAME OVER - No CheckpointManager found!");
 
-            // Option 1: Reload current scene
+            // Reload current scene
             UnityEngine.SceneManagement.SceneManager.LoadScene(
                 UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
             );
-
-            // Option 2: Load game over scene (kalau sudah ada)
-            // UnityEngine.SceneManagement.SceneManager.LoadScene("GameOverScene");
-
-            // Option 3: Show game over UI (kalau sudah ada)
-            // GameOverUI.Instance.Show();
         }
     }
 

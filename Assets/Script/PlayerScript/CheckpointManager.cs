@@ -2,75 +2,62 @@ using UnityEngine;
 
 public class CheckpointManager : MonoBehaviour
 {
-    [Header("Respawn Settings")]
-    [SerializeField] private float respawnInvincibilityDuration = 2f; // I-frames setelah respawn
-
-    private Vector2 checkpointPosition; // Rename untuk lebih jelas
-    private PlayerHealth playerHealth;
+    private Vector2 currentCheckpoint;
 
     void Start()
     {
-        // Set initial checkpoint = spawn position
-        checkpointPosition = transform.position;
-
-        // Get PlayerHealth component
-        playerHealth = GetComponent<PlayerHealth>();
-
-        Debug.Log($"Initial checkpoint set at: {checkpointPosition}");
+        // Set initial checkpoint ke posisi spawn
+        currentCheckpoint = transform.position;
+        Debug.Log($"Initial checkpoint set at: {currentCheckpoint}");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Update checkpoint saat sentuh checkpoint trigger
+        // Update checkpoint saat player touch checkpoint object
         if (collision.gameObject.CompareTag("Checkpoint"))
         {
-            checkpointPosition = transform.position;
-            Debug.Log($"Checkpoint updated at: {checkpointPosition}");
-
-            // Optional: Visual/audio feedback untuk checkpoint activated
-            // PlayCheckpointEffect();
+            currentCheckpoint = transform.position;
+            Debug.Log($"Checkpoint updated at: {currentCheckpoint}");
         }
 
-        // Trap handling - trigger death instead of instant teleport
+        // ONE-HIT KILL TRAP
         if (collision.gameObject.CompareTag("Trap"))
         {
+            PlayerHealth playerHealth = GetComponent<PlayerHealth>();
             if (playerHealth != null && !playerHealth.IsDead)
             {
-                // Kill player instantly (fall damage / trap damage)
-                playerHealth.TakeDamage(playerHealth.MaxHealth);
-                Debug.Log("Player hit trap! Triggering death...");
+                // Langsung kill player (damage = current HP)
+                int overkillDamage = playerHealth.CurrentHealth;
+                playerHealth.TakeDamage(overkillDamage);
+
+                Debug.Log($"Player hit one-hit-kill trap! Dealt {overkillDamage} damage.");
             }
         }
     }
 
     /// <summary>
-    /// Respawn player ke checkpoint terakhir
+    /// Teleport player ke checkpoint terakhir (dipanggil dari PlayerHealth saat respawn)
     /// </summary>
     public void RespawnPlayer()
     {
-        // Teleport ke checkpoint
-        transform.position = checkpointPosition;
-
-        Debug.Log($"Player respawned at checkpoint: {checkpointPosition}");
-
-        // Optional: Respawn visual effect
-        // PlayRespawnEffect();
+        transform.position = currentCheckpoint;
+        Debug.Log($"Player respawned at: {currentCheckpoint}");
     }
 
     /// <summary>
-    /// Get current checkpoint position (untuk debugging atau UI)
+    /// Get posisi checkpoint saat ini (optional, untuk debugging)
     /// </summary>
-    public Vector2 GetCheckpointPosition()
+    public Vector2 GetCurrentCheckpoint()
     {
-        return checkpointPosition;
+        return currentCheckpoint;
     }
 
     /// <summary>
-    /// Manually set checkpoint (untuk scripted events)
+    /// Manually set checkpoint position (optional, untuk scripting events)
     /// </summary>
-    public void SetCheckpoint(Vector2 newPosition)
+    public void SetCheckpoint(Vector2 newCheckpoint)
     {
-        checkpointPosition = newPosition;
-        Debug.Log($"Checkpoint manually set at: {checkpointPosition}");
+        currentCheckpoint = newCheckpoint;
+        Debug.Log($"Checkpoint manually set at: {newCheckpoint}");
     }
 }
