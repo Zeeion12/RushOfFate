@@ -1759,7 +1759,73 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Archer-Sheet_0: 4457765380805507362
+      Archer-Sheet_1: -8664856891455973944
+      Archer-Sheet_10: 3316038016018342071
+      Archer-Sheet_11: -768485544982539814
+      Archer-Sheet_12: -8677271119647602270
+      Archer-Sheet_13: -1103669323991003663
+      Archer-Sheet_14: -8944850786355509789
+      Archer-Sheet_15: -4346493360374697856
+      Archer-Sheet_16: -7508337715903355013
+      Archer-Sheet_17: -7253667839418892471
+      Archer-Sheet_18: -3224363401780969051
+      Archer-Sheet_19: -1357555042565145642
+      Archer-Sheet_2: -7763964863775850711
+      Archer-Sheet_20: 4959252160723948323
+      Archer-Sheet_21: -5012857723891946597
+      Archer-Sheet_22: -3860449528202853207
+      Archer-Sheet_23: -4147847850279254497
+      Archer-Sheet_24: 7057179147706771210
+      Archer-Sheet_25: -3865980656983746734
+      Archer-Sheet_26: 7353214516477406150
+      Archer-Sheet_27: 430666392563550024
+      Archer-Sheet_28: 4302858334777133087
+      Archer-Sheet_29: 1641360181715097841
+      Archer-Sheet_3: 4191456089627626594
+      Archer-Sheet_30: -566624894117655191
+      Archer-Sheet_31: 4979768307033935871
+      Archer-Sheet_32: 3758699245755404859
+      Archer-Sheet_33: 4139838339266360178
+      Archer-Sheet_34: -4842366144594400851
+      Archer-Sheet_35: -7216041562222054242
+      Archer-Sheet_36: 8443765030402972453
+      Archer-Sheet_37: -936783204958017555
+      Archer-Sheet_38: -7345191671767662293
+      Archer-Sheet_39: -1614131184967863733
+      Archer-Sheet_4: 428185795702342721
+      Archer-Sheet_40: 290675159425343965
+      Archer-Sheet_41: 1091405295624823825
+      Archer-Sheet_42: -8368025681242434054
+      Archer-Sheet_43: 5437843754144267057
+      Archer-Sheet_44: 682383937878718669
+      Archer-Sheet_45: 5337992709972738559
+      Archer-Sheet_46: -6467100888013081013
+      Archer-Sheet_47: 5019029919446478372
+      Archer-Sheet_48: -3887835857345160009
+      Archer-Sheet_49: -2125090190245554489
+      Archer-Sheet_5: 2738121457543416847
+      Archer-Sheet_50: -4613403153575764962
+      Archer-Sheet_51: -3397646229099729671
+      Archer-Sheet_52: -6377111328482644704
+      Archer-Sheet_53: -4382147778684649952
+      Archer-Sheet_54: 6397152673672014358
+      Archer-Sheet_55: -2672743944448330464
+      Archer-Sheet_56: -1022757717011872061
+      Archer-Sheet_57: -909396508462073679
+      Archer-Sheet_58: 3651198631479278919
+      Archer-Sheet_59: 4618771610815541886
+      Archer-Sheet_6: -4191222672656463945
+      Archer-Sheet_60: 3617169313220955963
+      Archer-Sheet_61: -2565165177047253384
+      Archer-Sheet_62: 1604683498559587380
+      Archer-Sheet_63: 4408719107877504594
+      Archer-Sheet_64: -7180046753246074039
+      Archer-Sheet_65: -5309783648219704476
+      Archer-Sheet_7: -6071076495961210549
+      Archer-Sheet_8: 7173203317038154442
+      Archer-Sheet_9: -3287708385774132375
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

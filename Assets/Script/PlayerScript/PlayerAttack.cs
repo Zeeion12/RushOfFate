@@ -111,12 +111,21 @@ public class PlayerAttack : MonoBehaviour
                 enemyHit = true;
             }
 
-            // Check for Bandit (Whip)
+            // Check for Bandit (Whip & Spear)
             BanditHealth banditHealth = hit.GetComponent<BanditHealth>();
             if (banditHealth != null)
             {
                 banditHealth.TakeDamage(attackDamage, transform.position);
                 Debug.Log($"Player hit Bandit: {hit.name}! Damage: {attackDamage}");
+                enemyHit = true;
+            }
+
+            // Check for BanditArcher
+            BanditArcherHealth banditArcherHealth = hit.GetComponent<BanditArcherHealth>();
+            if (banditArcherHealth != null)
+            {
+                banditArcherHealth.TakeDamage(attackDamage, transform.position);
+                Debug.Log($"Player hit BanditArcher: {hit.name}! Damage: {attackDamage}");
                 enemyHit = true;
             }
 
