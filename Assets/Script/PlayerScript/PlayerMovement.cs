@@ -35,9 +35,6 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Collider2D playerCollider;
 
-    private AudioManager audioManager;
-    private bool isFootstepPlaying = false;
-
     private Vector2 moveInput;
     private bool isGrounded;
     private bool canMove = true;
@@ -58,7 +55,6 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         playerCollider = GetComponent<Collider2D>();
         manaScript = GetComponent<PlayerMana>();
-        audioManager = AudioManager.Instance;
     }
 
     private void OnEnable()
@@ -123,8 +119,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
             animator.SetBool("IsGrounded", isGrounded);
         }
-
-        HandleFootstepSound();
     }
 
     // ✅ NEW: Ground check pakai Tag "Ground"
@@ -280,34 +274,4 @@ public class PlayerMovement : MonoBehaviour
             Gizmos.DrawRay(transform.position, rollDirection * 2f);
         }
     }
-
-    private void HandleFootstepSound()
-    {
-        if (audioManager == null) return;
-
-        bool shouldPlayFootstep =
-            Mathf.Abs(rb.linearVelocity.x) > 0.1f &&
-            isGrounded &&
-            canMove &&
-            !isRolling;
-
-        if (shouldPlayFootstep)
-        {
-            if (!isFootstepPlaying)
-            {
-                audioManager.PlayFootstep();
-                isFootstepPlaying = true;
-            }
-        }
-        else
-        {
-            if (isFootstepPlaying)
-            {
-                audioManager.StopFootstep();
-                isFootstepPlaying = false;
-            }
-        }
-    }
-
-
 }
