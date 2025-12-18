@@ -3,6 +3,10 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 
+/// <summary>
+/// Manage UI popup puzzle (pertanyaan & jawaban)
+/// Attach ke Canvas Puzzle UI
+/// </summary>
 public class PuzzleUI : MonoBehaviour
 {
     [Header("UI References")]
@@ -12,8 +16,18 @@ public class PuzzleUI : MonoBehaviour
     [SerializeField] private Button[] answerButtons; // Array 4 button (A, B, C, D)
     [SerializeField] private TextMeshProUGUI[] answerTexts; // Text di dalam button
 
-    [Header("Feedback UI (Optional)")]
-    [SerializeField] private GameObject wrongAnswerIndicator; // Optional: icon X merah
+    [Header("Feedback UI")]
+    [SerializeField] private GameObject wrongAnswerIndicator; // Container untuk wrong feedback
+    [SerializeField] private TextMeshProUGUI wrongAnswerText; // Text "Wrong Answer!"
+    [SerializeField] private Image wrongAnswerIcon; // Icon X merah
+    [SerializeField] private float wrongIndicatorDuration = 1.5f; // Durasi tampil
+
+    [Header("Feedback Animation")]
+    [SerializeField] private bool enableShakeAnimation = true;
+    [SerializeField] private float shakeIntensity = 10f;
+    [SerializeField] private float shakeDuration = 0.3f;
+    [SerializeField] private bool enableButtonFlash = true;
+    [SerializeField] private Color wrongButtonColor = new Color(1f, 0.3f, 0.3f, 1f); // Merah
 
     [Header("Animation Settings")]
     [SerializeField] private float fadeInDuration = 0.3f;
@@ -34,8 +48,17 @@ public class PuzzleUI : MonoBehaviour
         if (puzzlePanel != null)
             puzzlePanel.SetActive(false);
 
+        // Hide wrong indicator di awal
         if (wrongAnswerIndicator != null)
+        {
             wrongAnswerIndicator.SetActive(false);
+
+            // Pastikan ada CanvasGroup untuk fade animation
+            if (wrongAnswerIndicator.GetComponent<CanvasGroup>() == null)
+            {
+                wrongAnswerIndicator.AddComponent<CanvasGroup>();
+            }
+        }
 
         // Setup button listeners
         SetupButtons();
@@ -98,15 +121,68 @@ public class PuzzleUI : MonoBehaviour
     {
         Debug.Log($"Player selected answer {selectedIndex} (Correct: {correctIndex})");
 
+        // Flash button yang dipilih (visual feedback)
+        if (enableButtonFlash && answerButtons[selectedIndex] != null)
+        {
+            StartCoroutine(FlashButton(selectedIndex, selectedIndex == correctIndex));
+        }
+
         if (selectedIndex == correctIndex)
         {
             // ✅ JAWABAN BENAR
-            OnCorrectAnswer();
+            // Delay sedikit agar player lihat button flash hijau
+            StartCoroutine(DelayedCorrectAnswer());
         }
         else
         {
             // ❌ JAWABAN SALAH
             OnWrongAnswer();
+        }
+    }
+
+    System.Collections.IEnumerator DelayedCorrectAnswer()
+    {
+        yield return new WaitForSeconds(0.3f); // Delay untuk lihat flash hijau
+        OnCorrectAnswer();
+    }
+
+    System.Collections.IEnumerator FlashButton(int buttonIndex, bool isCorrect)
+    {
+        if (buttonIndex < 0 || buttonIndex >= answerButtons.Length) yield break;
+
+        Button button = answerButtons[buttonIndex];
+        Image buttonImage = button.GetComponent<Image>();
+        if (buttonImage == null) yield break;
+
+        // Simpan warna original
+        Color originalColor = buttonImage.color;
+        Color flashColor = isCorrect ? new Color(0.3f, 1f, 0.3f, 1f) : wrongButtonColor; // Hijau atau merah
+
+        // Flash animation
+        float flashDuration = 0.15f;
+        int flashCount = isCorrect ? 1 : 2; // Benar: 1x flash, salah: 2x flash
+
+        for (int i = 0; i < flashCount; i++)
+        {
+            // Flash to color
+            float elapsed = 0f;
+            while (elapsed < flashDuration)
+            {
+                elapsed += Time.deltaTime;
+                buttonImage.color = Color.Lerp(originalColor, flashColor, elapsed / flashDuration);
+                yield return null;
+            }
+            buttonImage.color = flashColor;
+
+            // Flash back to original
+            elapsed = 0f;
+            while (elapsed < flashDuration)
+            {
+                elapsed += Time.deltaTime;
+                buttonImage.color = Color.Lerp(flashColor, originalColor, elapsed / flashDuration);
+                yield return null;
+            }
+            buttonImage.color = originalColor;
         }
     }
 
@@ -125,23 +201,67 @@ public class PuzzleUI : MonoBehaviour
     {
         Debug.Log("❌ Wrong answer! Try again.");
 
-        // Show wrong indicator (optional)
+        // Show wrong indicator dengan animasi
+        ShowWrongIndicator();
+
+        // Flash button yang dipilih (handled di OnAnswerSelected)
+
+        // TIDAK menutup popup, player bisa coba lagi langsung
+    }
+
+    void ShowWrongIndicator()
+    {
         if (wrongAnswerIndicator != null)
         {
             wrongAnswerIndicator.SetActive(true);
-            StartCoroutine(HideWrongIndicatorAfterDelay(1f));
+
+            // Fade in wrong indicator
+            StartCoroutine(FadeWrongIndicator());
+        }
+    }
+
+    System.Collections.IEnumerator FadeWrongIndicator()
+    {
+        // Fade in animation untuk wrong indicator
+        CanvasGroup wrongGroup = wrongAnswerIndicator.GetComponent<CanvasGroup>();
+        if (wrongGroup != null)
+        {
+            wrongGroup.alpha = 0f;
+            float elapsed = 0f;
+            float fadeDuration = 0.2f;
+
+            while (elapsed < fadeDuration)
+            {
+                elapsed += Time.deltaTime;
+                wrongGroup.alpha = Mathf.Lerp(0f, 1f, elapsed / fadeDuration);
+                yield return null;
+            }
+            wrongGroup.alpha = 1f;
         }
 
-        // TIDAK menutup popup, player bisa coba lagi langsung
-        // UI tetap terbuka untuk retry
+        // Tunggu sebelum hide
+        yield return new WaitForSeconds(wrongIndicatorDuration);
+
+        // Fade out animation
+        if (wrongGroup != null)
+        {
+            float elapsed = 0f;
+            float fadeDuration = 0.2f;
+
+            while (elapsed < fadeDuration)
+            {
+                elapsed += Time.deltaTime;
+                wrongGroup.alpha = Mathf.Lerp(1f, 0f, elapsed / fadeDuration);
+                yield return null;
+            }
+            wrongGroup.alpha = 0f;
+        }
+
+        // Hide indicator
+        wrongAnswerIndicator.SetActive(false);
     }
 
-    System.Collections.IEnumerator HideWrongIndicatorAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        if (wrongAnswerIndicator != null)
-            wrongAnswerIndicator.SetActive(false);
-    }
+
 
     void ClosePuzzle()
     {
