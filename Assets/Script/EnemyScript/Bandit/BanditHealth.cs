@@ -17,12 +17,21 @@ public class BanditHealth : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D col;
 
+    // DropManager
+    private DropManager dropManager;
+
     void Start()
     {
         currentHealth = maxHealth;
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        dropManager = GetComponent<DropManager>();
+
+        if (dropManager == null)
+        {
+            Debug.LogWarning($"{gameObject.name}: DropManager component not found! Items will not drop.");
+        }
     }
 
     public void TakeDamage(int damage, Vector2 attackerPosition)
@@ -83,16 +92,16 @@ public class BanditHealth : MonoBehaviour
 
         Debug.Log($"{gameObject.name} died!");
 
+        // ✅ NEW: Try drop item sebelum animasi death
+        if (dropManager != null)
+        {
+            dropManager.TryDropItem();
+        }
+
         // Trigger death animation
         if (animator != null)
         {
             animator.SetTrigger("Death");
-        }
-
-        // Stop movement
-        if (rb != null)
-        {
-            rb.linearVelocity = Vector2.zero;
         }
 
         // Disable collider agar tidak bisa diserang lagi

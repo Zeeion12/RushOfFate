@@ -51,7 +51,6 @@ public class ManaCounterUI : MonoBehaviour
         {
             // FIXED: Gunakan SetFloat karena Blend Tree parameter adalah Float
             animator.SetFloat("CurrentMana", currentMana);
-            Debug.Log($"UI Updated: Mana = {currentMana}");
         }
     }
 }

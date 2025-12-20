@@ -3,22 +3,22 @@ using UnityEngine;
 public class CanineHealth : MonoBehaviour
 {
     [Header("Health Settings")]
-    [SerializeField] private int maxHealth = 2;
+    [SerializeField] private int maxHealth = 6;
     [SerializeField] private float invincibilityDuration = 0.2f;
-    [SerializeField] private float knockbackForce = 5f; // ✅ Naikin jadi 5
-    [SerializeField] private float knockbackDuration = 0.2f; // ✅ BARU - durasi knockback
+    [SerializeField] private float knockbackForce = 3f;
 
     // State
     private int currentHealth;
     private bool isInvincible = false;
     private bool isDead = false;
-    private bool isKnockedBack = false; // ✅ BARU - flag knockback
 
     // Components
     private Animator animator;
     private Rigidbody2D rb;
     private Collider2D col;
-    private CanineAI aiScript; // ✅ BARU - reference AI
+
+    // ✅ NEW: Reference untuk DropManager
+    private DropManager dropManager;
 
     void Start()
     {
@@ -26,11 +26,19 @@ public class CanineHealth : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
-        aiScript = GetComponent<CanineAI>(); // ✅ BARU
+
+        // ✅ NEW: Get DropManager component (harus ditambahkan ke enemy prefab)
+        dropManager = GetComponent<DropManager>();
+
+        if (dropManager == null)
+        {
+            Debug.LogWarning($"{gameObject.name}: DropManager component not found! Items will not drop.");
+        }
     }
 
     public void TakeDamage(int damage, Vector2 attackerPosition)
     {
+        // Tidak bisa kena damage kalau invincible atau sudah mati
         if (isInvincible || isDead) return;
 
         currentHealth -= damage;
@@ -42,14 +50,17 @@ public class CanineHealth : MonoBehaviour
         }
         else
         {
+            // Trigger hurt animation
             if (animator != null)
             {
                 animator.SetTrigger("Hurt");
             }
 
+            // Apply knockback
             Vector2 knockbackDirection = ((Vector2)transform.position - attackerPosition).normalized;
             ApplyKnockback(knockbackDirection);
 
+            // Start invincibility
             StartCoroutine(InvincibilityCoroutine());
         }
     }
@@ -58,33 +69,20 @@ public class CanineHealth : MonoBehaviour
     {
         if (rb != null)
         {
-            // ✅ Disable AI sementara biar ga override velocity
-            if (aiScript != null)
-            {
-                aiScript.enabled = false;
-            }
-
-            isKnockedBack = true;
-
             // Apply knockback force
             rb.linearVelocity = new Vector2(direction.x * knockbackForce, rb.linearVelocity.y);
 
-            StartCoroutine(KnockbackCoroutine());
+            // Stop knockback setelah durasi invincibility
+            StartCoroutine(StopKnockbackAfterDelay());
         }
     }
 
-    // ✅ GANTI dari StopKnockbackAfterDelay jadi KnockbackCoroutine
-    System.Collections.IEnumerator KnockbackCoroutine()
+    System.Collections.IEnumerator StopKnockbackAfterDelay()
     {
-        yield return new WaitForSeconds(knockbackDuration);
+        yield return new WaitForSeconds(invincibilityDuration);
 
-        // ✅ Re-enable AI setelah knockback selesai
-        if (aiScript != null)
-        {
-            aiScript.enabled = true;
-        }
-
-        isKnockedBack = false;
+        // Enemy bisa gerak lagi setelah knockback
+        // Velocity akan di-handle oleh BanditAI script
     }
 
     void Die()
@@ -96,38 +94,47 @@ public class CanineHealth : MonoBehaviour
 
         Debug.Log($"{gameObject.name} died!");
 
+        // ✅ NEW: Try drop item sebelum animasi death
+        if (dropManager != null)
+        {
+            dropManager.TryDropItem();
+        }
+
+        // Trigger death animation
         if (animator != null)
         {
             animator.SetTrigger("Death");
         }
 
-        if (rb != null)
-        {
-            rb.linearVelocity = Vector2.zero;
-        }
-
+        // Disable collider agar tidak bisa diserang lagi
         if (col != null)
         {
             col.enabled = false;
         }
 
+        // Disable scripts
+        BanditAI aiScript = GetComponent<BanditAI>();
         if (aiScript != null)
         {
             aiScript.enabled = false;
         }
 
-        CanineAttack attackScript = GetComponent<CanineAttack>();
+        BanditAttack attackScript = GetComponent<BanditAttack>();
         if (attackScript != null)
         {
             attackScript.enabled = false;
         }
 
+        // Wait untuk death animation selesai, lalu disable GameObject
         StartCoroutine(DisableAfterDeath());
     }
 
     System.Collections.IEnumerator DisableAfterDeath()
     {
+        // Sesuaikan durasi dengan panjang animasi death (default 1 detik)
         yield return new WaitForSeconds(1f);
+
+        // Disable GameObject
         gameObject.SetActive(false);
     }
 
@@ -143,5 +150,4 @@ public class CanineHealth : MonoBehaviour
     public int GetMaxHealth() => maxHealth;
     public bool IsAlive() => !isDead && currentHealth > 0;
     public bool IsInvincible() => isInvincible;
-    public bool IsKnockedBack() => isKnockedBack; // ✅ BARU
 }

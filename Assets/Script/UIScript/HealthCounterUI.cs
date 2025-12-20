@@ -49,9 +49,7 @@ public class HealthCounterUI : MonoBehaviour
     {
         if (animator != null)
         {
-            // FIXED: Gunakan SetFloat karena Blend Tree parameter adalah Float
             animator.SetFloat("CurrentHealth", currentHealth);
-            Debug.Log($"UI Updated: Health = {currentHealth}");
         }
     }
 }

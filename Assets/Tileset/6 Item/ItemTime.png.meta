@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 650
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -125,12 +125,12 @@ TextureImporter:
       name: ItemTime_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 111
         y: 0
-        width: 649
-        height: 862
+        width: 451
+        height: 864
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: ItemTime_1
       rect:
         serializedVersion: 2
-        x: 699
+        x: 722
         y: 0
-        width: 587
+        width: 451
         height: 864
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,12 +169,12 @@ TextureImporter:
       name: ItemTime_2
       rect:
         serializedVersion: 2
-        x: 1283
-        y: 1
-        width: 505
-        height: 635
+        x: 1322
+        y: 0
+        width: 451
+        height: 862
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,12 +191,12 @@ TextureImporter:
       name: ItemTime_3
       rect:
         serializedVersion: 2
-        x: 1899
-        y: 209
-        width: 489
-        height: 460
+        x: 1923
+        y: 0
+        width: 451
+        height: 864
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fd7d434250d627442a31097534557582
     internalID: 0
     vertices: []
     indices: 

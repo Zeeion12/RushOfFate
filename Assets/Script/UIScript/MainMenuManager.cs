@@ -7,50 +7,61 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private FadeManager fadeManager;
 
     [Header("Scene Names")]
-    [SerializeField] private string gameSceneName = "LevelSelection"; // SESUAIKAN dengan nama scene game Anda!
+    [SerializeField] private string gameSceneName = "LevelSelection";
 
-    /// <summary>
-    /// Dipanggil saat tombol PLAY diklik
-    /// </summary>
+    // ✅ EXISTING METHOD - TETAP SAMA
     public void OnPlayButtonClicked()
     {
         Debug.Log("Play button clicked!");
 
+        // ✅ TAMBAHKAN INI DI AWAL METHOD:
+        // Prepare timer untuk new game
+        TimerManager.PrepareNewGame();
+
         if (fadeManager != null)
         {
-            // Fade out lalu load scene game
             fadeManager.FadeOutAndLoadScene(gameSceneName);
         }
         else
         {
             Debug.LogError("FadeManager not assigned!");
-            // Fallback: load langsung tanpa fade
             LoadSceneByName(gameSceneName);
         }
     }
 
-    /// <summary>
-    /// Dipanggil saat tombol QUIT diklik
-    /// </summary>
+    // ✅ OPSIONAL: Tambahkan method Continue jika mau fitur Continue Game
+    public void OnContinueButtonClicked()
+    {
+        Debug.Log("Continue button clicked!");
+
+        // TIDAK call PrepareNewGame() - langsung load saja
+        // Timer akan load dari save
+
+        if (fadeManager != null)
+        {
+            fadeManager.FadeOutAndLoadScene(gameSceneName);
+        }
+        else
+        {
+            LoadSceneByName(gameSceneName);
+        }
+    }
+
+    // ✅ EXISTING METHODS - TETAP SAMA, TIDAK DIUBAH
     public void OnQuitButtonClicked()
     {
         Debug.Log("Quit button clicked!");
 
         if (fadeManager != null)
         {
-            // Fade out lalu quit
             fadeManager.FadeOutAndQuit();
         }
         else
         {
-            // Fallback: quit langsung
             QuitGame();
         }
     }
 
-    /// <summary>
-    /// Load scene langsung tanpa fade (fungsi lama - untuk backup)
-    /// </summary>
     public void LoadSceneByName(string sceneName)
     {
         if (string.IsNullOrEmpty(sceneName))
@@ -68,9 +79,6 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    /// <summary>
-    /// Quit game langsung tanpa fade (fungsi lama - untuk backup)
-    /// </summary>
     public void QuitGame()
     {
         Debug.Log("Keluar dari aplikasi...");

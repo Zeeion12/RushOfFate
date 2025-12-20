@@ -5,18 +5,18 @@ public class PlayerHealth : MonoBehaviour
 {
     [Header("Health Settings")]
     [SerializeField] private int maxHealth = 10;
-    [SerializeField] private float invincibilityDuration = 1f; // Setelah terkena damage
+    [SerializeField] private float invincibilityDuration = 1f;
 
     [Header("Death Settings")]
-    [SerializeField] private float deathDelay = 2f; // Delay sebelum respawn/game over
+    [SerializeField] private float deathDelay = 2f;
 
     [Header("Respawn Settings")]
-    [SerializeField] private float respawnInvincibilityDuration = 2f; // I-frames setelah respawn
+    [SerializeField] private float respawnInvincibilityDuration = 2f;
 
     [Header("Events")]
-    public UnityEvent<int> OnHealthChanged; // Event untuk update UI
+    public UnityEvent<int> OnHealthChanged;
     public UnityEvent OnDeath;
-    public UnityEvent OnRespawn; // Event saat respawn
+    public UnityEvent OnRespawn;
 
     // State
     private int currentHealth;
@@ -28,7 +28,10 @@ public class PlayerHealth : MonoBehaviour
     private PlayerMovement movementScript;
     private SpriteRenderer spriteRenderer;
 
-    // Properties (untuk diakses script lain)
+    // ✅ NEW: Reference ke TimerManager
+    private TimerManager timerManager;
+
+    // Properties
     public int CurrentHealth => currentHealth;
     public int MaxHealth => maxHealth;
     public bool IsInvincible => isInvincible;
@@ -36,30 +39,30 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        // Initialize
         currentHealth = maxHealth;
-
-        // Get components
         animator = GetComponentInChildren<Animator>();
         movementScript = GetComponent<PlayerMovement>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
-        // Trigger initial UI update
+        // ✅ NEW: Get TimerManager reference
+        timerManager = FindObjectOfType<TimerManager>();
+
+        if (timerManager == null)
+        {
+            Debug.LogWarning("[PlayerHealth] TimerManager not found in scene!");
+        }
+
         OnHealthChanged?.Invoke(currentHealth);
     }
 
     public void TakeDamage(int damage)
     {
-        // Prevent damage jika invincible atau sudah mati
         if (isInvincible || isDead) return;
 
-        // Kurangi health
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
         Debug.Log($"Player took {damage} damage. Health: {currentHealth}/{maxHealth}");
-
-        // Trigger UI update
         OnHealthChanged?.Invoke(currentHealth);
 
         if (currentHealth <= 0)
@@ -68,7 +71,6 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
-            // Trigger hurt animation
             if (animator != null)
             {
                 animator.SetTrigger("Hurt");
@@ -84,122 +86,101 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
         Debug.Log($"Player healed {amount}. Health: {currentHealth}/{maxHealth}");
-
-        // Trigger UI update
         OnHealthChanged?.Invoke(currentHealth);
     }
 
     void Die()
     {
         if (isDead) return;
-
         isDead = true;
 
         Debug.Log("Player died!");
 
-        // Trigger death animation
+        // ✅ NEW: Pause timer saat player mati
+        if (timerManager != null)
+        {
+            timerManager.PauseOnDeath();
+        }
+
         if (animator != null)
         {
             animator.SetTrigger("Death");
         }
 
-        // Disable movement
         if (movementScript != null)
         {
             movementScript.enabled = false;
         }
 
-        // Trigger death event
         OnDeath?.Invoke();
-
-        // Handle death (respawn, game over, etc.)
         StartCoroutine(HandleDeath());
     }
 
     System.Collections.IEnumerator HandleDeath()
     {
-        // Wait for death animation to play
         yield return new WaitForSeconds(deathDelay);
 
-        // Try to respawn using checkpoint system
         CheckpointManager checkpoint = GetComponent<CheckpointManager>();
 
         if (checkpoint != null)
         {
-            // === RESPAWN SEQUENCE ===
-
-            // 1. Restore health
             currentHealth = maxHealth;
             isDead = false;
-
-            // 2. Update UI
             OnHealthChanged?.Invoke(currentHealth);
-
-            // 3. Teleport to checkpoint
             checkpoint.RespawnPlayer();
 
-            // 4. Re-enable movement
             if (movementScript != null)
             {
                 movementScript.enabled = true;
             }
 
-            // 5. FORCE IDLE STATE (Keluar dari Death state)
             if (animator != null)
             {
                 animator.Play("Idle");
-
-                Debug.Log("Forced to Idle state after respawn!");
             }
 
-            // 6. Ensure sprite visible
             if (spriteRenderer != null)
             {
                 spriteRenderer.enabled = true;
             }
 
-            // 7. Give temporary invincibility setelah respawn
             StartCoroutine(RespawnInvincibilityCoroutine(respawnInvincibilityDuration));
-
-            // 8. Trigger respawn event
             OnRespawn?.Invoke();
+
+            // ✅ NEW: Resume timer setelah respawn
+            if (timerManager != null)
+            {
+                timerManager.ResumeOnRespawn();
+            }
 
             Debug.Log("Player respawned at checkpoint!");
         }
         else
         {
-            // === NO CHECKPOINT = GAME OVER ===
             Debug.LogWarning("GAME OVER - No CheckpointManager found!");
-
-            // Reload current scene
-            UnityEngine.SceneManagement.SceneManager.LoadScene(
-                UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
-            );
         }
     }
 
-    /// <summary>
-    /// I-frames setelah respawn agar player tidak langsung mati lagi
-    /// </summary>
     System.Collections.IEnumerator RespawnInvincibilityCoroutine(float duration)
     {
         isInvincible = true;
+        float elapsed = 0f;
 
-        // Visual feedback: slower blinking
-        float blinkInterval = 0.15f;
-        float elapsedTime = 0f;
-
-        while (elapsedTime < duration)
+        while (elapsed < duration)
         {
-            spriteRenderer.enabled = !spriteRenderer.enabled;
-            yield return new WaitForSeconds(blinkInterval);
-            elapsedTime += blinkInterval;
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.enabled = !spriteRenderer.enabled;
+            }
+            yield return new WaitForSeconds(0.1f);
+            elapsed += 0.1f;
         }
 
-        // Ensure sprite visible
-        spriteRenderer.enabled = true;
-        isInvincible = false;
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.enabled = true;
+        }
 
-        Debug.Log("Respawn invincibility ended!");
+        isInvincible = false;
     }
 }

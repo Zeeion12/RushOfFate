@@ -143,12 +143,12 @@ TextureImporter:
       name: ItemScroll_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 164
         y: 0
-        width: 678
+        width: 454
         height: 631
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -162,37 +162,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemScroll_1
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 547
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b1da63ed423105c60800000000000000
-      internalID: 7804759203300945179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ItemScroll_2
       rect:
         serializedVersion: 2
-        x: 701
+        x: 720
         y: 0
-        width: 516
+        width: 454
         height: 631
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -209,12 +187,12 @@ TextureImporter:
       name: ItemScroll_3
       rect:
         serializedVersion: 2
-        x: 1251
-        y: 1
-        width: 473
-        height: 630
+        x: 1277
+        y: 0
+        width: 454
+        height: 631
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -231,12 +209,12 @@ TextureImporter:
       name: ItemScroll_4
       rect:
         serializedVersion: 2
-        x: 1801
-        y: 89
-        width: 473
-        height: 460
+        x: 1822
+        y: 0
+        width: 454
+        height: 631
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -249,121 +227,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: ItemScroll_5
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 434
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b3430b55df1cd5a00800000000000000
-      internalID: 746966407021868091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ItemScroll_6
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 211
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 09eaeb906451bc730800000000000000
-      internalID: 4020330482913685136
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ItemScroll_7
-      rect:
-        serializedVersion: 2
-        x: 995
-        y: 132
-        width: 6
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 83188a424b74e9580800000000000000
-      internalID: -8818532181310144200
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ItemScroll_8
-      rect:
-        serializedVersion: 2
-        x: 1041
-        y: 116
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c713e6704bd6dfcd0800000000000000
-      internalID: -2522739596271406724
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ItemScroll_9
-      rect:
-        serializedVersion: 2
-        x: 994
-        y: 12
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b54e76baf36b365e0800000000000000
-      internalID: -1917488631754791845
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 375ab5a233d0cd6439219e15c4195cc6
     internalID: 0
     vertices: []
     indices: 

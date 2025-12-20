@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 2668003616918392755}
   - component: {fileID: 2085161760316720797}
   - component: {fileID: 6253176583028829892}
+  - component: {fileID: 7960022510249930313}
   m_Layer: 6
   m_Name: BanditArcher
   m_TagString: Enemy
@@ -183,6 +184,24 @@ MonoBehaviour:
   maxHealth: 6
   invincibilityDuration: 0.2
   knockbackForce: 3
+--- !u!114 &7960022510249930313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4649841228066782363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2beb412cd69ab1c48980711a162282ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropChance: 50
+  healthItemPrefab: {fileID: 0}
+  timeItemPrefab: {fileID: 0}
+  healthItemChance: 50
+  spawnOffset: {x: 0, y: 0}
+  showDebugLogs: 1
 --- !u!1 &6226543806958995492
 GameObject:
   m_ObjectHideFlags: 0

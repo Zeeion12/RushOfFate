@@ -17,12 +17,23 @@ public class BanditArcherHealth : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D col;
 
+    // ✅ NEW: Reference untuk DropManager
+    private DropManager dropManager;
+
     void Start()
     {
         currentHealth = maxHealth;
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+
+        // ✅ NEW: Get DropManager component (harus ditambahkan ke enemy prefab)
+        dropManager = GetComponent<DropManager>();
+
+        if (dropManager == null)
+        {
+            Debug.LogWarning($"{gameObject.name}: DropManager component not found! Items will not drop.");
+        }
     }
 
     public void TakeDamage(int damage, Vector2 attackerPosition)
@@ -45,7 +56,7 @@ public class BanditArcherHealth : MonoBehaviour
                 animator.SetTrigger("Hurt");
             }
 
-            // Apply knockback (optional for archer, bisa di-comment kalau tidak mau)
+            // Apply knockback
             Vector2 knockbackDirection = ((Vector2)transform.position - attackerPosition).normalized;
             ApplyKnockback(knockbackDirection);
 
@@ -56,7 +67,7 @@ public class BanditArcherHealth : MonoBehaviour
 
     void ApplyKnockback(Vector2 direction)
     {
-        if (rb != null && rb.bodyType == RigidbodyType2D.Dynamic)
+        if (rb != null)
         {
             // Apply knockback force
             rb.linearVelocity = new Vector2(direction.x * knockbackForce, rb.linearVelocity.y);
@@ -70,11 +81,8 @@ public class BanditArcherHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(invincibilityDuration);
 
-        // Stop movement (archer is stationary)
-        if (rb != null)
-        {
-            rb.linearVelocity = Vector2.zero;
-        }
+        // Enemy bisa gerak lagi setelah knockback
+        // Velocity akan di-handle oleh BanditAI script
     }
 
     void Die()
@@ -86,16 +94,16 @@ public class BanditArcherHealth : MonoBehaviour
 
         Debug.Log($"{gameObject.name} died!");
 
+        // ✅ NEW: Try drop item sebelum animasi death
+        if (dropManager != null)
+        {
+            dropManager.TryDropItem();
+        }
+
         // Trigger death animation
         if (animator != null)
         {
             animator.SetTrigger("Death");
-        }
-
-        // Stop movement
-        if (rb != null)
-        {
-            rb.linearVelocity = Vector2.zero;
         }
 
         // Disable collider agar tidak bisa diserang lagi
@@ -105,13 +113,13 @@ public class BanditArcherHealth : MonoBehaviour
         }
 
         // Disable scripts
-        BanditArcherAI aiScript = GetComponent<BanditArcherAI>();
+        BanditAI aiScript = GetComponent<BanditAI>();
         if (aiScript != null)
         {
             aiScript.enabled = false;
         }
 
-        BanditArcherAttack attackScript = GetComponent<BanditArcherAttack>();
+        BanditAttack attackScript = GetComponent<BanditAttack>();
         if (attackScript != null)
         {
             attackScript.enabled = false;

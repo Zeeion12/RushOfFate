@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 502958069080309658}
   - component: {fileID: 2801725955253063513}
   - component: {fileID: 5809227619126836827}
+  - component: {fileID: 4863197720339446627}
   m_Layer: 6
   m_Name: Canine1Emy
   m_TagString: Enemy
@@ -287,7 +288,6 @@ MonoBehaviour:
   maxHealth: 6
   invincibilityDuration: 0.2
   knockbackForce: 3
-  knockbackDuration: 0.2
 --- !u!114 &5809227619126836827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,3 +309,21 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &4863197720339446627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7105693366538755498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2beb412cd69ab1c48980711a162282ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropChance: 50
+  healthItemPrefab: {fileID: 0}
+  timeItemPrefab: {fileID: 0}
+  healthItemChance: 50
+  spawnOffset: {x: 0, y: 0}
+  showDebugLogs: 1

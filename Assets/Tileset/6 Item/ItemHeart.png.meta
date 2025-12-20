@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 650
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,12 +128,12 @@ TextureImporter:
       name: ItemHeart_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 133
         y: 0
-        width: 563
-        height: 602
+        width: 394
+        height: 595
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,37 +147,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemHeart_1
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 407
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 00571dedfa10c7170800000000000000
-      internalID: 8177412878267151616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ItemHeart_2
       rect:
         serializedVersion: 2
-        x: 584
+        x: 1044
         y: 0
-        width: 376
-        height: 599
+        width: 394
+        height: 600
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -194,12 +172,12 @@ TextureImporter:
       name: ItemHeart_3
       rect:
         serializedVersion: 2
-        x: 943
-        y: 1
-        width: 584
-        height: 601
+        x: 1487
+        y: 0
+        width: 394
+        height: 602
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,23 +191,23 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemHeart_4
+      name: ItemHeart_1
       rect:
         serializedVersion: 2
-        x: 1502
-        y: 106
-        width: 364
-        height: 368
+        x: 588
+        y: 0
+        width: 394
+        height: 600
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7b7bb37eb10a73540800000000000000
-      internalID: 4987631154040125367
+      spriteID: 2c466aa1a6cdba2459231ffff3e0cd1e
+      internalID: 8177412878267151616
       vertices: []
       indices: 
       edges: []
@@ -238,7 +216,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2a683c8a833512545a9f48c09e541c44
     internalID: 0
     vertices: []
     indices: 
@@ -252,7 +230,6 @@ TextureImporter:
       ItemHeart_1: 8177412878267151616
       ItemHeart_2: 723252904305249701
       ItemHeart_3: -2033961821580500006
-      ItemHeart_4: 4987631154040125367
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
