@@ -1,10 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-/// <summary>
-/// Script untuk button level individual
-/// Handle visual locked/unlocked dan load scene dengan fade
-/// </summary>
 [RequireComponent(typeof(Button))]
 public class LevelButton : MonoBehaviour
 {
@@ -57,9 +53,6 @@ public class LevelButton : MonoBehaviour
         button.onClick.AddListener(OnButtonClicked);
     }
 
-    /// <summary>
-    /// Update visual dan interactability berdasarkan unlock status
-    /// </summary>
     void UpdateButtonState()
     {
         // Cek unlock status dari LevelProgressManager
@@ -87,9 +80,7 @@ public class LevelButton : MonoBehaviour
         Debug.Log($"{levelSceneName} - Unlocked: {isUnlocked}");
     }
 
-    /// <summary>
-    /// Dipanggil saat button diklik
-    /// </summary>
+
     void OnButtonClicked()
     {
         if (!isUnlocked)
@@ -112,9 +103,7 @@ public class LevelButton : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Public method untuk refresh button state (misal setelah unlock level baru)
-    /// </summary>
+
     public void RefreshButtonState()
     {
         UpdateButtonState();

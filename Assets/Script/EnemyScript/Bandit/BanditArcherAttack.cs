@@ -109,11 +109,8 @@ public class BanditArcherAttack : MonoBehaviour
         }
         else
         {
-            Debug.LogError("ArrowProjectile script not found on arrow prefab!");
             Destroy(arrow);
         }
-
-        Debug.Log($"BanditArcher spawned arrow towards player!");
     }
 
     // Visualize arrow spawn point in editor

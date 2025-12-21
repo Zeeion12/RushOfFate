@@ -46,10 +46,7 @@ public class ArrowProjectile : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Launch arrow dengan direction dan speed tertentu
-    /// Dipanggil dari BanditArcherAttack saat spawn
-    /// </summary>
+
     public void Launch(Vector2 direction, float speed)
     {
         velocity = direction.normalized * speed;
@@ -57,8 +54,6 @@ public class ArrowProjectile : MonoBehaviour
         // Rotate arrow to face direction immediately
         float angle = Mathf.Atan2(velocity.y, velocity.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
-
-        Debug.Log($"Arrow launched with velocity: {velocity}");
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -74,14 +69,12 @@ public class ArrowProjectile : MonoBehaviour
             // Check player invincibility (roll)
             if (playerMovement != null && playerMovement.IsInvincible())
             {
-                Debug.Log("Arrow blocked - Player is rolling!");
                 return; // Don't hit, arrow continues flying
             }
 
             // Check player i-frames
             if (playerHealth != null && playerHealth.IsInvincible)
             {
-                Debug.Log("Arrow blocked - Player has i-frames!");
                 return; // Don't hit, arrow continues flying
             }
 
@@ -108,7 +101,6 @@ public class ArrowProjectile : MonoBehaviour
         // Check if hit ground/wall
         else if (((1 << collision.gameObject.layer) & groundLayer) != 0)
         {
-            Debug.Log("Arrow hit ground/wall!");
             HitTarget();
         }
     }
