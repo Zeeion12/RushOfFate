@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BanditHealth : MonoBehaviour
+public class BanditHealth : MonoBehaviour, IDamageable
 {
     [Header("Health Settings")]
     [SerializeField] private int maxHealth = 6;

@@ -153,9 +153,9 @@ GameObject:
   - component: {fileID: 1914234504297906792}
   - component: {fileID: 7661589052531090810}
   - component: {fileID: 2089061782334405930}
-  - component: {fileID: 1744450986504054375}
   - component: {fileID: 8078333491842496774}
   - component: {fileID: 4192608112894738337}
+  - component: {fileID: 6937998153066853000}
   - component: {fileID: 1405948002285180093}
   m_Layer: 3
   m_Name: 'Player '
@@ -270,27 +270,6 @@ MonoBehaviour:
   moveAction: {fileID: 307617841007770292, guid: 2f6c1c3548f602c4480735cd4330de7e, type: 3}
   jumpAction: {fileID: -1155276534010188793, guid: 2f6c1c3548f602c4480735cd4330de7e, type: 3}
   rollAction: {fileID: -1710812699453758891, guid: 2f6c1c3548f602c4480735cd4330de7e, type: 3}
---- !u!114 &1744450986504054375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7233176420604810732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 488516866c3f39147afb19ea270e518c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 1
-  attackCooldown: 0.2
-  attackDelay: 0.1
-  attackBoxSize: {x: 1.5, y: 1}
-  attackBoxOffset: 0.8
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  attackAction: {fileID: 6192404328524070302, guid: 2f6c1c3548f602c4480735cd4330de7e, type: 3}
 --- !u!114 &8078333491842496774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,6 +307,36 @@ MonoBehaviour:
   OnRespawn:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6937998153066853000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7233176420604810732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488516866c3f39147afb19ea270e518c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 1
+  attackCooldown: 0.2
+  attackDelay: 0.1
+  swordStabDamage: 2
+  comboWindow: 0.5
+  attackBoxSize: {x: 1.5, y: 1}
+  attackBoxOffset: {x: 0.8, y: 0}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  animator: {fileID: 3711293394441828541}
+  playerTransform: {fileID: 147139841302435657}
+  attackAction: {fileID: 6192404328524070302, guid: 2f6c1c3548f602c4480735cd4330de7e, type: 3}
+  audioSource: {fileID: 0}
+  normalAttackSound: {fileID: 0}
+  swordStabSound: {fileID: 0}
+  showDebugLogs: 1
+  showAttackGizmos: 1
 --- !u!114 &1405948002285180093
 MonoBehaviour:
   m_ObjectHideFlags: 0

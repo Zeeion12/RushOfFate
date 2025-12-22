@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CanineHealth : MonoBehaviour
+public class CanineHealth : MonoBehaviour, IDamageable
 {
     [Header("Health Settings")]
     [SerializeField] private int maxHealth = 6;
