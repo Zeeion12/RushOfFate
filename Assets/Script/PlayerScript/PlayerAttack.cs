@@ -157,33 +157,75 @@ public class PlayerAttack : MonoBehaviour
 
     private void DealNormalDamage()
     {
-        DealDamageInBox(attackDamage);
+        StartCoroutine(DealDamageAfterDelay(attackDamage));
     }
 
     private void DealSwordStabDamage()
     {
-        DealDamageInBox(swordStabDamage);
+        StartCoroutine(DealDamageAfterDelay(swordStabDamage));
     }
 
-    private void DealDamageInBox(int damage)
+    private System.Collections.IEnumerator DealDamageAfterDelay(int damage)
     {
+        // Wait untuk tengah animasi
+        yield return new WaitForSeconds(attackDelay);
+
+        // Check for enemies in attack range
         Vector2 attackPosition = GetAttackPosition();
+        Collider2D[] hits = Physics2D.OverlapBoxAll(attackPosition, attackBoxSize, 0f, enemyLayer);
 
-        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPosition, attackBoxSize, 0f, enemyLayer);
-
-        foreach (Collider2D enemy in hitEnemies)
+        foreach (Collider2D hit in hits)
         {
-            IDamageable damageable = enemy.GetComponent<IDamageable>();
-            if (damageable != null)
-            {
-                damageable.TakeDamage(damage, (Vector2)playerTransform.position);
+            // Try to damage different enemy types
+            bool enemyHit = false;
 
-                if (showDebugLogs)
-                    Debug.Log($"[PlayerAttack] Hit {enemy.name} for {damage} damage");
+            // Check for Canine
+            CanineHealth canineHealth = hit.GetComponent<CanineHealth>();
+            if (canineHealth != null)
+            {
+                canineHealth.TakeDamage(damage, transform.position);
+                Debug.Log($"Player hit Canine: {hit.name}! Damage: {damage}");
+                enemyHit = true;
+            }
+
+            // Check for Bandit (Whip & Spear)
+            if (!enemyHit)
+            {
+                BanditHealth banditHealth = hit.GetComponent<BanditHealth>();
+                if (banditHealth != null)
+                {
+                    banditHealth.TakeDamage(damage, transform.position);
+                    Debug.Log($"Player hit Bandit: {hit.name}! Damage: {damage}");
+                    enemyHit = true;
+                }
+            }
+
+            // Check for BanditArcher
+            if (!enemyHit)
+            {
+                BanditArcherHealth banditArcherHealth = hit.GetComponent<BanditArcherHealth>();
+                if (banditArcherHealth != null)
+                {
+                    banditArcherHealth.TakeDamage(damage, transform.position);
+                    Debug.Log($"Player hit BanditArcher: {hit.name}! Damage: {damage}");
+                    enemyHit = true;
+                }
+            }
+
+            // Check for FlyingEnemy
+            if (!enemyHit)
+            {
+                FlyingEnemyHealth flyingHealth = hit.GetComponent<FlyingEnemyHealth>();
+                if (flyingHealth != null)
+                {
+                    flyingHealth.TakeDamage(damage, transform.position);
+                    Debug.Log($"Player hit FlyingEnemy: {hit.name}! Damage: {damage}");
+                    enemyHit = true;
+                }
             }
         }
 
-        if (showDebugLogs && hitEnemies.Length == 0)
+        if (showDebugLogs && hits.Length == 0)
             Debug.Log("[PlayerAttack] Attack missed, no enemies hit");
     }
 

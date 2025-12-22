@@ -125,5 +125,44 @@ public class ItemSkill : MonoBehaviour
 
         UnityEditor.Handles.Label(transform.position + Vector3.up * 1.5f, $"ItemSkill: {skillName}\nID: {uniqueID}");
     }
+
+    [ContextMenu("Debug: Check Collection Status")]
+    private void DebugCheckStatus()
+    {
+        int currentStage = PlayerPrefs.GetInt("CurrentStage", 1);
+        string saveKey = $"Stage{currentStage}_{uniqueID}_Collected";
+        int savedValue = PlayerPrefs.GetInt(saveKey, 0);
+
+        Debug.Log($"[ItemSkill] DEBUG Status:\n" +
+                  $"Skill Name: {skillName}\n" +
+                  $"Unique ID: {uniqueID}\n" +
+                  $"Current Stage: {currentStage}\n" +
+                  $"Save Key: {saveKey}\n" +
+                  $"Collected: {(savedValue == 1 ? "YES" : "NO")}");
+    }
+
+    [ContextMenu("Debug: Reset Collection Flag")]
+    private void DebugResetFlag()
+    {
+        int currentStage = PlayerPrefs.GetInt("CurrentStage", 1);
+        string saveKey = $"Stage{currentStage}_{uniqueID}_Collected";
+        PlayerPrefs.DeleteKey(saveKey);
+        PlayerPrefs.Save();
+
+        Debug.Log($"[ItemSkill] Collection flag reset for: {skillName}");
+        Debug.Log("Reload scene to see the ItemSkill appear again!");
+    }
+
+    [ContextMenu("Debug: Force Recollect (Play Mode)")]
+    private void DebugForceCollect()
+    {
+        if (!Application.isPlaying)
+        {
+            Debug.LogWarning("[ItemSkill] This only works in Play Mode!");
+            return;
+        }
+
+        CollectSkill();
+    }
 #endif
 }
