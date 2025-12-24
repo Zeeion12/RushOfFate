@@ -968,6 +968,10 @@ PrefabInstance:
       propertyPath: currentLevelName
       value: Merchant
       objectReference: {fileID: 0}
+    - target: {fileID: 6573773722670074137, guid: e1578ac21a306a442b3685161e8d1ec5, type: 3}
+      propertyPath: levelSelectionSceneName
+      value: MountainParallax
+      objectReference: {fileID: 0}
     - target: {fileID: 7591457216977042388, guid: e1578ac21a306a442b3685161e8d1ec5, type: 3}
       propertyPath: m_Name
       value: LevelFinish
@@ -1513,6 +1517,10 @@ PrefabInstance:
     - target: {fileID: 6573773722670074137, guid: e1578ac21a306a442b3685161e8d1ec5, type: 3}
       propertyPath: currentLevelName
       value: Merchant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573773722670074137, guid: e1578ac21a306a442b3685161e8d1ec5, type: 3}
+      propertyPath: levelSelectionSceneName
+      value: Stage3
       objectReference: {fileID: 0}
     - target: {fileID: 7591457216977042388, guid: e1578ac21a306a442b3685161e8d1ec5, type: 3}
       propertyPath: m_Name
