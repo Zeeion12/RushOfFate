@@ -81,8 +81,11 @@ public class BanditArcherHealth : MonoBehaviour, IDamageable
     {
         yield return new WaitForSeconds(invincibilityDuration);
 
-        // Enemy bisa gerak lagi setelah knockback
-        // Velocity akan di-handle oleh BanditAI script
+        // Stop knockback sepenuhnya karena BanditArcher tidak punya movement AI
+        if (rb != null)
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+        }
     }
 
     void Die()

@@ -116,7 +116,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4649841228066782363}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 6
   invincibilityDuration: 0.2
-  knockbackForce: 3
+  knockbackForce: 0
 --- !u!114 &7960022510249930313
 MonoBehaviour:
   m_ObjectHideFlags: 0
