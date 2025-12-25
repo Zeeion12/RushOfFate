@@ -9,6 +9,7 @@ TagManager:
   - Trap
   - Checkpoint
   - Item
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - FallingPlatform
   - Ground
   - NPC
-  - 
+  - Wall
   - 
   - 
   - 
@@ -63,6 +64,9 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 1287233389
+    locked: 0
+  - name: Wall
+    uniqueID: 796461709
     locked: 0
   m_RenderingLayers:
   - Default

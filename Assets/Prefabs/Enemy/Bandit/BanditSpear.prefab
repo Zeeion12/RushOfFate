@@ -116,11 +116,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrolSpeed: 2
-  patrolDistance: 5
+  patrolDistance: 0.5
   idleTime: 1.5
   chaseSpeed: 3
-  detectionRange: 4
-  chaseRange: 5
+  detectionRange: 2
+  chaseRange: 3
   attackRange: 1.5
   stoppingDistance: 1.2
   groundCheckPoint: {fileID: 8853016121415942454}
@@ -181,8 +181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropChance: 50
-  healthItemPrefab: {fileID: 0}
-  timeItemPrefab: {fileID: 0}
+  healthItemPrefab: {fileID: 7144761499682254388, guid: 7e5050128d7399744bccb4aa52dccb45, type: 3}
+  timeItemPrefab: {fileID: 6480638076862143109, guid: 3ac923b85b90b014bb5ae05ab95d0c57, type: 3}
   healthItemChance: 50
   spawnOffset: {x: 0, y: 0}
   showDebugLogs: 1

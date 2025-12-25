@@ -128,8 +128,8 @@ MonoBehaviour:
   - {fileID: 7726771857495791537}
   - {fileID: 7766905349679811571}
   - {fileID: 8654590177394569414}
-  wrongAnswerIndicator: {fileID: 0}
-  wrongAnswerText: {fileID: 0}
+  wrongAnswerIndicator: {fileID: 9047687953482365868}
+  wrongAnswerText: {fileID: 3054819952347576487}
   wrongAnswerIcon: {fileID: 0}
   wrongIndicatorDuration: 1.5
   enableShakeAnimation: 1
