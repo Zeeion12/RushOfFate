@@ -134,12 +134,12 @@ TextureImporter:
       name: boss_bar2-Sheet_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 422
-        width: 32
-        height: 20
+        x: 0
+        y: 416
+        width: 384
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -156,12 +156,12 @@ TextureImporter:
       name: boss_bar2-Sheet_1
       rect:
         serializedVersion: 2
-        x: 24
-        y: 390
-        width: 35
-        height: 20
+        x: 0
+        y: 384
+        width: 384
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -178,12 +178,12 @@ TextureImporter:
       name: boss_bar2-Sheet_2
       rect:
         serializedVersion: 2
-        x: 19
-        y: 357
-        width: 47
-        height: 22
+        x: 0
+        y: 352
+        width: 384
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -200,12 +200,12 @@ TextureImporter:
       name: boss_bar2-Sheet_3
       rect:
         serializedVersion: 2
-        x: 14
-        y: 324
-        width: 90
-        height: 24
+        x: 0
+        y: 320
+        width: 384
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -222,12 +222,12 @@ TextureImporter:
       name: boss_bar2-Sheet_4
       rect:
         serializedVersion: 2
-        x: 11
-        y: 291
-        width: 130
-        height: 26
+        x: 0
+        y: 288
+        width: 384
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -241,15 +241,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_bar2-Sheet_5
+      name: boss_bar2-Sheet_6
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
-        width: 379
-        height: 257
+        x: 0
+        y: 224
+        width: 384
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -263,15 +263,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_bar2-Sheet_6
+      name: boss_bar2-Sheet_5
       rect:
         serializedVersion: 2
-        x: 6
-        y: 257
-        width: 167
-        height: 30
+        x: 0
+        y: 256
+        width: 384
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -284,11 +284,165 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: boss_bar2-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 384
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e40de3e150f50f44b49581f4e471c8b
+      internalID: -161090244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_bar2-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 384
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ce4f3b8c55ff048ac1591eae085431
+      internalID: 743730712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_bar2-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 384
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db1f72c4ac96ab4dae39e39be9f07b4
+      internalID: 1679563060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_bar2-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 384
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69171aa7ab6a5b46bb734d68d889d94
+      internalID: -109818477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_bar2-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 384
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8fdbddfc4592ba439e254bdedb5919e
+      internalID: -1488689793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_bar2-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 384
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f8be5625f66bc47a6b0bb9510090f0
+      internalID: -907337470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_bar2-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec6d6787586c3f40999dce619502e6a
+      internalID: 878705743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 85e7b16e8b7a4394a946c7062abccc7e
     internalID: 0
     vertices: []
     indices: 
@@ -298,13 +452,21 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      6: -6221498732798289528
       boss_bar2-Sheet_0: 4583157926050527394
       boss_bar2-Sheet_1: -3887107052678424266
+      boss_bar2-Sheet_10: -109818477
+      boss_bar2-Sheet_11: -1488689793
+      boss_bar2-Sheet_12: -907337470
+      boss_bar2-Sheet_13: 878705743
       boss_bar2-Sheet_2: 1608631497925473882
       boss_bar2-Sheet_3: 2910405153266406639
       boss_bar2-Sheet_4: 1529514322783434596
-      boss_bar2-Sheet_5: -6221498732798289528
-      boss_bar2-Sheet_6: -6726566540379654459
+      boss_bar2-Sheet_5: -6726566540379654459
+      boss_bar2-Sheet_6: -6221498732798289528
+      boss_bar2-Sheet_7: -161090244
+      boss_bar2-Sheet_8: 743730712
+      boss_bar2-Sheet_9: 1679563060
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
