@@ -1656,7 +1656,11 @@ PrefabInstance:
     - target: {fileID: 147139841302435657, guid: 4621e799a76a06b4eae00bd340fbdc44, type: 3}
       propertyPath: m_LocalPosition.x
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: -39.4
+=======
+      value: 376.13
+>>>>>>> Stashed changes
 =======
       value: 376.13
 >>>>>>> Stashed changes
@@ -9739,7 +9743,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_LocalPosition: {x: -13.125969, y: 0.23962975, z: -9.939817}
+=======
+  m_LocalPosition: {x: 402.40405, y: -0.37037015, z: -9.939817}
+>>>>>>> Stashed changes
 =======
   m_LocalPosition: {x: 402.40405, y: -0.37037015, z: -9.939817}
 >>>>>>> Stashed changes
@@ -112917,7 +112925,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_LocalPosition: {x: -39.4, y: 4.1, z: -9.266479}
+=======
+  m_LocalPosition: {x: 376.13, y: 3.49, z: -9.266479}
+>>>>>>> Stashed changes
 =======
   m_LocalPosition: {x: 376.13, y: 3.49, z: -9.266479}
 >>>>>>> Stashed changes
