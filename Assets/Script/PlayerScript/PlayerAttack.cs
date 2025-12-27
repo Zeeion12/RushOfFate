@@ -60,8 +60,6 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-
-
         if (attackAction != null && attackAction.action.triggered)
         {
             if (Time.time - lastAttackTime >= attackCooldown)
@@ -126,13 +124,15 @@ public class PlayerAttack : MonoBehaviour
             if (archer != null) { archer.TakeDamage(damage, transform.position); continue; }
 
             FlyingEnemyHealth flying = hit.GetComponent<FlyingEnemyHealth>();
-            if (flying != null) { flying.TakeDamage(damage, transform.position); }
+            if (flying != null) { flying.TakeDamage(damage, transform.position); continue; }
+
+            EvilWizardBoss boss = hit.GetComponent<EvilWizardBoss>();
+            if (boss != null) { boss.TakeDamage(damage); }
         }
     }
 
     private Vector2 GetAttackPosition()
     {
-        // Gunakan IsFacingRight() dari PlayerMovement untuk deteksi arah yang akurat
         float direction = 1f;
 
         if (playerMovement != null)

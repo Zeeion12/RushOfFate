@@ -105,8 +105,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1467397021
-  m_SortingLayer: 2
+  m_SortingLayerID: -1846795173
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 3234629978573100161, guid: 943b1c5a08290af4292856f1f887ede2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -275,6 +275,6 @@ MonoBehaviour:
   phase3AttackCooldownMultiplier: 0.5
   phase3EnableComboAttacks: 1
   phase3TintColor: {r: 1, g: 0.5, b: 0.5, a: 1}
-  player: {fileID: 147139841302435657, guid: 4621e799a76a06b4eae00bd340fbdc44, type: 3}
+  player: {fileID: 0}
   attackPoint: {fileID: 6592341345838395527}
   healthBar: {fileID: 0}

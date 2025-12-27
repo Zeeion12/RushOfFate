@@ -80,15 +80,10 @@ public class EvilWizardBoss : MonoBehaviour
         phase3HealthThreshold = Mathf.RoundToInt(maxHealth * 0.2f); // 20% HP
 
         // Find player if not assigned
-        if (player == null)
-            player = GameObject.FindGameObjectWithTag("Player").transform;
+        FindPlayer();
 
-        // Setup Health Bar
-        if (healthBar != null)
-        {
-            healthBar.SetMaxHealth(maxHealth);
-            healthBar.ShowHealthBar();
-        }
+        // Find health bar if not assigned
+        FindHealthBar();
 
         // Find attack point if not set
         if (attackPoint == null)
@@ -96,6 +91,48 @@ public class EvilWizardBoss : MonoBehaviour
             attackPoint = transform.Find("AttackPoint");
             if (attackPoint == null)
                 Debug.LogWarning("AttackPoint not found! Create an empty child GameObject named 'AttackPoint'");
+        }
+    }
+
+    void FindPlayer()
+    {
+        if (player != null) return;
+
+        // Try finding by tag
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null)
+        {
+            player = playerObj.transform;
+            Debug.Log($"Boss found player: {player.name}");
+            return;
+        }
+
+        // If not found by tag, try finding by name
+        playerObj = GameObject.Find("Player");
+        if (playerObj != null)
+        {
+            player = playerObj.transform;
+            Debug.Log($"Boss found player by name: {player.name}");
+            return;
+        }
+
+        Debug.LogError("Player not found! Make sure player GameObject has tag 'Player' or is named 'Player'");
+    }
+
+    void FindHealthBar()
+    {
+        if (healthBar != null) return;
+
+        // Try finding BossHealthBar in scene
+        healthBar = FindFirstObjectByType<BossHealthBar>();
+
+        if (healthBar != null)
+        {
+            Debug.Log($"Boss found health bar: {healthBar.gameObject.name}");
+        }
+        else
+        {
+            Debug.LogWarning("BossHealthBar component not found in scene!");
         }
     }
 

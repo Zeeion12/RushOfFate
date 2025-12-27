@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 230
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,12 +128,12 @@ TextureImporter:
       name: Player Wall Land 48x48-Sheet_0
       rect:
         serializedVersion: 2
-        x: 59
+        x: 48
         y: 20
-        width: 69
+        width: 56
         height: 109
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -150,12 +150,12 @@ TextureImporter:
       name: Player Wall Land 48x48-Sheet_1
       rect:
         serializedVersion: 2
-        x: 221
+        x: 202
         y: 20
-        width: 69
+        width: 63
         height: 111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -172,12 +172,12 @@ TextureImporter:
       name: Player Wall Land 48x48-Sheet_2
       rect:
         serializedVersion: 2
-        x: 381
+        x: 366
         y: 20
-        width: 64
+        width: 61
         height: 111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -194,12 +194,12 @@ TextureImporter:
       name: Player Wall Land 48x48-Sheet_3
       rect:
         serializedVersion: 2
-        x: 544
+        x: 521
         y: 20
-        width: 64
+        width: 66
         height: 111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -216,12 +216,12 @@ TextureImporter:
       name: Player Wall Land 48x48-Sheet_4
       rect:
         serializedVersion: 2
-        x: 706
+        x: 683
         y: 20
-        width: 57
+        width: 66
         height: 106
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7693b25271fbf4749932d33596412036
     internalID: 0
     vertices: []
     indices: 

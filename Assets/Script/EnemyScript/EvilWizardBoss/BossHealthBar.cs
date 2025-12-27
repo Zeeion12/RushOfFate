@@ -11,9 +11,13 @@ public class BossHealthBar : MonoBehaviour
     [SerializeField] private CanvasGroup canvasGroup;
 
     [Header("Settings")]
-    [SerializeField] private string bossName = "Evil Wizard";
+    [SerializeField] private string bossName = "Cynus - The Evil Wizard";
     [SerializeField] private float animationSpeed = 5f;
-    [SerializeField] private float blendTreeMaxValue = 11f; // Max value dari Blend Tree (0 = empty, 11 = full)
+    [SerializeField] private float blendTreeMaxValue = 11f;
+
+    [Header("Intro Animation")]
+    [SerializeField] private bool playIntroAnimation = true;
+    [SerializeField] private float introAnimationDuration = 1f;
 
     private int maxHealth;
     private int currentHealth;
@@ -27,17 +31,24 @@ public class BossHealthBar : MonoBehaviour
         if (bossNameText != null)
             bossNameText.text = bossName;
 
-        // Get Animator from HealthBarFill if not assigned
         if (healthBarAnimator == null)
-            healthBarAnimator = GetComponentInChildren<Animator>();
+        {
+            Transform healthBarFill = transform.Find("HealthBarFill");
+            if (healthBarFill != null)
+            {
+                healthBarAnimator = healthBarFill.GetComponent<Animator>();
+            }
+            else
+            {
+                healthBarAnimator = GetComponentInChildren<Animator>();
+            }
+        }
 
-        // Start hidden
-        HideHealthBar();
+        HideHealthBar(immediate: true);
     }
 
     void Update()
     {
-        // Smooth health bar animation using Animator parameter
         if (healthBarAnimator != null)
         {
             float currentHealthValue = healthBarAnimator.GetFloat("Health");
@@ -50,7 +61,7 @@ public class BossHealthBar : MonoBehaviour
     {
         maxHealth = health;
         currentHealth = health;
-        targetHealthValue = blendTreeMaxValue; // Full health = max blend tree value (11)
+        targetHealthValue = blendTreeMaxValue;
 
         if (healthBarAnimator != null)
             healthBarAnimator.SetFloat("Health", blendTreeMaxValue);
@@ -60,12 +71,13 @@ public class BossHealthBar : MonoBehaviour
     {
         currentHealth = health;
 
-        // Convert health percentage to blend tree range (0 to blendTreeMaxValue)
         float healthPercent = (float)currentHealth / maxHealth;
         targetHealthValue = healthPercent * blendTreeMaxValue;
 
-        // Shake effect saat kena damage
-        StartCoroutine(ShakeHealthBar());
+        if (health < maxHealth)
+        {
+            StartCoroutine(ShakeHealthBar());
+        }
     }
 
     IEnumerator ShakeHealthBar()
@@ -91,12 +103,66 @@ public class BossHealthBar : MonoBehaviour
 
     public void ShowHealthBar()
     {
-        StartCoroutine(FadeHealthBar(1f, 0.5f));
+        gameObject.SetActive(true);
+
+        if (playIntroAnimation)
+        {
+            StartCoroutine(IntroSequence());
+        }
+        else
+        {
+            StartCoroutine(FadeHealthBar(1f, 0.5f));
+        }
     }
 
-    public void HideHealthBar()
+    IEnumerator IntroSequence()
     {
-        StartCoroutine(FadeHealthBar(0f, 0.5f));
+        if (healthBarAnimator != null)
+        {
+            healthBarAnimator.SetFloat("Health", 0f);
+        }
+
+        yield return StartCoroutine(FadeHealthBar(1f, 0.3f));
+
+        float elapsed = 0f;
+        float startValue = 0f;
+        float endValue = blendTreeMaxValue;
+
+        while (elapsed < introAnimationDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / introAnimationDuration;
+            float smoothT = 1f - Mathf.Pow(1f - t, 3f);
+            float currentValue = Mathf.Lerp(startValue, endValue, smoothT);
+
+            if (healthBarAnimator != null)
+            {
+                healthBarAnimator.SetFloat("Health", currentValue);
+            }
+
+            yield return null;
+        }
+
+        if (healthBarAnimator != null)
+        {
+            healthBarAnimator.SetFloat("Health", blendTreeMaxValue);
+        }
+
+        targetHealthValue = blendTreeMaxValue;
+    }
+
+    public void HideHealthBar(bool immediate = false)
+    {
+        if (immediate)
+        {
+            if (canvasGroup != null)
+                canvasGroup.alpha = 0f;
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            StartCoroutine(FadeHealthBar(0f, 0.5f));
+        }
     }
 
     IEnumerator FadeHealthBar(float targetAlpha, float duration)
@@ -114,5 +180,18 @@ public class BossHealthBar : MonoBehaviour
         }
 
         canvasGroup.alpha = targetAlpha;
+
+        if (targetAlpha == 0f)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    void OnValidate()
+    {
+        if (bossNameText != null && !string.IsNullOrEmpty(bossName))
+        {
+            bossNameText.text = bossName;
+        }
     }
 }
