@@ -38,6 +38,16 @@ public class PlayerMovement : MonoBehaviour
     public InputActionReference jumpAction;
     public InputActionReference rollAction;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource loopAudioSource;      // For run sound (loop)
+    [SerializeField] private AudioSource oneShotAudioSource;   // For jump & roll sounds
+    [SerializeField] private AudioClip runSound;
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip rollSound;
+    [SerializeField][Range(0f, 1f)] private float runSoundVolume = 0.5f;
+    [SerializeField][Range(0f, 1f)] private float jumpSoundVolume = 1f;
+    [SerializeField][Range(0f, 1f)] private float rollSoundVolume = 1f;
+
     [Header("Debug Wall Cling")]
     [SerializeField] private bool showWallClingGizmos = true;
     [SerializeField] private bool showWallClingDebugLogs = false;
@@ -77,6 +87,25 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         playerCollider = GetComponent<Collider2D>();
         manaScript = GetComponent<PlayerMana>();
+
+        // Get or create audio sources
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+
+        if (audioSources.Length >= 2)
+        {
+            loopAudioSource = audioSources[0];
+            oneShotAudioSource = audioSources[1];
+        }
+        else if (audioSources.Length == 1)
+        {
+            loopAudioSource = audioSources[0];
+            oneShotAudioSource = gameObject.AddComponent<AudioSource>();
+        }
+        else
+        {
+            loopAudioSource = gameObject.AddComponent<AudioSource>();
+            oneShotAudioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     private void Start()
@@ -156,6 +185,33 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
             animator.SetBool("IsGrounded", isGrounded);
+        }
+
+        // Handle run sound
+        HandleRunSound();
+    }
+
+    private void HandleRunSound()
+    {
+        bool isMoving = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
+        bool shouldPlayRunSound = isMoving && isGrounded && !isRolling && !isWallClinging;
+
+        if (shouldPlayRunSound)
+        {
+            if (loopAudioSource != null && runSound != null && !loopAudioSource.isPlaying)
+            {
+                loopAudioSource.clip = runSound;
+                loopAudioSource.volume = runSoundVolume;
+                loopAudioSource.loop = true;
+                loopAudioSource.Play();
+            }
+        }
+        else
+        {
+            if (loopAudioSource != null && loopAudioSource.isPlaying && loopAudioSource.clip == runSound)
+            {
+                loopAudioSource.Stop();
+            }
         }
     }
 
@@ -322,6 +378,10 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         jumpCount++;
         animator.SetTrigger("Jump");
+
+        // Play jump sound
+        if (oneShotAudioSource != null && jumpSound != null)
+            oneShotAudioSource.PlayOneShot(jumpSound, jumpSoundVolume);
     }
 
     private void PerformWallJump()
@@ -413,6 +473,10 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetTrigger("Roll");
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+
+        // Play roll sound
+        if (oneShotAudioSource != null && rollSound != null)
+            oneShotAudioSource.PlayOneShot(rollSound, rollSoundVolume);
 
         StartCoroutine(InvincibilityCoroutine());
     }

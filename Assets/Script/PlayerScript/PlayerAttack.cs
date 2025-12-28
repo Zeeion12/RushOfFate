@@ -24,9 +24,11 @@ public class PlayerAttack : MonoBehaviour
     private PlayerMovement playerMovement;
 
     [Header("Audio")]
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource attackAudioSource;  // Dedicated for attack sounds
     [SerializeField] private AudioClip normalAttackSound;
     [SerializeField] private AudioClip swordStabSound;
+    [SerializeField][Range(0f, 1f)] private float normalAttackVolume = 1f;
+    [SerializeField][Range(0f, 1f)] private float swordStabVolume = 1f;
 
     private float lastAttackTime = -999f;
     private float lastComboTime = -999f;
@@ -38,7 +40,22 @@ public class PlayerAttack : MonoBehaviour
         Instance = this;
         if (animator == null) animator = GetComponentInChildren<Animator>();
         if (playerTransform == null) playerTransform = transform;
-        if (audioSource == null) audioSource = GetComponent<AudioSource>();
+
+        // Get or create dedicated attack audio source
+        if (attackAudioSource == null)
+        {
+            AudioSource[] audioSources = GetComponents<AudioSource>();
+            // Use the third AudioSource if available (first two are for movement)
+            if (audioSources.Length >= 3)
+            {
+                attackAudioSource = audioSources[2];
+            }
+            else
+            {
+                attackAudioSource = gameObject.AddComponent<AudioSource>();
+            }
+        }
+
         playerMovement = GetComponent<PlayerMovement>();
     }
 
@@ -83,14 +100,14 @@ public class PlayerAttack : MonoBehaviour
         if (hasSwordStab && comboCount == 1 && timeSinceCombo <= comboWindow)
         {
             if (animator != null) animator.SetTrigger("SwordStab");
-            if (audioSource != null && swordStabSound != null) audioSource.PlayOneShot(swordStabSound);
+            if (attackAudioSource != null && swordStabSound != null) attackAudioSource.PlayOneShot(swordStabSound, swordStabVolume);
             Invoke(nameof(DealSwordStabDamage), attackDelay);
             comboCount = 0;
         }
         else
         {
             if (animator != null) animator.SetTrigger("Attack");
-            if (audioSource != null && normalAttackSound != null) audioSource.PlayOneShot(normalAttackSound);
+            if (attackAudioSource != null && normalAttackSound != null) attackAudioSource.PlayOneShot(normalAttackSound, normalAttackVolume);
             Invoke(nameof(DealNormalDamage), attackDelay);
             comboCount = 1;
             lastComboTime = Time.time;
