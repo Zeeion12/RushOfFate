@@ -23,12 +23,12 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Wall Cling Settings")]
     [SerializeField] private float wallClingDuration = 3f; // Max 3 detik
-    [SerializeField] private float wallSlideSpeed = 1f; // Kecepatan turun pelan
     [SerializeField] private float wallCheckDistance = 0.6f; // Jarak check wall
     [SerializeField] private Vector2 wallCheckOffset = new Vector2(0.5f, 0f); // Offset dari center
     [SerializeField] private LayerMask wallLayer; // Layer untuk wall
-    [SerializeField] private float wallJumpForce = 10f; // Jump force dari wall
-    [SerializeField] private Vector2 wallJumpDirection = new Vector2(1f, 1.5f); // Direction wall jump
+    [SerializeField] private float wallJumpForce = 15f; // Jump force dari wall (increased)
+    [SerializeField] private Vector2 wallJumpDirection = new Vector2(1.5f, 1.8f); // Direction wall jump (increased)
+    [SerializeField] private float wallJumpAwayForce = 8f; // Force untuk push away dari wall
 
     [Header("Mana Cost")]
     [SerializeField] private int rollManaCost = 2;
@@ -64,6 +64,9 @@ public class PlayerMovement : MonoBehaviour
     private float wallClingTimer = 0f;
     private bool isTouchingWall = false;
     private int wallDirection = 0; // -1 = left wall, 1 = right wall
+    private float originalGravityScale; // Simpan gravity scale original
+    private float lastWallJumpTime = -999f; // Track wall jump time
+    private const float wallJumpCooldown = 0.3f; // Cooldown setelah wall jump
 
     private PlayerMana manaScript;
 
@@ -175,15 +178,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleWallClingLogic()
     {
-        // Check wall collision
-        isTouchingWall = CheckWallCollision(out wallDirection);
-
-        if (isTouchingWall && !isWallClinging)
-        {
-            // Enter wall cling
-            EnterWallCling();
-        }
-        else if (isWallClinging)
+        // Jangan handle wall cling logic jika sedang tidak wall clinging
+        // Ini mencegah re-attach saat masih dalam jump
+        if (isWallClinging)
         {
             // Update wall cling state
             wallClingTimer += Time.deltaTime;
@@ -195,13 +192,31 @@ public class PlayerMovement : MonoBehaviour
                 return;
             }
 
-            // Slow slide down
-            rb.linearVelocity = new Vector2(0f, -wallSlideSpeed);
+            // Tetap diam di tempat (tidak ada wall slide)
+            rb.linearVelocity = Vector2.zero;
 
             // Check jika lepas dari wall
+            isTouchingWall = CheckWallCollision(out wallDirection);
             if (!isTouchingWall)
             {
                 ExitWallCling();
+            }
+        }
+        else
+        {
+            // Cek cooldown setelah wall jump - jangan langsung nempel lagi
+            if (Time.time - lastWallJumpTime < wallJumpCooldown)
+            {
+                return; // Skip wall cling detection saat dalam cooldown
+            }
+
+            // Only check for wall to enter wall cling
+            isTouchingWall = CheckWallCollision(out wallDirection);
+
+            if (isTouchingWall)
+            {
+                // Enter wall cling
+                EnterWallCling();
             }
         }
     }
@@ -210,6 +225,10 @@ public class PlayerMovement : MonoBehaviour
     {
         isWallClinging = true;
         wallClingTimer = 0f;
+
+        // Nonaktifkan gravity agar player diam di tempat
+        rb.gravityScale = 0f;
+        rb.linearVelocity = Vector2.zero;
 
         // Set animator
         animator.SetBool("isWallClinging", true);
@@ -225,6 +244,9 @@ public class PlayerMovement : MonoBehaviour
     {
         isWallClinging = false;
         wallClingTimer = 0f;
+
+        // Aktifkan kembali gravity
+        rb.gravityScale = 3f; // Kembalikan ke nilai normal (sesuaikan jika perlu)
 
         // Reset animator
         animator.SetBool("isWallClinging", false);
@@ -304,16 +326,25 @@ public class PlayerMovement : MonoBehaviour
 
     private void PerformWallJump()
     {
-        // Exit wall cling
+        // Simpan wall direction sebelum exit
+        int savedWallDirection = wallDirection;
+
+        // Exit wall cling terlebih dahulu (ini akan aktifkan gravity kembali)
         ExitWallCling();
 
-        // Jump away from wall
-        float jumpDirectionX = -wallDirection; // Opposite dari wall direction
+        // Set wall jump time untuk cooldown
+        lastWallJumpTime = Time.time;
+
+        // Jump away dari wall dengan force yang lebih kuat
+        float jumpDirectionX = -savedWallDirection; // Opposite dari wall direction
+
+        // Set velocity untuk jump yang powerful
         Vector2 jumpVelocity = new Vector2(
-            jumpDirectionX * wallJumpDirection.x * moveSpeed,
-            wallJumpDirection.y * firstJumpForce * 0.8f
+            jumpDirectionX * wallJumpAwayForce,
+            wallJumpForce
         );
 
+        // Set velocity langsung untuk jump yang lebih responsive
         rb.linearVelocity = jumpVelocity;
 
         // Flip sprite untuk face jump direction
@@ -326,7 +357,7 @@ public class PlayerMovement : MonoBehaviour
         jumpCount = 1; // Wall jump count as first jump
 
         if (showWallClingDebugLogs)
-            Debug.Log($"[WallCling] Wall jump! Direction: {jumpDirectionX}");
+            Debug.Log($"[WallCling] Wall jump! Direction: {jumpDirectionX}, Velocity: {jumpVelocity}");
     }
 
     private void OnRoll(InputAction.CallbackContext context)

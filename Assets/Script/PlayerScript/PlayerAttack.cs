@@ -126,7 +126,10 @@ public class PlayerAttack : MonoBehaviour
             if (archer != null) { archer.TakeDamage(damage, transform.position); continue; }
 
             FlyingEnemyHealth flying = hit.GetComponent<FlyingEnemyHealth>();
-            if (flying != null) { flying.TakeDamage(damage, transform.position); }
+            if (flying != null) { flying.TakeDamage(damage, transform.position); continue; }
+
+            EvilWizardBoss wizard = hit.GetComponent<EvilWizardBoss>();
+            if (wizard != null) { wizard.TakeDamage(damage); }
         }
     }
 
