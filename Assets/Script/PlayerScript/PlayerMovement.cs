@@ -25,9 +25,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float wallClingDuration = 3f; // Max 3 detik
     [SerializeField] private float wallCheckDistance = 0.6f; // Jarak check wall
     [SerializeField] private Vector2 wallCheckOffset = new Vector2(0.5f, 0f); // Offset dari center
-    [SerializeField] private LayerMask wallLayer; // Layer untuk wall
+    [SerializeField] private LayerMask wallLayer; // Layer untuk wall (optional)
+    [SerializeField] private string wallTag = "Wall"; // Tag untuk wall (optional)
     [SerializeField] private float wallJumpForce = 15f; // Jump force dari wall (increased)
-    [SerializeField] private Vector2 wallJumpDirection = new Vector2(1.5f, 1.8f); // Direction wall jump (increased)
     [SerializeField] private float wallJumpAwayForce = 8f; // Force untuk push away dari wall
 
     [Header("Mana Cost")]
@@ -87,6 +87,9 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         playerCollider = GetComponent<Collider2D>();
         manaScript = GetComponent<PlayerMana>();
+
+        // Simpan gravity scale original
+        originalGravityScale = rb.gravityScale;
 
         // Get or create audio sources
         AudioSource[] audioSources = GetComponents<AudioSource>();
@@ -301,8 +304,8 @@ public class PlayerMovement : MonoBehaviour
         isWallClinging = false;
         wallClingTimer = 0f;
 
-        // Aktifkan kembali gravity
-        rb.gravityScale = 3f; // Kembalikan ke nilai normal (sesuaikan jika perlu)
+        // Aktifkan kembali gravity ke nilai original
+        rb.gravityScale = originalGravityScale;
 
         // Reset animator
         animator.SetBool("isWallClinging", false);
@@ -319,7 +322,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 rightCheckPos = (Vector2)transform.position + new Vector2(wallCheckOffset.x, wallCheckOffset.y);
         RaycastHit2D rightHit = Physics2D.Raycast(rightCheckPos, Vector2.right, wallCheckDistance, wallLayer);
 
-        if (rightHit.collider != null)
+        if (rightHit.collider != null && IsWall(rightHit.collider))
         {
             direction = 1; // Wall on right
             return true;
@@ -329,13 +332,25 @@ public class PlayerMovement : MonoBehaviour
         Vector2 leftCheckPos = (Vector2)transform.position + new Vector2(-wallCheckOffset.x, wallCheckOffset.y);
         RaycastHit2D leftHit = Physics2D.Raycast(leftCheckPos, Vector2.left, wallCheckDistance, wallLayer);
 
-        if (leftHit.collider != null)
+        if (leftHit.collider != null && IsWall(leftHit.collider))
         {
             direction = -1; // Wall on left
             return true;
         }
 
         return false;
+    }
+
+    private bool IsWall(Collider2D collider)
+    {
+        // Check tag jika wallTag tidak kosong
+        if (!string.IsNullOrEmpty(wallTag))
+        {
+            return collider.CompareTag(wallTag);
+        }
+
+        // Jika tag kosong, return true (karena sudah di-filter oleh layer mask)
+        return true;
     }
 
     private bool CheckGroundWithTag()
@@ -413,8 +428,12 @@ public class PlayerMovement : MonoBehaviour
         // Trigger jump animation
         animator.SetTrigger("Jump");
 
-        // Reset jump count
-        jumpCount = 1; // Wall jump count as first jump
+        // Play jump sound
+        if (oneShotAudioSource != null && jumpSound != null)
+            oneShotAudioSource.PlayOneShot(jumpSound, jumpSoundVolume);
+
+        // Reset jump count ke 0 agar next jump pakai first jump force
+        jumpCount = 0; // Wall jump reset jump count, next jump will be first jump
 
         if (showWallClingDebugLogs)
             Debug.Log($"[WallCling] Wall jump! Direction: {jumpDirectionX}, Velocity: {jumpVelocity}");
