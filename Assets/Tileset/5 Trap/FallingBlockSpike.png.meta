@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FallingBlockSpike_0: 3214132996289542345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
