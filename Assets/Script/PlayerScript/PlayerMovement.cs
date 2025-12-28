@@ -22,10 +22,13 @@ public class PlayerMovement : MonoBehaviour
     public float invincibilityDuration = 0.5f;
 
     [Header("Wall Cling Settings")]
-    [SerializeField] private float wallClingDuration = 3f;
-    [SerializeField] private float wallCheckDistance = 0.6f;
-    [SerializeField] private Vector2 wallCheckOffset = new Vector2(0.5f, 0f);
-    [SerializeField] private Vector2 wallJumpDirection = new Vector2(1f, 1.5f);
+    [SerializeField] private float wallClingDuration = 3f; // Max 3 detik
+    [SerializeField] private float wallSlideSpeed = 1f; // Kecepatan turun pelan
+    [SerializeField] private float wallCheckDistance = 0.6f; // Jarak check wall
+    [SerializeField] private Vector2 wallCheckOffset = new Vector2(0.5f, 0f); // Offset dari center
+    [SerializeField] private LayerMask wallLayer; // Layer untuk wall
+    [SerializeField] private float wallJumpForce = 10f; // Jump force dari wall
+    [SerializeField] private Vector2 wallJumpDirection = new Vector2(1f, 1.5f); // Direction wall jump
 
     [Header("Mana Cost")]
     [SerializeField] private int rollManaCost = 2;
@@ -48,17 +51,19 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private bool canMove = true;
 
+    // Roll state
     private bool isRolling = false;
     private bool isInvincible = false;
     private float lastRollTime = -999f;
     private float rollTimer = 0f;
     private Vector2 rollDirection;
 
+    // Wall Cling state
     private bool isWallClinging = false;
     private bool hasWallClingSkill = false;
     private float wallClingTimer = 0f;
     private bool isTouchingWall = false;
-    private int wallDirection = 0;
+    private int wallDirection = 0; // -1 = left wall, 1 = right wall
 
     private PlayerMana manaScript;
 
@@ -98,23 +103,28 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        // Ground check
         wasGrounded = isGrounded;
         isGrounded = CheckGroundWithTag();
 
+        // Reset jump count saat landing
         if (isGrounded && !wasGrounded)
         {
             jumpCount = 0;
         }
 
+        // Wall Cling Logic
         if (hasWallClingSkill && !isRolling && !isGrounded)
         {
             HandleWallClingLogic();
         }
         else if (isWallClinging)
         {
+            // Force exit wall cling jika skill hilang atau grounded
             ExitWallCling();
         }
 
+        // Handle roll timer
         if (isRolling)
         {
             rollTimer += Time.deltaTime;
@@ -128,21 +138,17 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
+        // Gerakan horizontal (disable saat wall cling)
         if (canMove && !isRolling && !isWallClinging)
         {
             moveInput = moveAction.action.ReadValue<Vector2>();
             rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
-        }
-        else if (isWallClinging)
-        {
-            rb.linearVelocity = Vector2.zero;
+
+            if (moveInput.x != 0)
+                spriteRenderer.flipX = moveInput.x < 0;
         }
 
-        if (!isRolling && !isWallClinging && canMove && moveInput.x != 0)
-        {
-            spriteRenderer.flipX = moveInput.x < 0;
-        }
-
+        // Update animasi
         if (!isRolling && !isWallClinging)
         {
             animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
@@ -161,6 +167,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // ✅ PUBLIC METHOD: untuk di-call dari PlayerAttack
     public void RefreshSkills()
     {
         CheckUnlockedSkills();
@@ -168,22 +175,30 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleWallClingLogic()
     {
+        // Check wall collision
         isTouchingWall = CheckWallCollision(out wallDirection);
 
         if (isTouchingWall && !isWallClinging)
         {
+            // Enter wall cling
             EnterWallCling();
         }
         else if (isWallClinging)
         {
+            // Update wall cling state
             wallClingTimer += Time.deltaTime;
 
+            // Auto-release setelah durasi habis
             if (wallClingTimer >= wallClingDuration)
             {
                 ExitWallCling();
                 return;
             }
 
+            // Slow slide down
+            rb.linearVelocity = new Vector2(0f, -wallSlideSpeed);
+
+            // Check jika lepas dari wall
             if (!isTouchingWall)
             {
                 ExitWallCling();
@@ -196,16 +211,11 @@ public class PlayerMovement : MonoBehaviour
         isWallClinging = true;
         wallClingTimer = 0f;
 
+        // Set animator
         animator.SetBool("isWallClinging", true);
 
-        if (wallDirection > 0)
-        {
-            spriteRenderer.flipX = false;
-        }
-        else if (wallDirection < 0)
-        {
-            spriteRenderer.flipX = true;
-        }
+        // Face the wall (flip sprite)
+        spriteRenderer.flipX = wallDirection < 0; // Face right jika wall di kiri, vice versa
 
         if (showWallClingDebugLogs)
             Debug.Log($"[WallCling] Entered wall cling on {(wallDirection < 0 ? "left" : "right")} wall");
@@ -216,6 +226,7 @@ public class PlayerMovement : MonoBehaviour
         isWallClinging = false;
         wallClingTimer = 0f;
 
+        // Reset animator
         animator.SetBool("isWallClinging", false);
 
         if (showWallClingDebugLogs)
@@ -226,21 +237,23 @@ public class PlayerMovement : MonoBehaviour
     {
         direction = 0;
 
+        // Check right wall
         Vector2 rightCheckPos = (Vector2)transform.position + new Vector2(wallCheckOffset.x, wallCheckOffset.y);
-        RaycastHit2D rightHit = Physics2D.Raycast(rightCheckPos, Vector2.right, wallCheckDistance);
+        RaycastHit2D rightHit = Physics2D.Raycast(rightCheckPos, Vector2.right, wallCheckDistance, wallLayer);
 
-        if (rightHit.collider != null && rightHit.collider.CompareTag("Ground"))
+        if (rightHit.collider != null)
         {
-            direction = 1;
+            direction = 1; // Wall on right
             return true;
         }
 
+        // Check left wall
         Vector2 leftCheckPos = (Vector2)transform.position + new Vector2(-wallCheckOffset.x, wallCheckOffset.y);
-        RaycastHit2D leftHit = Physics2D.Raycast(leftCheckPos, Vector2.left, wallCheckDistance);
+        RaycastHit2D leftHit = Physics2D.Raycast(leftCheckPos, Vector2.left, wallCheckDistance, wallLayer);
 
-        if (leftHit.collider != null && leftHit.collider.CompareTag("Ground"))
+        if (leftHit.collider != null)
         {
-            direction = -1;
+            direction = -1; // Wall on left
             return true;
         }
 
@@ -266,12 +279,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isRolling || !canMove) return;
 
+        // Wall Jump
         if (isWallClinging)
         {
             PerformWallJump();
             return;
         }
 
+        // Normal Jump
         if (jumpCount < maxJumps)
         {
             PerformJump();
@@ -289,28 +304,26 @@ public class PlayerMovement : MonoBehaviour
 
     private void PerformWallJump()
     {
+        // Exit wall cling
         ExitWallCling();
 
-        float jumpDirectionX = -wallDirection;
+        // Jump away from wall
+        float jumpDirectionX = -wallDirection; // Opposite dari wall direction
         Vector2 jumpVelocity = new Vector2(
             jumpDirectionX * wallJumpDirection.x * moveSpeed,
-            firstJumpForce
+            wallJumpDirection.y * firstJumpForce * 0.8f
         );
 
         rb.linearVelocity = jumpVelocity;
 
-        if (jumpDirectionX > 0)
-        {
-            spriteRenderer.flipX = false;
-        }
-        else if (jumpDirectionX < 0)
-        {
-            spriteRenderer.flipX = true;
-        }
+        // Flip sprite untuk face jump direction
+        spriteRenderer.flipX = jumpDirectionX < 0;
 
+        // Trigger jump animation
         animator.SetTrigger("Jump");
 
-        jumpCount = 1;
+        // Reset jump count
+        jumpCount = 1; // Wall jump count as first jump
 
         if (showWallClingDebugLogs)
             Debug.Log($"[WallCling] Wall jump! Direction: {jumpDirectionX}");
@@ -340,7 +353,7 @@ public class PlayerMovement : MonoBehaviour
     private bool CanRoll()
     {
         if (isRolling) return false;
-        if (isWallClinging) return false;
+        if (isWallClinging) return false; // Cannot roll while wall clinging
         if (!isGrounded) return false;
         if (Time.time - lastRollTime < rollCooldown) return false;
 
@@ -420,26 +433,32 @@ public class PlayerMovement : MonoBehaviour
         return isWallClinging;
     }
 
+    // Gizmos untuk debugging
     private void OnDrawGizmosSelected()
     {
         if (!showWallClingGizmos) return;
 
+        // Ground check visualization
         if (groundCheck != null)
         {
             Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
 
+        // Wall check visualization
         if (Application.isPlaying)
         {
+            // Right wall check
             Vector2 rightCheckPos = (Vector2)transform.position + new Vector2(wallCheckOffset.x, wallCheckOffset.y);
             Gizmos.color = isTouchingWall && wallDirection == 1 ? Color.red : Color.blue;
             Gizmos.DrawRay(rightCheckPos, Vector2.right * wallCheckDistance);
 
+            // Left wall check
             Vector2 leftCheckPos = (Vector2)transform.position + new Vector2(-wallCheckOffset.x, wallCheckOffset.y);
             Gizmos.color = isTouchingWall && wallDirection == -1 ? Color.red : Color.blue;
             Gizmos.DrawRay(leftCheckPos, Vector2.left * wallCheckDistance);
 
+            // Wall cling indicator
             if (isWallClinging)
             {
                 Gizmos.color = Color.yellow;

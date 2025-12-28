@@ -6,20 +6,22 @@ public class BossFightManager : MonoBehaviour
     public static BossFightManager Instance;
 
     [Header("Boss Fight Settings")]
-    [SerializeField] private EvilWizardBoss bossObject;
+    [SerializeField] private GameObject bossPrefab;
+    [SerializeField] private Transform bossSpawnPoint;
     [SerializeField] private GameObject bossArena;
-    [SerializeField] private BossHealthBar bossHealthBar;
+    [SerializeField] private GameObject arenaBarriers;
 
     [Header("Arena Doors")]
-    [SerializeField] private BossDoor entranceDoor;
-    [SerializeField] private BossDoor exitDoor;
-    [SerializeField] private bool closeDoorsOnStart = true;
-    [SerializeField] private bool openDoorsOnDefeat = true;
+    [SerializeField] private BossDoor entranceDoor; // Pintu masuk
+    [SerializeField] private BossDoor exitDoor; // Pintu keluar
+    [SerializeField] private bool closeDoorsOnStart = true; // Tutup pintu saat boss fight dimulai
+    [SerializeField] private bool openDoorsOnDefeat = true; // Buka pintu saat boss kalah
 
     [Header("Music & Audio")]
     [SerializeField] private AudioClip bossMusicClip;
     [SerializeField] private AudioClip victoryMusicClip;
 
+    private GameObject currentBoss;
     private bool bossFightActive = false;
     private bool bossDefeated = false;
 
@@ -33,20 +35,8 @@ public class BossFightManager : MonoBehaviour
 
     void Start()
     {
-        if (bossHealthBar == null)
-        {
-            bossHealthBar = FindFirstObjectByType<BossHealthBar>();
-        }
-
-        if (bossHealthBar != null)
-        {
-            bossHealthBar.HideHealthBar(immediate: true);
-        }
-
-        if (bossObject != null)
-        {
-            bossObject.gameObject.SetActive(false);
-        }
+        if (arenaBarriers != null)
+            arenaBarriers.SetActive(false);
     }
 
     public void StartBossFight()
@@ -55,18 +45,13 @@ public class BossFightManager : MonoBehaviour
 
         bossFightActive = true;
 
-        if (bossObject != null)
+        // Spawn boss
+        if (bossPrefab != null && bossSpawnPoint != null)
         {
-            bossObject.gameObject.SetActive(true);
-
-            if (bossHealthBar != null)
-            {
-                int bossMaxHealth = GetBossMaxHealth();
-                bossHealthBar.SetMaxHealth(bossMaxHealth);
-                bossHealthBar.ShowHealthBar();
-            }
+            currentBoss = Instantiate(bossPrefab, bossSpawnPoint.position, Quaternion.identity);
         }
 
+        // Close arena doors
         if (closeDoorsOnStart)
         {
             if (entranceDoor != null)
@@ -75,25 +60,18 @@ public class BossFightManager : MonoBehaviour
             if (exitDoor != null)
                 exitDoor.CloseDoor();
         }
-    }
 
-    int GetBossMaxHealth()
-    {
-        if (bossObject == null) return 500;
-
-        var bossScript = bossObject.GetComponent<EvilWizardBoss>();
-        if (bossScript != null)
+        // Activate arena barriers (optional)
+        if (arenaBarriers != null)
         {
-            var field = typeof(EvilWizardBoss).GetField("maxHealth",
-                System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-
-            if (field != null)
-            {
-                return (int)field.GetValue(bossScript);
-            }
+            arenaBarriers.SetActive(true);
         }
 
-        return 500;
+        // Start boss music (TODO: Implement AudioManager jika diperlukan)
+        // if (bossMusicClip != null)
+        //     AudioManager.Instance?.PlayMusic(bossMusicClip);
+
+        Debug.Log("Boss fight started! Doors closed.");
     }
 
     public void OnBossDefeated()
@@ -103,11 +81,7 @@ public class BossFightManager : MonoBehaviour
         bossDefeated = true;
         bossFightActive = false;
 
-        if (bossHealthBar != null)
-        {
-            bossHealthBar.HideHealthBar();
-        }
-
+        // Open arena doors
         if (openDoorsOnDefeat)
         {
             if (entranceDoor != null)
@@ -116,13 +90,26 @@ public class BossFightManager : MonoBehaviour
             if (exitDoor != null)
                 exitDoor.OpenDoor();
         }
+
+        // Play victory music (TODO: Implement AudioManager jika diperlukan)
+        // if (victoryMusicClip != null)
+        //     AudioManager.Instance?.PlayMusic(victoryMusicClip);
+
+        // Deactivate barriers after delay
+        StartCoroutine(DeactivateBarriersDelayed(3f));
+
+        // Award time bonus (TODO: Implement TimeManager jika diperlukan)
+        // if (TimeManager.Instance != null)
+        //     TimeManager.Instance.AddTimeBonus(120); // 2 minutes bonus
+
+        Debug.Log("Boss defeated! Doors opened.");
     }
 
-    void OnValidate()
+    IEnumerator DeactivateBarriersDelayed(float delay)
     {
-        if (bossObject != null && bossHealthBar == null)
-        {
-            bossHealthBar = FindFirstObjectByType<BossHealthBar>();
-        }
+        yield return new WaitForSeconds(delay);
+
+        if (arenaBarriers != null)
+            arenaBarriers.SetActive(false);
     }
 }
