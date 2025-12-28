@@ -38,6 +38,16 @@ public class EvilWizardBoss : MonoBehaviour
     [SerializeField] private Transform attackPoint;
     [SerializeField] private BossHealthBar healthBar;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource bossAudioSource;
+    [SerializeField] private AudioSource runAudioSource;  // Separate for run loop
+    [SerializeField] private AudioClip attack1Sound;
+    [SerializeField] private AudioClip attack2Sound;
+    [SerializeField] private AudioClip runSound;
+    [SerializeField][Range(0f, 1f)] private float attack1Volume = 1f;
+    [SerializeField][Range(0f, 1f)] private float attack2Volume = 1f;
+    [SerializeField][Range(0f, 1f)] private float runVolume = 0.5f;
+
     // Components
     private Animator animator;
     private Rigidbody2D rb;
@@ -67,6 +77,24 @@ public class EvilWizardBoss : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        // Get or create audio sources
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        if (audioSources.Length >= 2)
+        {
+            bossAudioSource = audioSources[0];
+            runAudioSource = audioSources[1];
+        }
+        else if (audioSources.Length == 1)
+        {
+            bossAudioSource = audioSources[0];
+            runAudioSource = gameObject.AddComponent<AudioSource>();
+        }
+        else
+        {
+            bossAudioSource = gameObject.AddComponent<AudioSource>();
+            runAudioSource = gameObject.AddComponent<AudioSource>();
+        }
 
         // Initialize
         currentHealth = maxHealth;
@@ -174,6 +202,9 @@ public class EvilWizardBoss : MonoBehaviour
             case BossState.Idle:
                 animator.SetBool("isRunning", false);
                 rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+
+                // Stop run sound when idle
+                StopRunSound();
                 break;
 
             case BossState.Chase:
@@ -182,13 +213,33 @@ public class EvilWizardBoss : MonoBehaviour
 
             case BossState.Attack:
                 PerformAttack();
+
+                // Stop run sound when attacking
+                StopRunSound();
                 break;
+        }
+    }
+
+    void StopRunSound()
+    {
+        if (runAudioSource != null && runAudioSource.isPlaying && runAudioSource.clip == runSound)
+        {
+            runAudioSource.Stop();
         }
     }
 
     void ChasePlayer()
     {
         animator.SetBool("isRunning", true);
+
+        // Play run sound (loop)
+        if (runAudioSource != null && runSound != null && !runAudioSource.isPlaying)
+        {
+            runAudioSource.clip = runSound;
+            runAudioSource.volume = runVolume;
+            runAudioSource.loop = true;
+            runAudioSource.Play();
+        }
 
         // Calculate direction
         Vector2 direction = (player.position - transform.position).normalized;
@@ -246,6 +297,19 @@ public class EvilWizardBoss : MonoBehaviour
         // Trigger animation
         animator.SetInteger("AttackType", attackType);
         animator.SetTrigger("Attack");
+
+        // Play attack sound based on type
+        if (bossAudioSource != null)
+        {
+            if (attackType == 1 && attack1Sound != null)
+            {
+                bossAudioSource.PlayOneShot(attack1Sound, attack1Volume);
+            }
+            else if (attackType == 2 && attack2Sound != null)
+            {
+                bossAudioSource.PlayOneShot(attack2Sound, attack2Volume);
+            }
+        }
 
         // Wait for attack animation to reach hit frame (adjust timing based on your animation)
         yield return new WaitForSeconds(0.4f);

@@ -19,6 +19,11 @@ public class SkillPopup : MonoBehaviour
     [Header("Text Format")]
     [SerializeField] private string popupFormat = "New Skill Unlocked!\n{0}";
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource popupAudioSource;
+    [SerializeField] private AudioClip skillUnlockedSound;
+    [SerializeField][Range(0f, 1f)] private float skillUnlockedVolume = 1f;
+
     [Header("Debug")]
     [SerializeField] private bool showDebugLogs = true;
 
@@ -39,6 +44,13 @@ public class SkillPopup : MonoBehaviour
 
         if (canvasGroup == null && popupPanel != null)
             canvasGroup = popupPanel.GetComponent<CanvasGroup>();
+
+        // Get or create audio source
+        if (popupAudioSource == null)
+            popupAudioSource = GetComponent<AudioSource>();
+
+        if (popupAudioSource == null)
+            popupAudioSource = gameObject.AddComponent<AudioSource>();
     }
 
     public void ShowSkillUnlocked(string skillName)
@@ -61,6 +73,12 @@ public class SkillPopup : MonoBehaviour
         skillNameText.text = string.Format(popupFormat, skillName);
 
         popupPanel.SetActive(true);
+
+        // Play skill unlocked sound
+        if (popupAudioSource != null && skillUnlockedSound != null)
+        {
+            popupAudioSource.PlayOneShot(skillUnlockedSound, skillUnlockedVolume);
+        }
 
         yield return StartCoroutine(FadeIn());
 

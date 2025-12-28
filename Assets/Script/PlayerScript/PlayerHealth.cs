@@ -13,6 +13,13 @@ public class PlayerHealth : MonoBehaviour
     [Header("Respawn Settings")]
     [SerializeField] private float respawnInvincibilityDuration = 2f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource healthAudioSource;
+    [SerializeField] private AudioClip hurtSound;
+    [SerializeField] private AudioClip deathSound;
+    [SerializeField][Range(0f, 1f)] private float hurtVolume = 1f;
+    [SerializeField][Range(0f, 1f)] private float deathVolume = 1f;
+
     [Header("Events")]
     public UnityEvent<int> OnHealthChanged;
     public UnityEvent OnDeath;
@@ -44,6 +51,21 @@ public class PlayerHealth : MonoBehaviour
         movementScript = GetComponent<PlayerMovement>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
+        // Get or create audio source
+        if (healthAudioSource == null)
+        {
+            AudioSource[] audioSources = GetComponents<AudioSource>();
+            // Use the fourth AudioSource if available (first three are for movement and attack)
+            if (audioSources.Length >= 4)
+            {
+                healthAudioSource = audioSources[3];
+            }
+            else
+            {
+                healthAudioSource = gameObject.AddComponent<AudioSource>();
+            }
+        }
+
         // ✅ NEW: Get TimerManager reference
         timerManager = FindObjectOfType<TimerManager>();
 
@@ -71,11 +93,27 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
+            // Play hurt sound
+            if (healthAudioSource != null && hurtSound != null)
+            {
+                healthAudioSource.PlayOneShot(hurtSound, hurtVolume);
+            }
+
             if (animator != null)
             {
                 animator.SetTrigger("Hurt");
             }
+
+            // Start invincibility frames after taking damage
+            StartCoroutine(InvincibilityCoroutine());
         }
+    }
+
+    System.Collections.IEnumerator InvincibilityCoroutine()
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(invincibilityDuration);
+        isInvincible = false;
     }
 
     public void Heal(int amount)
@@ -95,6 +133,12 @@ public class PlayerHealth : MonoBehaviour
         isDead = true;
 
         Debug.Log("Player died!");
+
+        // Play death sound
+        if (healthAudioSource != null && deathSound != null)
+        {
+            healthAudioSource.PlayOneShot(deathSound, deathVolume);
+        }
 
         // ✅ NEW: Pause timer saat player mati
         if (timerManager != null)

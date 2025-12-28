@@ -414,9 +414,9 @@ MonoBehaviour:
   runSound: {fileID: 8300000, guid: 71d284765bad06b4e90960b4754624ae, type: 3}
   jumpSound: {fileID: 8300000, guid: 62d27839a94a13c4f95132b9b25aeedc, type: 3}
   rollSound: {fileID: 8300000, guid: 22164e09c81eb9146a6cbdc982330465, type: 3}
-  runSoundVolume: 0.4
-  jumpSoundVolume: 0.4
-  rollSoundVolume: 0.4
+  runSoundVolume: 0.6
+  jumpSoundVolume: 0.7
+  rollSoundVolume: 0.7
   showWallClingGizmos: 1
   showWallClingDebugLogs: 0
 --- !u!114 &6937998153066853000
@@ -447,8 +447,8 @@ MonoBehaviour:
   attackAudioSource: {fileID: 1491661289391021055}
   normalAttackSound: {fileID: 8300000, guid: a89000e6b30cf4642856f021ba3031ee, type: 3}
   swordStabSound: {fileID: 8300000, guid: 12c59510072db2347ae54cb7c3f315e2, type: 3}
-  normalAttackVolume: 0.4
-  swordStabVolume: 0.4
+  normalAttackVolume: 0.5
+  swordStabVolume: 0.5
 --- !u!114 &8078333491842496774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,6 +477,11 @@ MonoBehaviour:
   invincibilityDuration: 1
   deathDelay: 0.5
   respawnInvincibilityDuration: 2
+  healthAudioSource: {fileID: 1491661289391021055}
+  hurtSound: {fileID: 8300000, guid: 3ad822f3a8dc1c44aa868bdf5e6cbbb6, type: 3}
+  deathSound: {fileID: 0}
+  hurtVolume: 1
+  deathVolume: 1
   OnHealthChanged:
     m_PersistentCalls:
       m_Calls: []

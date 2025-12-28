@@ -30,9 +30,6 @@ public class LevelFinish : MonoBehaviour
     [SerializeField] private bool showCompletionMessage = true;
     [Tooltip("Tampilkan log completion message?")]
 
-    [Header("References")]
-    [SerializeField] private FadeManager fadeManager;
-
     [Header("Optional: Player Freeze")]
     [SerializeField] private bool freezePlayerOnFinish = true;
     [Tooltip("Freeze player movement saat finish?")]
@@ -54,16 +51,6 @@ public class LevelFinish : MonoBehaviour
         {
             Debug.LogWarning($"{gameObject.name}: Collider2D is not set as Trigger! Auto-fixing...");
             col.isTrigger = true;
-        }
-
-        // Auto-find FadeManager jika belum di-assign
-        if (fadeManager == null)
-        {
-            fadeManager = FindFirstObjectByType<FadeManager>();
-            if (fadeManager == null)
-            {
-                Debug.LogWarning($"{gameObject.name}: FadeManager not found! Will load scene directly without fade.");
-            }
         }
 
         // Validasi nama level
@@ -127,16 +114,8 @@ public class LevelFinish : MonoBehaviour
         // Log navigation
         Debug.Log($"Returning to {levelSelectionSceneName}...");
 
-        // Load scene dengan fade atau langsung
-        if (fadeManager != null)
-        {
-            fadeManager.FadeOutAndLoadScene(levelSelectionSceneName);
-        }
-        else
-        {
-            // Fallback: load langsung
-            UnityEngine.SceneManagement.SceneManager.LoadScene(levelSelectionSceneName);
-        }
+        // Load scene langsung
+        UnityEngine.SceneManagement.SceneManager.LoadScene(levelSelectionSceneName);
     }
 
     /// <summary>
