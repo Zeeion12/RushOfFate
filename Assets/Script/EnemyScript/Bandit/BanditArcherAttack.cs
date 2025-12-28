@@ -11,6 +11,11 @@ public class BanditArcherAttack : MonoBehaviour
     [SerializeField] private Transform arrowSpawnPoint; // Posisi spawn arrow (ujung bow)
     [SerializeField] private float arrowSpeed = 10f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource attackAudioSource;
+    [SerializeField] private AudioClip bowChargeSound; // Sound saat menarik busur
+    [SerializeField][Range(0f, 1f)] private float chargeVolume = 1f;
+
     // Components
     private Animator animator;
     private BanditArcherAI aiScript;
@@ -25,6 +30,13 @@ public class BanditArcherAttack : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         aiScript = GetComponent<BanditArcherAI>();
         healthScript = GetComponent<BanditArcherHealth>();
+
+        // Get or create audio source
+        if (attackAudioSource == null)
+            attackAudioSource = GetComponent<AudioSource>();
+
+        if (attackAudioSource == null)
+            attackAudioSource = gameObject.AddComponent<AudioSource>();
 
         // Validation
         if (arrowPrefab == null)
@@ -64,6 +76,12 @@ public class BanditArcherAttack : MonoBehaviour
         if (animator != null)
         {
             animator.SetTrigger("BowAttack");
+        }
+
+        // Play bow charge sound (saat menarik busur)
+        if (attackAudioSource != null && bowChargeSound != null)
+        {
+            attackAudioSource.PlayOneShot(bowChargeSound, chargeVolume);
         }
 
         // Spawn arrow after delay (match with animation release frame)

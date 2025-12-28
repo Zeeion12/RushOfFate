@@ -13,6 +13,11 @@ public class CanineAttack : MonoBehaviour
     [SerializeField] private float attackBoxOffset = 0.5f;
     [SerializeField] private LayerMask playerLayer;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource attackAudioSource;
+    [SerializeField] private AudioClip attackSound;
+    [SerializeField][Range(0f, 1f)] private float attackVolume = 1f;
+
     // Components
     private Animator animator;
     private CanineHealth healthScript;
@@ -27,6 +32,13 @@ public class CanineAttack : MonoBehaviour
     {
         animator = GetComponentInChildren<Animator>();
         healthScript = GetComponent<CanineHealth>();
+
+        // Get or create audio source
+        if (attackAudioSource == null)
+            attackAudioSource = GetComponent<AudioSource>();
+
+        if (attackAudioSource == null)
+            attackAudioSource = gameObject.AddComponent<AudioSource>();
 
         // Find player
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -68,6 +80,12 @@ public class CanineAttack : MonoBehaviour
         if (animator != null)
         {
             animator.SetTrigger("Attack");
+        }
+
+        // Play attack sound
+        if (attackAudioSource != null && attackSound != null)
+        {
+            attackAudioSource.PlayOneShot(attackSound, attackVolume);
         }
 
         // Deal damage after delay

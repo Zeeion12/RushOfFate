@@ -13,6 +13,11 @@ public class BanditAttack : MonoBehaviour
     [SerializeField] private float attackBoxOffset = 1f; // Further offset for whip reach
     [SerializeField] private LayerMask playerLayer;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource attackAudioSource;
+    [SerializeField] private AudioClip whipAttackSound;
+    [SerializeField][Range(0f, 1f)] private float attackVolume = 1f;
+
     // Components
     private Animator animator;
     private BanditHealth healthScript;
@@ -28,6 +33,13 @@ public class BanditAttack : MonoBehaviour
     {
         animator = GetComponentInChildren<Animator>();
         healthScript = GetComponent<BanditHealth>();
+
+        // Get or create audio source
+        if (attackAudioSource == null)
+            attackAudioSource = GetComponent<AudioSource>();
+
+        if (attackAudioSource == null)
+            attackAudioSource = gameObject.AddComponent<AudioSource>();
 
         // Find player
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -70,6 +82,12 @@ public class BanditAttack : MonoBehaviour
         if (animator != null)
         {
             animator.SetTrigger("Attack");
+        }
+
+        // Play whip attack sound
+        if (attackAudioSource != null && whipAttackSound != null)
+        {
+            attackAudioSource.PlayOneShot(whipAttackSound, attackVolume);
         }
 
         // Deal damage after delay

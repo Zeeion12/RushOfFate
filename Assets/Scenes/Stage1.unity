@@ -10079,7 +10079,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: a7d49f18689601e4d9ce3362e733fdd2, type: 3}
   m_Resource: {fileID: 8300000, guid: a7d49f18689601e4d9ce3362e733fdd2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.53
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -152018,6 +152018,30 @@ PrefabInstance:
       propertyPath: connectedDoor
       value: 
       objectReference: {fileID: 235813113}
+    - target: {fileID: 8125551305460121665, guid: e422d893ddf01dd4fa67bbd64c96d676, type: 3}
+      propertyPath: puzzleQuestion
+      value: Siapa Nama Iblis Yang Menjadi Masalah Utama Dunia Ini
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125551305460121665, guid: e422d893ddf01dd4fa67bbd64c96d676, type: 3}
+      propertyPath: correctAnswerIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125551305460121665, guid: e422d893ddf01dd4fa67bbd64c96d676, type: 3}
+      propertyPath: 'answerOptions.Array.data[0]'
+      value: Natiyas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125551305460121665, guid: e422d893ddf01dd4fa67bbd64c96d676, type: 3}
+      propertyPath: 'answerOptions.Array.data[1]'
+      value: Bahlillidun
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125551305460121665, guid: e422d893ddf01dd4fa67bbd64c96d676, type: 3}
+      propertyPath: 'answerOptions.Array.data[2]'
+      value: Fafafufu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125551305460121665, guid: e422d893ddf01dd4fa67bbd64c96d676, type: 3}
+      propertyPath: 'answerOptions.Array.data[3]'
+      value: Owoowi
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
