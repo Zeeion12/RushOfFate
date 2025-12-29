@@ -151,5 +151,4 @@ MonoBehaviour:
   levelSelectionSceneName: LevelSelection
   delayBeforeTransition: 1.5
   showCompletionMessage: 1
-  fadeManager: {fileID: 0}
   freezePlayerOnFinish: 1

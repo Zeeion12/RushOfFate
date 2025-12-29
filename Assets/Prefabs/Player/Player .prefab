@@ -402,8 +402,8 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 1024
+  wallTag: Wall
   wallJumpForce: 10
-  wallJumpDirection: {x: 1, y: 1.5}
   wallJumpAwayForce: 8
   rollManaCost: 2
   moveAction: {fileID: 307617841007770292, guid: 2f6c1c3548f602c4480735cd4330de7e, type: 3}

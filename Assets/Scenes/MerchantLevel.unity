@@ -966,7 +966,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6573773722670074137, guid: e1578ac21a306a442b3685161e8d1ec5, type: 3}
       propertyPath: currentLevelName
-      value: Merchant
+      value: MerchantLevel
       objectReference: {fileID: 0}
     - target: {fileID: 6573773722670074137, guid: e1578ac21a306a442b3685161e8d1ec5, type: 3}
       propertyPath: levelSelectionSceneName
@@ -1516,7 +1516,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6573773722670074137, guid: e1578ac21a306a442b3685161e8d1ec5, type: 3}
       propertyPath: currentLevelName
-      value: Merchant
+      value: MerchantLevel
       objectReference: {fileID: 0}
     - target: {fileID: 6573773722670074137, guid: e1578ac21a306a442b3685161e8d1ec5, type: 3}
       propertyPath: levelSelectionSceneName
