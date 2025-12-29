@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelection.unity
     guid: 7be9ac2cf8c92a44e90273d95782b808
   - enabled: 1
-    path: Assets/Scenes/Merchant.unity
+    path: Assets/Scenes/MerchantLevel.unity
     guid: da02ac609986a444cba8ec94288d2cd5
   - enabled: 1
     path: Assets/Scenes/Stage1.unity

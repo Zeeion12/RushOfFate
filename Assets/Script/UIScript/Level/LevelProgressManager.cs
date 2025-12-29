@@ -111,6 +111,7 @@ public class LevelProgressManager : MonoBehaviour
 
     /// <summary>
     /// Get nama level berikutnya berdasarkan progression
+    /// Level progression: Tutorial -> Stage1 -> Stage2 -> Stage3 -> MerchantLevel -> Stage4 -> Stage5
     /// </summary>
     string GetNextLevel(string currentLevel)
     {
@@ -123,7 +124,9 @@ public class LevelProgressManager : MonoBehaviour
             case "Stage2":
                 return "Stage3";
             case "Stage3":
-                return "Stage4";
+                return "MerchantLevel"; // Setelah Stage3, unlock Merchant dulu
+            case "MerchantLevel":
+                return "Stage4"; // Setelah Merchant, baru unlock Stage4
             case "Stage4":
                 return "Stage5";
             case "Stage5":
@@ -156,6 +159,7 @@ public class LevelProgressManager : MonoBehaviour
         UnlockLevel("Stage1");
         UnlockLevel("Stage2");
         UnlockLevel("Stage3");
+        UnlockLevel("MerchantLevel");
         UnlockLevel("Stage4");
         UnlockLevel("Stage5");
         Debug.Log("All levels unlocked!");

@@ -564,19 +564,23 @@ public class PlayerMovement : MonoBehaviour
         {
             // Right wall check
             Vector2 rightCheckPos = (Vector2)transform.position + new Vector2(wallCheckOffset.x, wallCheckOffset.y);
-            Gizmos.color = isTouchingWall && wallDirection == 1 ? Color.red : Color.blue;
+            Gizmos.color = isTouchingWall && wallDirection == 1 ? Color.red : Color.cyan;
             Gizmos.DrawRay(rightCheckPos, Vector2.right * wallCheckDistance);
+            // Draw small sphere at raycast origin
+            Gizmos.DrawWireSphere(rightCheckPos, 0.05f);
 
             // Left wall check
             Vector2 leftCheckPos = (Vector2)transform.position + new Vector2(-wallCheckOffset.x, wallCheckOffset.y);
-            Gizmos.color = isTouchingWall && wallDirection == -1 ? Color.red : Color.blue;
+            Gizmos.color = isTouchingWall && wallDirection == -1 ? Color.red : Color.cyan;
             Gizmos.DrawRay(leftCheckPos, Vector2.left * wallCheckDistance);
+            // Draw small sphere at raycast origin
+            Gizmos.DrawWireSphere(leftCheckPos, 0.05f);
 
-            // Wall cling indicator
+            // Wall cling indicator (smaller)
             if (isWallClinging)
             {
                 Gizmos.color = Color.yellow;
-                Gizmos.DrawWireSphere(transform.position, 0.5f);
+                Gizmos.DrawWireSphere(transform.position, 0.2f);
             }
         }
     }

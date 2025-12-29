@@ -40,9 +40,17 @@ public class InventoryManager : MonoBehaviour
             if (showDebugLogs)
                 Debug.Log($"[Inventory] Skill unlocked: {skillName}");
 
+            // Refresh skills untuk PlayerAttack
             if (PlayerAttack.Instance != null)
             {
                 PlayerAttack.Instance.RefreshSkills();
+            }
+
+            // Refresh skills untuk PlayerMovement (penting untuk Wall Cling!)
+            PlayerMovement playerMovement = FindFirstObjectByType<PlayerMovement>();
+            if (playerMovement != null)
+            {
+                playerMovement.RefreshSkills();
             }
         }
     }

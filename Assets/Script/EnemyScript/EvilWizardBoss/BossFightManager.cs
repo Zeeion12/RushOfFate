@@ -75,6 +75,12 @@ public class BossFightManager : MonoBehaviour
             if (exitDoor != null)
                 exitDoor.CloseDoor();
         }
+
+        // Start boss music
+        if (StageMusicManager.Instance != null)
+        {
+            StageMusicManager.Instance.PlayBossMusic();
+        }
     }
 
     int GetBossMaxHealth()
@@ -115,6 +121,12 @@ public class BossFightManager : MonoBehaviour
 
             if (exitDoor != null)
                 exitDoor.OpenDoor();
+        }
+
+        // Return to stage music after boss defeated
+        if (StageMusicManager.Instance != null)
+        {
+            StageMusicManager.Instance.ReturnToStageMusic();
         }
     }
 
