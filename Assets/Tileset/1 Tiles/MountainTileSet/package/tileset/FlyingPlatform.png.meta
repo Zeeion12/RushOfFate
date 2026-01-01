@@ -1,0 +1,408 @@
+fileFormatVersion: 2
+guid: 1439fac9cdad71f4fa20d9f8ee7654bd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5763604087213999146
+    second: FlyingPlatform_0
+  - first:
+      213: 3754876857267792713
+    second: FlyingPlatform_1
+  - first:
+      213: -196565081803184477
+    second: FlyingPlatform_2
+  - first:
+      213: 1881481942936890691
+    second: FlyingPlatform_3
+  - first:
+      213: -7848602631039030836
+    second: FlyingPlatform_4
+  - first:
+      213: 8535754770886521373
+    second: FlyingPlatform_5
+  - first:
+      213: 3521177332940877337
+    second: FlyingPlatform_6
+  - first:
+      213: -2936433982683235135
+    second: FlyingPlatform_7
+  - first:
+      213: 325571760642581916
+    second: FlyingPlatform_8
+  - first:
+      213: -172856462167708577
+    second: FlyingPlatform_9
+  - first:
+      213: 4385719079071061828
+    second: FlyingPlatform_10
+  - first:
+      213: 7144685293882832772
+    second: FlyingPlatform_11
+  - first:
+      213: 9141539600457030099
+    second: FlyingPlatform_12
+  - first:
+      213: -8806398735886894891
+    second: FlyingPlatform_13
+  - first:
+      213: 3889504692110237774
+    second: FlyingPlatform_14
+  - first:
+      213: -4116379065046969358
+    second: FlyingPlatform_15
+  - first:
+      213: -2600990871321984928
+    second: FlyingPlatform_16
+  - first:
+      213: -8789744315178913484
+    second: FlyingPlatform_17
+  - first:
+      213: 1864624227242380634
+    second: FlyingPlatform_18
+  - first:
+      213: -6235831702074384058
+    second: FlyingPlatform_19
+  - first:
+      213: 1393143864185565174
+    second: FlyingPlatform_20
+  - first:
+      213: -979279873798975184
+    second: FlyingPlatform_21
+  - first:
+      213: -1345463604944991021
+    second: FlyingPlatform_22
+  - first:
+      213: -5417037974505845696
+    second: FlyingPlatform_23
+  - first:
+      213: 5237783754776333804
+    second: FlyingPlatform_24
+  - first:
+      213: -4095188067581011481
+    second: FlyingPlatform_25
+  - first:
+      213: -4630538560977542756
+    second: FlyingPlatform_26
+  - first:
+      213: 6029968072236104405
+    second: FlyingPlatform_27
+  - first:
+      213: -9204977536628382776
+    second: FlyingPlatform_28
+  - first:
+      213: 7103307290297192176
+    second: FlyingPlatform_29
+  - first:
+      213: -5507320929463448673
+    second: FlyingPlatform_30
+  - first:
+      213: 5955102381648446521
+    second: FlyingPlatform_31
+  - first:
+      213: 9221639377220597132
+    second: FlyingPlatform_32
+  - first:
+      213: -5089019397646100026
+    second: FlyingPlatform_33
+  - first:
+      213: 1025837250926259061
+    second: FlyingPlatform_34
+  - first:
+      213: 1479319496025673394
+    second: FlyingPlatform_35
+  - first:
+      213: 8768766332410858454
+    second: FlyingPlatform_36
+  - first:
+      213: 3516723032048890923
+    second: FlyingPlatform_37
+  - first:
+      213: 5566631093441551463
+    second: FlyingPlatform_38
+  - first:
+      213: 4208793590056172944
+    second: FlyingPlatform_39
+  - first:
+      213: -5808016706870029513
+    second: FlyingPlatform_40
+  - first:
+      213: -967553415481903331
+    second: FlyingPlatform_41
+  - first:
+      213: 1100954649412925527
+    second: FlyingPlatform_42
+  - first:
+      213: -6617403948584779863
+    second: FlyingPlatform_43
+  - first:
+      213: -6740181511957716075
+    second: FlyingPlatform_44
+  - first:
+      213: -7699685844588780283
+    second: FlyingPlatform_45
+  - first:
+      213: 3672605039305276311
+    second: FlyingPlatform_46
+  - first:
+      213: -3633976160446450982
+    second: FlyingPlatform_47
+  - first:
+      213: 3040836972259958068
+    second: FlyingPlatform_48
+  - first:
+      213: 1394319828181802602
+    second: FlyingPlatform_49
+  - first:
+      213: -1037098958200818811
+    second: FlyingPlatform_50
+  - first:
+      213: 2097286409266207611
+    second: FlyingPlatform_51
+  - first:
+      213: -6760371471281509014
+    second: FlyingPlatform_52
+  - first:
+      213: -1912375933003614996
+    second: FlyingPlatform_53
+  - first:
+      213: 5132383600097849008
+    second: FlyingPlatform_54
+  - first:
+      213: -2585335837445620329
+    second: FlyingPlatform_55
+  - first:
+      213: 4692535564309071282
+    second: FlyingPlatform_56
+  - first:
+      213: -8357322393739705546
+    second: FlyingPlatform_57
+  - first:
+      213: -6521890406173868006
+    second: FlyingPlatform_58
+  - first:
+      213: 5054289575286260781
+    second: FlyingPlatform_59
+  - first:
+      213: -4697486353115452132
+    second: FlyingPlatform_60
+  - first:
+      213: -8740394773432249304
+    second: FlyingPlatform_61
+  - first:
+      213: 7355649329820300028
+    second: FlyingPlatform_62
+  - first:
+      213: -8291804970536346863
+    second: FlyingPlatform_63
+  - first:
+      213: -3730183730604797424
+    second: FlyingPlatform_64
+  - first:
+      213: 6616795395613176115
+    second: FlyingPlatform_65
+  - first:
+      213: 6276934496584719305
+    second: FlyingPlatform_66
+  - first:
+      213: 8304496722349468553
+    second: FlyingPlatform_67
+  - first:
+      213: 5335746225414283767
+    second: FlyingPlatform_68
+  - first:
+      213: 6252579260886338285
+    second: FlyingPlatform_69
+  - first:
+      213: 4115781089266497155
+    second: FlyingPlatform_70
+  - first:
+      213: -844439408839559706
+    second: FlyingPlatform_71
+  - first:
+      213: 1378284101609186262
+    second: FlyingPlatform_72
+  - first:
+      213: 764358075764608590
+    second: FlyingPlatform_73
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FlyingPlatform_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 81
+        width: 80
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dbbe9b9e909300b0800000000000000
+      internalID: -5763604087213999146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingPlatform_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 48
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b28c48b900c1430800000000000000
+      internalID: 3754876857267792713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingPlatform_2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 20
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a620eb7919a54df0800000000000000
+      internalID: -196565081803184477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2749dfb9ec369ba4597bacbf01e6d807
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FlyingPlatform_0: -5763604087213999146
+      FlyingPlatform_1: 3754876857267792713
+      FlyingPlatform_2: -196565081803184477
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
