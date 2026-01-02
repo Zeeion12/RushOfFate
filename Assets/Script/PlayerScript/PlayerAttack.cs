@@ -142,8 +142,11 @@ public class PlayerAttack : MonoBehaviour
             BanditArcherHealth archer = hit.GetComponent<BanditArcherHealth>();
             if (archer != null) { archer.TakeDamage(damage, transform.position); continue; }
 
-            FlyingEnemyHealth flying = hit.GetComponent<FlyingEnemyHealth>();
-            if (flying != null) { flying.TakeDamage(damage, transform.position); continue; }
+            GolemHealth golem = hit.GetComponent<GolemHealth>();
+            if (golem != null) { golem.TakeDamage(damage, transform.position); continue; }
+
+            HarpyHealth harpy = hit.GetComponent<HarpyHealth>();
+            if (harpy != null) { harpy.TakeDamage(damage, transform.position); continue; }
 
             EvilWizardBoss wizard = hit.GetComponent<EvilWizardBoss>();
             if (wizard != null) { wizard.TakeDamage(damage); }
