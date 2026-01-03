@@ -2195,6 +2195,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ground_tileset_6
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 38
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 186ae48dc259933468a41e5666265c6d
+      internalID: -363029687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -2265,6 +2287,7 @@ TextureImporter:
       ground_tileset_57: 1212328727
       ground_tileset_58: 942370688
       ground_tileset_59: 1213853272
+      ground_tileset_6: -363029687
       ground_tileset_60: 729594685
       ground_tileset_61: -697896172
       ground_tileset_62: -328403586
