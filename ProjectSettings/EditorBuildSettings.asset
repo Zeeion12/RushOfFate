@@ -38,6 +38,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MountainParallax.unity
     guid: d5564420c6897ea4b874d8faa6f1e323
+  - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: aee215f2841402a498bd1c716bf26131
+  - enabled: 1
+    path: Assets/Scenes/LogoScene.unity
+    guid: cf4af9d29d443594ca053c10ec8a0298
+  - enabled: 1
+    path: Assets/Scenes/CutSceneMain.unity
+    guid: 7df37b3d6100c4a42a1d796b347de9b6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
