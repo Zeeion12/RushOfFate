@@ -696,7 +696,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f9f7d5a6d33d4724097bb56ae399f7e7, type: 3}
   sfxVolume: 0.5
   loopSoundEffects: 1
-  allSceneSubtitles: []
+  allSceneSubtitles:
+  - sceneName: Bayi
+    subtitles: []
+  - sceneName: Asing
+    subtitles: []
+  - sceneName: Keluarga
+    subtitles: []
+  - sceneName: Sakit
+    subtitles: []
   defaultFontSize: 32
   defaultTextColor: {r: 1, g: 1, b: 1, a: 1}
   defaultOutlineColor: {r: 0, g: 0, b: 0, a: 1}
