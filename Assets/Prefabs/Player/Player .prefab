@@ -396,7 +396,7 @@ MonoBehaviour:
   rollDuration: 0.5
   rollCooldown: 1
   invincibilityDuration: 0.5
-  wallClingDuration: 3
+  wallClingDuration: 50
   wallCheckDistance: 0.6
   wallCheckOffset: {x: 0.5, y: 0}
   wallLayer:
