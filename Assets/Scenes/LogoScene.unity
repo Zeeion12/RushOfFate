@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmSource: {fileID: 520488391}
-  sfxSource: {fileID: 520488391}
+  sfxSource: {fileID: 520488393}
   cutsceneBGM: {fileID: 8300000, guid: bd83d87bba9a2114f858847a0e98207c, type: 3}
   jumpSFX: {fileID: 8300000, guid: 62d27839a94a13c4f95132b9b25aeedc, type: 3}
   landingSFX: {fileID: 8300000, guid: 22164e09c81eb9146a6cbdc982330465, type: 3}

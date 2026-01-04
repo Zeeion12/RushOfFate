@@ -698,13 +698,169 @@ MonoBehaviour:
   loopSoundEffects: 1
   allSceneSubtitles:
   - sceneName: Bayi
-    subtitles: []
+    subtitles:
+    - startTime: 0.1
+      endTime: 2.5
+      text: Di pinggiran Desa Eryndor
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 1, g: 1, b: 1, a: 0}
+    - startTime: 3.5
+      endTime: 6
+      text: dalam kegelapan malam yang dingin
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 1, g: 1, b: 1, a: 0}
+    - startTime: 7.5
+      endTime: 8.5
+      text: dua bayi
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 1, g: 1, b: 1, a: 0}
+    - startTime: 9
+      endTime: 12.5
+      text: ditemukan terbungkus kain lusuh
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 1, g: 1, b: 1, a: 0}
+    - startTime: 14
+      endTime: 18
+      text: Mata merah mereka bersinar menusuk kegelapan
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 1, g: 1, b: 1, a: 0}
+    - startTime: 19
+      endTime: 26
+      text: pertanda warisan darah Raja Iblis Natiyas yang terkutuk
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 1, g: 1, b: 1, a: 0}
   - sceneName: Asing
-    subtitles: []
+    subtitles:
+    - startTime: 0.1
+      endTime: 1.5
+      text: Sejak kecil
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
+    - startTime: 2
+      endTime: 5.5
+      text: Kael dan Lyra hidup dalam bayang-bayang prasangka
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
+    - startTime: 6.5
+      endTime: 8
+      text: '"ANAK KUTUKAN"'
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 1, g: 0.028301716, b: 0.028301716, a: 0}
+    - startTime: 8.5
+      endTime: 10
+      text: begitu mereka sebut
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
+    - startTime: 8.5
+      endTime: 10
+      text: begitu mereka sebut
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
+    - startTime: 11
+      endTime: 13.5
+      text: Setiap tatapan penuh kebencian
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
+    - startTime: 14
+      endTime: 21
+      text: setiap ejekan menusuk hati mereka yang masih rapuh
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
   - sceneName: Keluarga
-    subtitles: []
+    subtitles:
+    - startTime: 0.1
+      endTime: 2.5
+      text: Namun di tengah kegelapan itu
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
+    - startTime: 3.5
+      endTime: 4.5
+      text: ada cahaya
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
+    - startTime: 6
+      endTime: 6.6
+      text: Noa
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
+    - startTime: 7.5
+      endTime: 10
+      text: kakak yang menjadi pelindung setia
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
+    - startTime: 10.8
+      endTime: 18
+      text: memberi mereka kehangatan yang tak pernah mereka rasakan dari dunia luar
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
   - sceneName: Sakit
-    subtitles: []
+    subtitles:
+    - startTime: 0.1
+      endTime: 1
+      text: Lyra
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
+    - startTime: 2
+      endTime: 3.5
+      text: adik yang berhati lembut
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
+    - startTime: 4.5
+      endTime: 7.5
+      text: harus berjuang melawan tubuhnya sendiri
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
+    - startTime: 9
+      endTime: 12.5
+      text: Penyakit darah langka yang tak dapat disembuhkan
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
+    - startTime: 13
+      endTime: 16
+      text: perlahan menggerogoti kekuatannya
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
+    - startTime: 17.5
+      endTime: 19
+      text: Noa dan Kael
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
+    - startTime: 19.5
+      endTime: 22
+      text: hanya bisa berdiri tak berdaya
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
+    - startTime: 22.5
+      endTime: 28
+      text: melihat adiknya menderita
+      customFontSize: 45
+      useCustomColor: 0
+      customColor: {r: 0, g: 0, b: 0, a: 0}
   defaultFontSize: 32
   defaultTextColor: {r: 1, g: 1, b: 1, a: 1}
   defaultOutlineColor: {r: 0, g: 0, b: 0, a: 1}
@@ -730,15 +886,15 @@ MonoBehaviour:
     endScale: 1.39
     duration: 18.6
     easingType: 3
-  - useCustomZoom: 0
+  - useCustomZoom: 1
     startScale: 1
-    endScale: 1
-    duration: 1
-    easingType: 0
+    endScale: 1.33
+    duration: 14.6
+    easingType: 3
   fadeDuration: 1.5
   sceneHoldTime: 1.5
-  lastSceneHoldTime: 0
-  nextSceneName: LevelSelection
+  lastSceneHoldTime: 5
+  nextSceneName: LogoScene
   enableCameraShake: 0
   shakeDuration: 30
   shakeMagnitude: 3
@@ -1088,8 +1244,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2a60fa0a6fd108447bfc15c104d5d435, type: 3}
+  m_Resource: {fileID: 8300000, guid: 2a60fa0a6fd108447bfc15c104d5d435, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

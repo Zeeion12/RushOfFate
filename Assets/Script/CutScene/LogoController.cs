@@ -34,7 +34,7 @@ public class LogoController : MonoBehaviour
         // Use transition to load next scene
         if (SceneTransition.Instance != null)
         {
-            SceneTransition.Instance.FadeToScene(1); // LoadingScene
+            SceneTransition.Instance.FadeToScene(11); // LoadingScene
         }
         else
         {

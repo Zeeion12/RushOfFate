@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; // TAMBAHKAN INI
+using UnityEngine.SceneManagement;
 
 public class LoadingController : MonoBehaviour
 {
@@ -15,15 +15,27 @@ public class LoadingController : MonoBehaviour
     
     [Header("Animation")]
     public Animator loadingAnimator;
+    [Range(0.5f, 5f)]
     public float animationSpeed = 2f;
     
     void Start()
     {
-        // Set animator speed
+        // PENTING: Pastikan BGM tetap playing
+        if (AudioManager.Instance != null)
+        {
+            // Check apakah BGM sudah playing
+            if (!AudioManager.Instance.bgmSource.isPlaying)
+            {
+                AudioManager.Instance.PlayBGM(AudioManager.Instance.cutsceneBGM);
+            }
+            
+            Debug.Log($"BGM Status: {(AudioManager.Instance.bgmSource.isPlaying ? "Playing" : "Stopped")}");
+        }
+        
+        // Set loading animation speed
         if (loadingAnimator != null)
         {
             loadingAnimator.speed = animationSpeed;
-            Debug.Log($"Loading animation speed set to: {animationSpeed}x");
         }
         
         StartCoroutine(LoadNextScene());
@@ -33,6 +45,7 @@ public class LoadingController : MonoBehaviour
     {
         float elapsedTime = 0f;
         
+        // Loading progress
         while (elapsedTime < minimumLoadingTime)
         {
             elapsedTime += Time.deltaTime;
@@ -55,18 +68,17 @@ public class LoadingController : MonoBehaviour
             loadingText.text = "Complete!";
         }
         
-        // Footstep pre-roll
+        // FOOTSTEP PRE-ROLL (BGM tetap playing)
         yield return StartCoroutine(FootstepPreRoll());
         
-        // GANTI: Gunakan SceneTransition kalau ada, atau load biasa
+        // Load cutscene
         if (SceneTransition.Instance != null)
         {
-            SceneTransition.Instance.FadeToScene(2); // CutsceneMain
+            SceneTransition.Instance.FadeToScene(13);
         }
         else
         {
-            // Fallback: Load langsung tanpa fade
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(13);
         }
     }
     
@@ -74,13 +86,19 @@ public class LoadingController : MonoBehaviour
     {
         Debug.Log("=== FOOTSTEP PRE-ROLL START ===");
         
+        // PENTING: Start footsteps (BGM tetap jalan)
         if (AudioManager.Instance != null)
         {
             AudioManager.Instance.StartFootsteps();
+            
+            // Debug check
+            Debug.Log($"BGM Playing: {AudioManager.Instance.bgmSource.isPlaying}");
         }
         
+        // Wait for pre-roll
         yield return new WaitForSeconds(footstepPreRollDuration);
         
         Debug.Log("=== FOOTSTEP PRE-ROLL END ===");
+        // NOTE: Footsteps tetap playing sampai cutscene
     }
 }
