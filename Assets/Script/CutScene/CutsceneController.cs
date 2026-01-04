@@ -41,6 +41,11 @@ public class CutsceneController : MonoBehaviour
     [Header("Credits")]
     public CreditsController creditsController;
 
+    [Header("Title Reveal")]
+    public Transform stopPosition; // Posisi berhenti di tanjakan
+    public float stopDistance = 2f; // Jarak untuk trigger stop
+    public GameTitleReveal titleReveal; // Reference ke title reveal script
+
     void Start()
     {
         rb = player.GetComponent<Rigidbody2D>();
@@ -238,9 +243,68 @@ public class CutsceneController : MonoBehaviour
             yield return new WaitForSeconds(totalCreditsTime);
         }
 
+        isRunning = true;
+    
+        Debug.Log("Running towards stop position...");
+
+        while (Vector2.Distance(player.transform.position, stopPosition.position) > stopDistance)
+        {
+            yield return null;
+        }
+        
+        Debug.Log("Reached stop position!");
+        
+        // STOP di tanjakan
+        isRunning = false;
+        rb.linearVelocity = Vector2.zero;
+        rb.gravityScale = 0;
+        
+        // Stop footsteps
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.StopFootsteps();
+        }
+        
+        // Stop animation - set ke idle
+        if (animator != null)
+        {
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isGrounded", true);
+            
+            // CRITICAL: Force play idle dengan normalizedTime = 0
+            animator.Play("Idle", 0, 0f);
+            
+            Debug.Log("FORCED IDLE ANIMATION");
+        }
+
+        // 4. Wait untuk animation settle
+        yield return new WaitForSeconds(0.3f);
+
+        // 5. Re-enable gravity (kalau perlu)
+        rb.gravityScale = 3;
+        
+        // TAMBAHAN: TITLE REVEAL
+        Debug.Log("=== SHOWING GAME TITLE ===");
+        
+        if (titleReveal != null)
+        {
+            titleReveal.ShowTitle();
+            
+            // Tunggu title selesai
+            yield return new WaitForSeconds(titleReveal.GetTotalDuration());
+        }
+        else
+        {
+            // Fallback delay kalau title reveal tidak ada
+            yield return new WaitForSeconds(5f);
+        }
+
+        isRunning = true;
+
         // End cutscene
         cutsceneComplete = false;
-        isRunning = true;
+        AudioManager.Instance.StopFootsteps();
+        AudioManager.Instance.StopBGM();
         Debug.Log("=== CUTSCENE COMPLETE ===");
     }
 
@@ -427,6 +491,48 @@ public class CutsceneController : MonoBehaviour
         
         // Tidak ada ground
         return false;
+    }
+
+    IEnumerator StopPlayerSmoothly(float decelerationTime = 0.5f)
+    {
+        Debug.Log("Stopping player smoothly...");
+        
+        isRunning = false;
+        
+        // Stop footsteps
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.StopFootsteps();
+        }
+        
+        // Gradual deceleration
+        float elapsed = 0f;
+        Vector2 startVelocity = rb.linearVelocity;
+        
+        while (elapsed < decelerationTime)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / decelerationTime;
+            
+            // Ease out deceleration
+            float velocityX = Mathf.Lerp(startVelocity.x, 0, t);
+            rb.linearVelocity = new Vector2(velocityX, rb.linearVelocity.y);
+            
+            yield return null;
+        }
+        
+        // Ensure full stop
+        rb.linearVelocity = Vector2.zero;
+        
+        // Transition to idle
+        if (animator != null)
+        {
+            animator.SetBool("isRunning", false);
+        }
+        
+        yield return new WaitForSeconds(0.2f);
+        
+        Debug.Log("Player stopped");
     }
     
     // Debug Gizmos

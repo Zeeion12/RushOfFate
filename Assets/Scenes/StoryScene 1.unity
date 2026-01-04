@@ -894,7 +894,7 @@ MonoBehaviour:
   fadeDuration: 1.5
   sceneHoldTime: 1.5
   lastSceneHoldTime: 5
-  nextSceneName: LogoScene
+  nextSceneName: LevelSelection
   enableCameraShake: 0
   shakeDuration: 30
   shakeMagnitude: 3
