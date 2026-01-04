@@ -1469,6 +1469,8 @@ MonoBehaviour:
   stopPosition: {fileID: 959327576}
   stopDistance: 2
   titleReveal: {fileID: 107487113}
+  levelNavigation: {fileID: 707341999}
+  stopFootstepDistance: 3
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1627,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 707342001}
   m_SourcePrefab: {fileID: 100100000, guid: 9aebf00a271fb4d4eb1a06e3fd5ffaa1, type: 3}
+--- !u!4 &707341999 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2037026691076190231, guid: 9aebf00a271fb4d4eb1a06e3fd5ffaa1, type: 3}
+  m_PrefabInstance: {fileID: 707341998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &707342000 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 675585728470885317, guid: 9aebf00a271fb4d4eb1a06e3fd5ffaa1, type: 3}

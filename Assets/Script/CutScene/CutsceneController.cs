@@ -303,8 +303,7 @@ public class CutsceneController : MonoBehaviour
 
         // End cutscene
         cutsceneComplete = false;
-        AudioManager.Instance.StopFootsteps();
-        AudioManager.Instance.StopBGM();
+        isRunning = true;
         Debug.Log("=== CUTSCENE COMPLETE ===");
     }
 
@@ -491,48 +490,6 @@ public class CutsceneController : MonoBehaviour
         
         // Tidak ada ground
         return false;
-    }
-
-    IEnumerator StopPlayerSmoothly(float decelerationTime = 0.5f)
-    {
-        Debug.Log("Stopping player smoothly...");
-        
-        isRunning = false;
-        
-        // Stop footsteps
-        if (AudioManager.Instance != null)
-        {
-            AudioManager.Instance.StopFootsteps();
-        }
-        
-        // Gradual deceleration
-        float elapsed = 0f;
-        Vector2 startVelocity = rb.linearVelocity;
-        
-        while (elapsed < decelerationTime)
-        {
-            elapsed += Time.deltaTime;
-            float t = elapsed / decelerationTime;
-            
-            // Ease out deceleration
-            float velocityX = Mathf.Lerp(startVelocity.x, 0, t);
-            rb.linearVelocity = new Vector2(velocityX, rb.linearVelocity.y);
-            
-            yield return null;
-        }
-        
-        // Ensure full stop
-        rb.linearVelocity = Vector2.zero;
-        
-        // Transition to idle
-        if (animator != null)
-        {
-            animator.SetBool("isRunning", false);
-        }
-        
-        yield return new WaitForSeconds(0.2f);
-        
-        Debug.Log("Player stopped");
     }
     
     // Debug Gizmos
