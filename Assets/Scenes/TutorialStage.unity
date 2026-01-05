@@ -292,6 +292,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameplayCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3903865723463173859, guid: cdebfaf42f905164e8499de917312340, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5017555338622477641, guid: cdebfaf42f905164e8499de917312340, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -370,6 +374,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5017555338622477641, guid: cdebfaf42f905164e8499de917312340, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334720335018485718, guid: cdebfaf42f905164e8499de917312340, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -30116,6 +30124,10 @@ PrefabInstance:
     - target: {fileID: 7075811480553437444, guid: 529fd06210c24664b8d5922d8ace794b, type: 3}
       propertyPath: m_Name
       value: PauseMenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7075811480553437444, guid: 529fd06210c24664b8d5922d8ace794b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

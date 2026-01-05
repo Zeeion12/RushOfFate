@@ -12,11 +12,18 @@ public class LogoController : MonoBehaviour
 
     void Start()
     {
+        // Initialize BuildVersionManager PERTAMA KALI di awal game
+        // Ini akan auto-reset semua data jika build baru
+        if (BuildVersionManager.Instance != null)
+        {
+            Debug.Log("[Logo] BuildVersionManager initialized");
+        }
+
         if (logoCanvasGroup != null)
         {
             logoCanvasGroup.alpha = 0;
         }
-        
+
         StartCoroutine(LogoSequence());
     }
 

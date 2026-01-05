@@ -63078,6 +63078,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenuCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7075811480553437444, guid: 529fd06210c24664b8d5922d8ace794b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -142265,6 +142269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameplayCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3903865723463173859, guid: cdebfaf42f905164e8499de917312340, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5017555338622477641, guid: cdebfaf42f905164e8499de917312340, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -142447,11 +142455,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4748781524502170053, guid: 01027a362383bb240980f677abcca67f, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4748781524502170053, guid: 01027a362383bb240980f677abcca67f, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1846795173
+      value: 1708634713
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
